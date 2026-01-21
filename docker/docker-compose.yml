@@ -1,0 +1,132 @@
+version: "3.8"
+
+services:
+  # DEV Database
+  mysql-dev:
+    image: mysql:8.0
+    container_name: andb-mysql-dev
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: dev_database
+      MYSQL_USER: dev_user
+      MYSQL_PASSWORD: dev_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_dev_data:/var/lib/mysql
+      - ./docker/init-dev.sql:/docker-entrypoint-initdb.d/init.sql
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mysqladmin",
+          "ping",
+          "-h",
+          "localhost",
+          "-u",
+          "root",
+          "-proot123",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # STAGE Database
+  mysql-stage:
+    image: mysql:8.0
+    container_name: andb-mysql-stage
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: stage_database
+      MYSQL_USER: stage_user
+      MYSQL_PASSWORD: stage_pass
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_stage_data:/var/lib/mysql
+      - ./docker/init-stage.sql:/docker-entrypoint-initdb.d/init.sql
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mysqladmin",
+          "ping",
+          "-h",
+          "localhost",
+          "-u",
+          "root",
+          "-proot123",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # UAT Database
+  mysql-uat:
+    image: mysql:8.0
+    container_name: andb-mysql-uat
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: uat_database
+      MYSQL_USER: uat_user
+      MYSQL_PASSWORD: uat_pass
+    ports:
+      - "3308:3306"
+    volumes:
+      - mysql_uat_data:/var/lib/mysql
+      - ./docker/init-uat.sql:/docker-entrypoint-initdb.d/init.sql
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mysqladmin",
+          "ping",
+          "-h",
+          "localhost",
+          "-u",
+          "root",
+          "-proot123",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # PROD Database
+  mysql-prod:
+    image: mysql:8.0
+    container_name: andb-mysql-prod
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: prod_database
+      MYSQL_USER: prod_user
+      MYSQL_PASSWORD: prod_pass
+    ports:
+      - "3309:3306"
+    volumes:
+      - mysql_prod_data:/var/lib/mysql
+      - ./docker/init-prod.sql:/docker-entrypoint-initdb.d/init.sql
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mysqladmin",
+          "ping",
+          "-h",
+          "localhost",
+          "-u",
+          "root",
+          "-proot123",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mysql_dev_data:
+  mysql_stage_data:
+  mysql_uat_data:
+  mysql_prod_data:

@@ -1,0 +1,84 @@
+version: "3.8"
+
+services:
+  # DEV Postgres
+  postgres-dev:
+    image: postgres:15
+    container_name: andb-postgres-dev
+    environment:
+      POSTGRES_USER: dev_user
+      POSTGRES_PASSWORD: dev_pass
+      POSTGRES_DB: dev_database
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+      - ./docker/init-pg-dev.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dev_user -d dev_database"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # STAGE Postgres
+  postgres-stage:
+    image: postgres:15
+    container_name: andb-postgres-stage
+    environment:
+      POSTGRES_USER: stage_user
+      POSTGRES_PASSWORD: stage_pass
+      POSTGRES_DB: stage_database
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_stage_data:/var/lib/postgresql/data
+      - ./docker/init-pg-stage.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U stage_user -d stage_database"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # UAT Postgres
+  postgres-uat:
+    image: postgres:15
+    container_name: andb-postgres-uat
+    environment:
+      POSTGRES_USER: uat_user
+      POSTGRES_PASSWORD: uat_pass
+      POSTGRES_DB: uat_database
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_uat_data:/var/lib/postgresql/data
+      - ./docker/init-pg-uat.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U uat_user -d uat_database"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # PROD Postgres
+  postgres-prod:
+    image: postgres:15
+    container_name: andb-postgres-prod
+    environment:
+      POSTGRES_USER: prod_user
+      POSTGRES_PASSWORD: prod_pass
+      POSTGRES_DB: prod_database
+    ports:
+      - "5435:5432"
+    volumes:
+      - postgres_prod_data:/var/lib/postgresql/data
+      - ./docker/init-pg-prod.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U prod_user -d prod_database"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_dev_data:
+  postgres_stage_data:
+  postgres_uat_data:
+  postgres_prod_data:

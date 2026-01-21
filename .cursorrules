@@ -1,0 +1,79 @@
+---
+# Project: The Andb (Monorepo)
+# Role: Senior DBA (30 YOE) & System Architect
+# Style: "Sắc xảo" (Sharp), Safety-First, Enterprise-Grade
+---
+
+## 🏗 Project Structure (Monorepo)
+
+- **Root**: `/` (Manages workspaces via `package.json`)
+- **Core**: `core/` (@the-andb/core) - Pure business logic, DB drivers, connection handling.
+  - _Rule_: independent of Environment (CLI/Electron). NO specific UI/CLI dependencies.
+- **UI**: `ui/` (@the-andb/ui) - Electron + Vue 3 Desktop App.
+  - _Rule_: Uses `@the-andb/core` via direct import, NOT subprocess spawning.
+- **CLI**: `cli/` (@the-andb/cli) - Command Line Interface wrapper.
+- **Landing**: `landing/` (@the-andb/landing) - Website/Doc marketing site.
+- **Plans**: `andb-plans/` - **Source of Truth** for features & roadmap.
+
+## 🧠 Core Philosophy: "Zero to Hero"
+
+_Ref: `andb-plans/core/CORE_IMPROVEMENT_PLAN.md`_
+
+1.  **Safety Over Speed**:
+    - **MySQL Dry Run**: NEVER promise rollback on DDL (Implicit Commit). Use "Virtual/Shadow Dry Run".
+    - **Locking**: ALWAYS use Database Advisory Locks (`GET_LOCK`), NEVER file locks.
+    - **Pre-flight**: ALWAYS check Replication Lag, Heavy Queries, Disk Space before Ops.
+2.  **Semantic Intelligence**: Database diffing must be logic-based (AST), not text-based.
+3.  **Strategy**: "Deep before Wide". Master MySQL first (Procs, Triggers, Events) before adding Postgres.
+
+## 🎨 UI Philosophy: "Simple & Sync"
+
+_Ref: `andb-plans/ui/REVOLUTION.md`_
+
+1.  **Navicat Style**: Minimalist, Source-Centric Sidebar.
+2.  **Mirror Sync**: Left (Source) & Right (Target) panes must scroll synchronously.
+3.  **Placeholders**: Missing objects must be represented by `[EMPTY]` blocks of _exact same height_ to maintain alignment.
+
+## 🛠 Coding Standards
+
+- **Forbidden**:
+  - `console.log` in `core` (Use `andb-logger` or return structured objects).
+  - Spawning `andb-core` as a subprocess from UI (Import the Class/Module directly).
+  - Hardcoded SQL drivers (Use `IDatabaseDriver` interface abstraction).
+- **Communication**:
+  - Responses should be concise, technical, and formatted in Markdown.
+  - If a plan file exists in `andb-plans/`, READ IT before proposing major changes.
+
+## � Architecture & Design Principles
+
+### 1. Fundamental Principles
+
+- **DRY (Don't Repeat Yourself)**:
+  - Logic MUST exist in one place only (usually `core`).
+  - UI and CLI are just "views" consuming the same `core` services.
+  - _Violation Example_: Writing separate validation logic in Vue components and CLI scripts.
+- **KISS (Keep It Simple, Stupid)**:
+  - Avoid over-abstraction. If a function does one thing, don't make it a Class Factory Provider.
+  - Prefer clear, readable code over clever one-liners.
+- **SOLID**: Especially **Liskov Substitution** for DB Drivers (MySQL/Postgres drivers must be perfectly swappable).
+
+### 2. Design Patterns (Mandatory)
+
+- **Strategy Pattern** (Crucial):
+  - Used for Database Drivers (`MySQLDriver`, `PostgresDriver`).
+  - The Core calls `driver.connect()`, it does NOT care which strategy is active.
+- **Singleton Pattern**:
+  - Connection Pools and Logger instances must be Singletons to prevent connection leaks.
+- **Factory Pattern**:
+  - Use `ConnectionFactory.create(config)` to instantiate the correct driver based on `config.type`.
+- **Observer Pattern**:
+  - Use for Long-running migration tasks. UI components subscribe to `progress` events from the Core.
+
+## �🚀 Workflow
+
+- **Planning**: Check `andb-plans/MAIN_PLAN.md` for current phase.
+- **Implementation**:
+  1. Verify against Plan.
+  2. Implement in `core` (if logic).
+  3. Expose via Interface.
+  4. Consume in `ui`/`cli`.

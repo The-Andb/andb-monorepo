@@ -1,0 +1,16 @@
+{
+  "name": "the-andb",
+  "private": true,
+  "workspaces": [
+    "ui",
+    "core",
+    "cli",
+    "landing"
+  ],
+  "scripts": {
+    "dev:ui": "npm run dev --workspace=ui",
+    "dev:cli": "npm run dev --workspace=cli",
+    "build:core": "npm run build --workspace=core",
+    "test": "npm test --workspaces"
+  }
+}
