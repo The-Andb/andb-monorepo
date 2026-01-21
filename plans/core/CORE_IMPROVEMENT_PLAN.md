@@ -20,6 +20,7 @@ _Goal: Abstract the current MySQL logic so the Core doesn't know what DB it's ta
 - [x] **Refactor MySQL Driver**
   - Move all `mysql2` logic from `services/*.js` into `core/drivers/mysql/MySQLDriver.js`.
   - Ensure all existing tests pass with the new abstraction layer.
+  - **Decoupled**: `ExporterService` no longer generates SQL. Uses `IntrospectionService` to `listX` and `getXDDL`.
 - [x] **Standardized Driver Set (Strategy Pattern)**
   - Implement the **Strategy Pattern** to select the correct driver at runtime based on config.
   - Create a standard suite of drivers for major SQL dialects.
