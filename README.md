@@ -89,3 +89,44 @@ npm link @the-andb/core
   ls -l ui/node_modules/@the-andb/core
   # Should point to -> ../../../core
   ```
+
+---
+
+## 🐳 Database Initialization (Docker)
+
+To spin up local test databases (MySQL & PostgreSQL) with pre-seeded data for various environments (dev, stage, uat, prod).
+
+### 1. Start Services
+
+Run the following command from the **root** directory:
+
+```bash
+# Start MySQL services
+docker-compose -f docker/docker-compose.yml up -d
+
+# Start PostgreSQL services (if needed)
+docker-compose -f docker/docker-compose-postgres.yml up -d
+```
+
+### 2. Verify Containers
+
+Check if the database containers are running:
+
+```bash
+docker ps --format "table {{.Names}}\t{{.Ports}}\t{{.Status}}"
+```
+
+You should see services like `mysql-dev`, `mysql-prod`, `postgres-dev`, etc.
+
+### 3. Connection Details
+
+Default credentials for local testing:
+
+| Environment | Service Name | Port (MySQL) | Port (Postgres) | User                | Password            | Key DB Name  |
+| ----------- | ------------ | ------------ | --------------- | ------------------- | ------------------- | ------------ |
+| **Dev**     | `*-dev`      | 3307         | 5433            | `root` / `postgres` | `root` / `postgres` | `andb_dev`   |
+| **Stage**   | `*-stage`    | 3308         | 5434            | `root` / `postgres` | `root` / `postgres` | `andb_stage` |
+| **UAT**     | `*-uat`      | 3309         | 5435            | `root` / `postgres` | `root` / `postgres` | `andb_uat`   |
+| **Prod**    | `*-prod`     | 3310         | 5436            | `root` / `postgres` | `root` / `postgres` | `andb_prod`  |
+
+_Note: Data is automatically initialized using scripts in `docker/init-_.sql`.\*
