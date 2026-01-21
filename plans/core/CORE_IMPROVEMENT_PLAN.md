@@ -12,15 +12,15 @@ This document outlines the strategic evolution of `@the-andb/core` from a functi
 
 _Goal: Abstract the current MySQL logic so the Core doesn't know what DB it's talking to._
 
-- [ ] **Define Interfaces (The Contract)**
+- [x] **Define Interfaces (The Contract)**
   - `IDatabaseDriver`: `connect()`, `disconnect()`, `query()`, `getIntrospectionService()`, `getDDLGenerator()`.
     - **Add**: `getSessionContext()` (ensures consistent `sql_mode`, `time_zone`, and `lock_wait_timeout`).
   - `IIntrospectionService`: `listTables()`, `getDDL(type, name)`, `getChecksums()`.
   - `IDDLGenerator`: `generateCreate(obj)`, `generateAlter(diff)`.
-- [ ] **Refactor MySQL Driver**
+- [x] **Refactor MySQL Driver**
   - Move all `mysql2` logic from `services/*.js` into `core/drivers/mysql/MySQLDriver.js`.
   - Ensure all existing tests pass with the new abstraction layer.
-- [ ] **Standardized Driver Set (Strategy Pattern)**
+- [x] **Standardized Driver Set (Strategy Pattern)**
   - Implement the **Strategy Pattern** to select the correct driver at runtime based on config.
   - Create a standard suite of drivers for major SQL dialects.
 - [ ] **Configuration Update**
