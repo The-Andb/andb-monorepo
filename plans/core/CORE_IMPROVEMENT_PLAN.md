@@ -21,24 +21,27 @@ _Goal: Abstract the current MySQL logic so the Core doesn't know what DB it's ta
   - Move all `mysql2` logic from `services/*.js` into `core/drivers/mysql/MySQLDriver.js`.
   - Ensure all existing tests pass with the new abstraction layer.
   - **Decoupled**: `ExporterService` no longer generates SQL. Uses `IntrospectionService` to `listX` and `getXDDL`.
+  - **Decoupled**: `MonitorService` now delegates to `IMonitoringService` in the driver. No SQL in services.
+  - **Decoupled**: `ComparatorService` uses `IDDLParser` for parsing and `IDDLGenerator` for table comparison/delta generation.
 - [x] **Standardized Driver Set (Strategy Pattern)**
   - Implement the **Strategy Pattern** to select the correct driver at runtime based on config.
   - Create a standard suite of drivers for major SQL dialects.
-- [ ] **Configuration Update**
+- [x] **Configuration Update**
   - Update `andb.config.js` to accept `type: 'postgres' | 'mysql' | 'mssql' | 'sqlite' | 'oracle' | 'mariadb'`.
+  - _Done_: Container and Factory now support dynamic driver loading.
 
 ## 🏗 Phase 1: Infrastructure & Foundation
 
 _Goal: Solidify connectivity and decouple logic from specific implementations._
 
-- [ ] **Unified Connection Factory (The Gateway)**
+- [x] **Unified Connection Factory (The Gateway)**
   - Centralize all connection creation logic.
   - Support **Native SSH Tunneling** (via `ssh2`) to access private databases without external port forwarding tools.
   - Implement a "Driver Registry" pattern to dynamically load drivers.
-- [ ] **Abstract Driver Interface (The Contract)**
-  - define `IDatabaseDriver` to force consistency across MySQL, Postgres, MSSQL, etc.
-  - Methods: `connect`, `disconnect`, `query`, `startTransaction`, `commit`, `rollback`.
-  - Methods: `fetchDDL(type, name)`, `listObjects(type)`.
+- [x] **Abstract Driver Interface (The Contract)**
+  - Define `IDatabaseDriver` to force consistency across MySQL, Postgres, MSSQL, etc.
+  - Methods: `connect`, `disconnect`, `query`, `getIntrospectionService`, `getDDLParser`, `getDDLGenerator`, `getMonitoringService`.
+  - Interfaces: `IIntrospectionService`, `IDDLParser`, `IDDLGenerator`, `IMonitoringService`.
 - [ ] **Resilient Execution**
   - **Retry Policies**: Automatically retry queries on transient network errors (e.g., exponential backoff for `Deadlock found` or `Gossip protocol` errors).
   - **Connection Pooling**: Implementing smart pooling for high-throughput operations.
@@ -114,6 +117,6 @@ _Goal: Go beyond MySQL._
 
 ## Immediate Priorities (Next 2 Weeks)
 
-1.  **Refactor**: Extract `mysql2` calls into `drivers/mysql/MySQLDriver.js` ensuring `IDatabaseDriver` compliance.
+1.  **Refactor**: (Done) Extract `mysql2` calls into `drivers/mysql/MySQLDriver.js` ensuring `IDatabaseDriver` compliance.
 2.  **Feature**: Implement `ConnectionFactory` with **Advisory Locks** support.
-3.  **Parsers**: Upgrade `DDLParser` to include basic Semantic Normalization (removing functional whitespace/quoting differences).
+3.  **Parsers**: (Done) Upgrade `DDLParser` to include basic Semantic Normalization and structured parsing (Table/Trigger).

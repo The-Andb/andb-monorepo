@@ -44,51 +44,63 @@ _Ref: `andb-plans/ui/REVOLUTION.md`_
   - Responses should be concise, technical, and formatted in Markdown.
   - If a plan file exists in `andb-plans/`, READ IT before proposing major changes.
 
-## � Architecture & Design Principles
+## 🏗️ Architecture & Design Principles
 
-### 1. Fundamental Principles
+### 1. Core Principles
 
 - **DRY (Don't Repeat Yourself)**:
-  - Logic MUST exist in one place only (usually `core`).
-  - UI and CLI are just "views" consuming the same `core` services.
-  - _Violation Example_: Writing separate validation logic in Vue components and CLI scripts.
-- **KISS (Keep It Simple, Stupid)**:
-  - Avoid over-abstraction. If a function does one thing, don't make it a Class Factory Provider.
-  - Prefer clear, readable code over clever one-liners.
-- **SOLID**: Especially **Liskov Substitution** for DB Drivers (MySQL/Postgres drivers must be perfectly swappable).
+  - Business logic MUST exist in the `core` layer only.
+  - UI, CLI, and API are just "views" consuming the same core services.
+  - _Constraint_: Avoid duplicating validation or calculation logic across different adapters.
+- **KISS & Readability**:
+  - Keep it simple, but **Readability > Cleverness**.
+  - If a function does one thing, don't make it a Class Factory Provider.
+  - Maintain balance: Do not over-refactor if it makes the logic harder to follow.
+- **SOLID**: Especially **Liskov Substitution** for DB Drivers (MySQL/Postgres drivers must be perfectly swappable via interfaces).
 - **YAGNI (You Ain't Gonna Need This)**:
-  - Avoid over-engineering. Don't add features or abstractions that aren't currently needed.
-  - Focus on solving the immediate problem rather than anticipating future needs.
+  - Avoid over-engineering. Do not add abstractions unless there are at least two distinct use cases.
+  - Focus on solving immediate problems rather than anticipating future needs.
 
-### 2. Design Patterns (Mandatory)
+### 2. Implementation Standards
 
-- **Strategy Pattern** (Crucial):
-  - Used for Database Drivers (`MySQLDriver`, `PostgresDriver`).
-  - The Core calls `driver.connect()`, it does NOT care which strategy is active.
-- **Singleton Pattern**:
-  - Connection Pools and Logger instances must be Singletons to prevent connection leaks.
-- **Factory Pattern**:
-  - Use `ConnectionFactory.create(config)` to instantiate the correct driver based on `config.type`.
-- **Observer Pattern**:
-  - Use for Long-running migration tasks. UI components subscribe to `progress` events from the Core.
+- **Functional & Pure Implementation**:
+  - Use pure functions whenever possible to ensure testability and avoid side effects.
+  - Separate I/O operations (DB, API, File) from data processing logic.
+  - Use immutable data structures (spread operators, `map`, `filter`, `reduce`).
+  - _Note_: If a function is not pure, it MUST be documented or clearly isolated in a service layer.
+- **Error Handling**:
+  - Avoid using `throw` for expected business errors.
+  - Prefer returning a **Result object** (e.g., `{ success: boolean, data?: T, error?: AppError }`).
+  - Distinguish between **System Errors** (for logs) and **User Errors** (for messages).
+- **Clean Code & Observability**:
+  - Remove all `console.log` statements.
+  - Remove unused variables, functions, imports, and dependencies.
+  - **Structured Logging**: Replace temporary logs with a formal `AppLogger`. Log only critical trace points (entry, error, performance metrics).
+- **Async Hygiene**:
+  - Prefer `async/await` over `.then()`.
+  - Always handle rejections in loops or parallel executions (e.g., `Promise.allSettled`).
 
-## �🚀 Workflow
+### 3. Design Patterns (Mandatory)
 
-- **Planning**: Check `andb-plans/MAIN_PLAN.md` for current phase.
-- **Implementation**:
-  1. Verify against Plan.
-  2. Implement in `core` (if logic).
-  3. Expose via Interface.
-  4. Consume in `ui`/`cli`.
+- **Strategy Pattern**: Used for Database Drivers. The Core calls `driver.connect()` and does not care which engine is active.
+- **Singleton Pattern**: Connection Pools and Logger instances must be Singletons to prevent leaks.
+- **Factory Pattern**: Use `ConnectionFactory.create(config)` to instantiate the correct driver based on `config.type`.
+- **Observer Pattern**: Used for migration progress. UI components subscribe to events from the Core.
 
-## 🛡️ Security & Operations (Strict Rules)
+## 🚀 Workflow & Git
 
-- **NO Unauthorized Commits**:
-  - Do NOT automatically commit changes unless explicitly instructed or part of a predefined workflow.
-  - Always summarize changes before suggesting a commit.
-- **NO Sensitive Data**:
-  - NEVER save, log, or hardcode secrets, passwords, or API tokens in file content or commit messages.
-  - Use environment variables (`.env`) for secrets.
-- **NO Silent Deletion**:
-  - NEVER delete files or directories silently.
-  - Always announce: "I am about to delete [path]" and wait for confirmation or imply it strongly in the plan.
+- **No Auto-Commit**:
+  - NEVER auto-commit changes unless explicitly instructed.
+  - Always provide a **Change Summary** (files changed and logic updated) before suggesting a commit.
+- **Atomic Changes**: Each suggestion should focus on a single logical unit to maintain a clean git history.
+- **Planning**:
+  1. Check `andb-plans/MAIN_PLAN.md` for current phase.
+  2. Verify against Plan -> Implement in `core` -> Expose via Interface -> Consume in `ui`/`cli`.
+
+## 🛡️ Security & Operations
+
+- **NO Sensitive Data**: NEVER save, log, or hardcode secrets/tokens. Use `.env` or vault.
+- **NO Silent Deletion**: NEVER delete files or directories silently. Always announce and wait for confirmation.
+- **Resource Management**: Always use `finally` blocks or "using" patterns to ensure driver disconnection and tunnel closure.
+- **No Unnecessary Dependencies**: Remove unused dependencies from `package.json`.
+- **No Automation overheating**: Do not over-engineer or over-abstract. Focus on solving immediate problems.
