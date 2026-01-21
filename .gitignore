@@ -2,7 +2,7 @@ node_modules
 .DS_Store
 .env
 .cursor
-ui/
-landing/
-core/
-cli/
+/ui/
+/landing/
+/core/
+/cli/
