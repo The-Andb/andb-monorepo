@@ -30,18 +30,18 @@
 - [x] `MigratorService`: Throw error nếu target là Dump
 - [x] `DumpDriver`: Parser xử lý DELIMITER
 
-### Phase 2: UI - Visual Restrictions ⏳
+### Phase 2: UI - Visual Restrictions ✅
 
-- [ ] **2.1** Disable nút "Apply Migration" / "Sync" khi target là dump connection
+- [x] **2.1** Disable nút "Apply Migration" / "Sync" khi target là dump connection
   - File: `ui/src/views/Compare.vue`
-  - Logic: Check `targetConn.type === 'dump'`
+  - Logic: Already has `:disabled="isTargetDump"` on buttons
 
-- [ ] **2.2** Hiển thị badge "READ-ONLY" cho dump connections
-  - File: `ui/src/components/ConnectionManager.vue` (list view)
-  - File: `ui/src/views/Compare.vue` (pair selector)
+- [x] **2.2** Hiển thị badge "STATIC" cho dump connections
+  - Already exists in Compare.vue (line 14, 17)
 
-- [ ] **2.3** Hiển thị warning tooltip khi hover nút bị disable
-  - Message: "Cannot sync to static SQL dump file"
+- [x] **2.3** Toast warning khi batch migrate vào dump
+  - Added guard to `openBatchMigrateModal()`
+  - Added i18n: `compare.dumpReadOnly`, `compare.cannotMigrateToDump`
 
 ### Phase 3: Parser Robustness ⏳
 
