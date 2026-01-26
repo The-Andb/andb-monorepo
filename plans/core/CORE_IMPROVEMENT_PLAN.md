@@ -10,25 +10,7 @@ This document outlines the strategic evolution of `@the-andb/core` from a functi
 
 ## 🏗 Phase 0: The Great Decoupling (Foundation)
 
-_Goal: Abstract the current MySQL logic so the Core doesn't know what DB it's talking to._
-
-- [x] **Define Interfaces (The Contract)**
-  - `IDatabaseDriver`: `connect()`, `disconnect()`, `query()`, `getIntrospectionService()`, `getDDLGenerator()`.
-    - **Add**: `getSessionContext()` (ensures consistent `sql_mode`, `time_zone`, and `lock_wait_timeout`).
-  - `IIntrospectionService`: `listTables()`, `getDDL(type, name)`, `getChecksums()`.
-  - `IDDLGenerator`: `generateCreate(obj)`, `generateAlter(diff)`.
-- [x] **Refactor MySQL Driver**
-  - Move all `mysql2` logic from `services/*.js` into `core/drivers/mysql/MySQLDriver.js`.
-  - Ensure all existing tests pass with the new abstraction layer.
-  - **Decoupled**: `ExporterService` no longer generates SQL. Uses `IntrospectionService` to `listX` and `getXDDL`.
-  - **Decoupled**: `MonitorService` now delegates to `IMonitoringService` in the driver. No SQL in services.
-  - **Decoupled**: `ComparatorService` uses `IDDLParser` for parsing and `IDDLGenerator` for table comparison/delta generation.
-- [x] **Standardized Driver Set (Strategy Pattern)**
-  - Implement the **Strategy Pattern** to select the correct driver at runtime based on config.
-  - Create a standard suite of drivers for major SQL dialects.
-- [x] **Configuration Update**
-  - Update `andb.config.js` to accept `type: 'postgres' | 'mysql' | 'mssql' | 'sqlite' | 'oracle' | 'mariadb'`.
-  - _Done_: Container and Factory now support dynamic driver loading.
+w
 
 ## 🏗 Phase 1: Infrastructure & Foundation
 
@@ -120,3 +102,6 @@ _Goal: Go beyond MySQL._
 1.  **Refactor**: (Done) Extract `mysql2` calls into `drivers/mysql/MySQLDriver.js` ensuring `IDatabaseDriver` compliance.
 2.  **Feature**: Implement `ConnectionFactory` with **Advisory Locks** support.
 3.  **Parsers**: (Done) Upgrade `DDLParser` to include basic Semantic Normalization and structured parsing (Table/Trigger).
+4.  **Core Upgrade (CRITICAL)**: Replace legacy text-based comparison with **Algorithmic/Semantic Comparison Engine**.
+    - **Objective**: Move away from fragile text comparison to robust tree/object comparison.
+    - **Benefit**: Eliminate false positives (whitespace, attribute ordering, compatible types) and enable "Intelligent Drift Detection".

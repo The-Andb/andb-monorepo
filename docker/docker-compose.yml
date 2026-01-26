@@ -14,7 +14,7 @@ services:
       - "3306:3306"
     volumes:
       - mysql_dev_data:/var/lib/mysql
-      - ./docker/init-dev.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./init-dev.sql:/docker-entrypoint-initdb.d/init.sql
     command: --default-authentication-plugin=mysql_native_password
     healthcheck:
       test:
@@ -45,7 +45,7 @@ services:
       - "3307:3306"
     volumes:
       - mysql_stage_data:/var/lib/mysql
-      - ./docker/init-stage.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./init-stage.sql:/docker-entrypoint-initdb.d/init.sql
     command: --default-authentication-plugin=mysql_native_password
     healthcheck:
       test:
@@ -76,7 +76,7 @@ services:
       - "3308:3306"
     volumes:
       - mysql_uat_data:/var/lib/mysql
-      - ./docker/init-uat.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./init-uat.sql:/docker-entrypoint-initdb.d/init.sql
     command: --default-authentication-plugin=mysql_native_password
     healthcheck:
       test:
@@ -107,7 +107,7 @@ services:
       - "3309:3306"
     volumes:
       - mysql_prod_data:/var/lib/mysql
-      - ./docker/init-prod.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./init-prod.sql:/docker-entrypoint-initdb.d/init.sql
     command: --default-authentication-plugin=mysql_native_password
     healthcheck:
       test:

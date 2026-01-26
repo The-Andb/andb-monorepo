@@ -6,3 +6,6 @@ node_modules
 /landing/
 /core/
 /cli/
+.agent
+.antigravity
+

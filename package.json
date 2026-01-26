@@ -7,10 +7,16 @@
     "cli",
     "landing"
   ],
+  "dependencies": {
+    "ssh2": "^1.15.0"
+  },
   "scripts": {
-    "dev:ui": "npm run dev --workspace=ui",
+    "dev:ui": "npm run electron:dev --workspace=ui",
     "dev:cli": "npm run dev --workspace=cli",
     "build:core": "npm run build --workspace=core",
-    "test": "npm test --workspaces"
+    "test": "npm test --workspaces",
+    "test:ui": "npm run test:ui --workspace=ui",
+    "test:e2e": "npm run test:e2e --workspace=ui",
+    "test:core": "npm test --workspace=core"
   }
 }
