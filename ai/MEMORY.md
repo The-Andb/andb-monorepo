@@ -57,6 +57,7 @@
 - Parser must handle custom delimiters (triggers, procedures)
 - Deep before Wide strategy — master MySQL first
 - Storage: FileStorage (CLI), SQLiteStorage (UI), HybridStorage (Pro)
+- **Store Init (Pinia)**: Use `initPromise` guards to prevent race conditions during concurrent `reloadData()` or component mounting. Overwriting `ref` state during slow loads is a major source of bugged "ghost items".
 
 ---
 
@@ -73,6 +74,7 @@
 
 | File                                  | Purpose                       |
 | ------------------------------------- | ----------------------------- |
+| `ai/the-flow.md`                      | AI setup & workflow guidebook |
 | `plans/ARCHITECTURE.md`               | Storage strategy              |
 | `plans/MAIN_PLAN.md`                  | 2026 roadmap                  |
 | `plans/core/CORE_IMPROVEMENT_PLAN.md` | Core engine plan              |
@@ -83,6 +85,10 @@
 
 ## 📅 Session Log
 
-| Date       | Session Summary                                                                        |
-| ---------- | -------------------------------------------------------------------------------------- |
-| 2026-01-26 | AI folder structure initialized with full context from AI.md, .cursorrules, and plans/ |
+| Date       | Session Summary                                                                                                                          |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-01-26 | AI folder structure initialized with full context from AI.md, .cursorrules, and plans/                                                   |
+| 2026-01-26 | Implemented dump comparison Phase 2: added `isTargetDump` guard with toast to `openBatchMigrateModal()`, added i18n (EN/VI)              |
+| 2026-01-27 | Fixed `DumpDriver` trigger parsing, added bulk actions to global templates, and verified via E2E/Unit tests.                             |
+| 2026-01-27 | Resolved Connection Duplication bug via `initPromise` store guards and explicit project targeting in `addConnection`.                    |
+| 2026-01-27 | Analyzed connection duplication & project isolation feedback. Updated PLAN.md with 3-phase fix: Deduplication, Isolation, UI Refinement. |

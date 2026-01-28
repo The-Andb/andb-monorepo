@@ -163,6 +163,7 @@
 
 ## 📚 Reference Documents
 
+- `ai/the-flow.md` — AI setup & workflow guidebook
 - `plans/ARCHITECTURE.md` — Storage strategy & schema
 - `plans/MAIN_PLAN.md` — Executive roadmap
 - `plans/QUALITY_CONTROL_PLAN.md` — Testing strategy

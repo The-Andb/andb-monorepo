@@ -4,117 +4,76 @@
 
 ---
 
-## 🎯 Current Task: Hoàn Thiện Dump Comparison
+## 🎯 Current Task: Refactor "Fat" Components (Composable Pattern)
 
-**Goal:** Đảm bảo tính năng so sánh schema từ SQL dump file hoạt động hoàn chỉnh và an toàn.
+**Goal:** Refactor logic-heavy Vue components (`Compare.vue`, `GlobalSchemaView.vue`) into reusable, testable **Composables**. Align with "Thin Components, Fat Composables".
 
-**Reference:** `compare-dump-enhance.md`
+**Priority**: High
 
 ---
 
 ## 📊 Status
 
-| Phase          | Status         | Notes                      |
-| -------------- | -------------- | -------------------------- |
-| Analysis       | ✅ Done        | Reviewed spec, code, tests |
-| Planning       | 🔄 In Progress | This document              |
-| Implementation | ⏳ Waiting     | Blocked on plan approval   |
-| Review         | ⏳ Waiting     | —                          |
+| Phase          | Status         | Notes                                        |
+| -------------- | -------------- | -------------------------------------------- |
+| Analysis       | ✅ Done        | Identified `Compare.vue` (~1400 lines) as P0 |
+| Planning       | ✅ Done        | Strategy defined                             |
+| Implementation | 🚧 In Progress | Phase 1 (Compare.vue) starting               |
+| Review         | ⏳ Pending     |                                              |
 
 ---
 
 ## 📝 Task Breakdown
 
-### Phase 1: Core - DBA Restrictions ✅ (Already Done)
+### Phase 1: The "Compare" Review (Highest Impact)
 
-- [x] `MigratorService`: Throw error nếu target là Dump
-- [x] `DumpDriver`: Parser xử lý DELIMITER
+> Focus on extracting logic from `Compare.vue`.
 
-### Phase 2: UI - Visual Restrictions ✅
+- [ ] **1.1: Create `useCompareCore`**
+  - Move API calls (`invoke('compare_schemas')`, etc.) here.
+  - Handle loading states (`isComparing`, `loading`).
+  - Manage raw `diff` result data.
+- [ ] **1.2: Create `useCompareState`**
+  - Manage UI state: `viewMode` (tree/list), `filterType`, `searchQuery`.
+  - Handle selection logic.
+- [ ] **1.3: Refactor `Compare.vue`**
+  - Replace internal methods with updating composables.
+  - Keep only layout and event binding in the `.vue` file.
+  - **Goal:** Reduce LOC to < 500.
 
-- [x] **2.1** Disable nút "Apply Migration" / "Sync" khi target là dump connection
-  - File: `ui/src/views/Compare.vue`
-  - Logic: Already has `:disabled="isTargetDump"` on buttons
+### Phase 2: Schema & Sidebar Optimization (Follow-up)
 
-- [x] **2.2** Hiển thị badge "STATIC" cho dump connections
-  - Already exists in Compare.vue (line 14, 17)
+- [ ] **2.1: Create `useSchemaExplorer`** (for `GlobalSchemaView.vue`)
+- [ ] **2.2: Enhance `useProjectNavigation`** (for `Sidebar.vue`)
 
-- [x] **2.3** Toast warning khi batch migrate vào dump
-  - Added guard to `openBatchMigrateModal()`
-  - Added i18n: `compare.dumpReadOnly`, `compare.cannotMigrateToDump`
+### Phase 3: Testing & Validation
 
-### Phase 3: Parser Robustness ⏳
-
-- [ ] **3.1** Test parser với complex dump files (triggers, procedures với DELIMITER)
-  - File: `core/src/drivers/mysql/DumpDriver.js` → `_parseDump()`
-  - Existing tests: TBD
-
-- [ ] **3.2** Handle edge cases:
-  - Multiple DELIMITER changes
-  - Nested procedures
-  - UTF-8 special chars
-
-### Phase 4: Testing ⏳
-
-- [ ] **4.1** Enable và fix `dump-ops.e2e.spec.ts`
-- [ ] **4.2** Add unit tests cho `DumpDriver._parseDump()`
-- [ ] **4.3** Add compare test: Dump vs Live connection
+- [ ] **3.1: Unit Tests for Composables**
 
 ---
 
 ## ⚠️ Risks & Unknowns
 
-| Risk                        | Impact | Mitigation                |
-| --------------------------- | ------ | ------------------------- |
-| Parser fails on complex SQL | High   | Test với real-world dumps |
-| UI state not synced         | Medium | Verify reactive bindings  |
-| E2E tests flaky             | Low    | Use stable selectors      |
-
----
-
-## ✅ Clarifications (Resolved)
-
-| Question       | Answer                          |
-| -------------- | ------------------------------- |
-| Error UX       | **Toast error** — nhẹ nhàng     |
-| Cache clearing | **Không cần** — dump là static  |
-| Test priority  | **Unit test → Vite test → E2E** |
-
----
-
-## 🧪 Verification Plan
-
-### Automated Tests
-
-```bash
-# Core unit tests
-cd core && npm test -- --grep "DumpDriver"
-
-# UI E2E tests
-cd ui && npx playwright test dump-ops.e2e.spec.ts --headed
-```
-
-### Manual Verification
-
-1. **Tạo dump connection:**
-   - Project Settings → Add Connection → Type: Dump
-   - Select file `.sql`
-   - Verify hiện badge "READ-ONLY"
-
-2. **Compare dump vs live:**
-   - Compare View → Select pair (Dump → Live)
-   - Verify diff hiển thị đúng
-   - Verify nút "Sync" **enabled** (dump is source, live is target)
-
-3. **Compare live vs dump:**
-   - Select pair (Live → Dump)
-   - Verify nút "Sync" **disabled** với tooltip
-   - Click → Verify không có action
+| Risk                         | Impact | Mitigation                                      |
+| ---------------------------- | ------ | ----------------------------------------------- |
+| Regression in Compare Logic  | High   | Keep original component backed up or use git    |
+| State synchronization issues | Medium | Define strict ownership of state in composables |
 
 ---
 
 ## 📅 History
 
-| Date       | Update                          |
-| ---------- | ------------------------------- |
-| 2026-01-26 | Initial plan created by Planner |
+### Previous Task: Fix Connection Management (Jan 2026)
+
+| Phase          | Status  | Notes                                   |
+| -------------- | ------- | --------------------------------------- |
+| Authentication | ✅ Done | Deduplication & Cleanup implemented     |
+| Isolation      | ✅ Done | Sync pairs scoped to project            |
+| UI Fixes       | ✅ Done | Dump connections "Test" button disabled |
+
+### Previous Task: Hoàn Thiện Dump Comparison (Jan 2026)
+
+| Phase                    | Status  | Notes                                               |
+| ------------------------ | ------- | --------------------------------------------------- |
+| Core - DBA Restrictions  | ✅ Done | `MigratorService` guards, `DumpDriver` parser fixes |
+| UI - Visual Restrictions | ✅ Done | Disabled buttons, "STATIC" badge, Toast warnings    |

@@ -64,3 +64,27 @@ Create `/ai` folder with:
 - All AI work goes through files
 - Agents have defined roles
 - Memory persists across sessions
+
+### ADR-002: Pinia Store Initialization Guards
+
+**Date:** 2026-01-27
+**Status:** Accepted
+
+#### Context
+
+Concurrent store initialization and project switching caused race conditions where newly created demo data was overwritten by slow loading from storage, leading to connection duplication and orphaned items.
+
+#### Decision
+
+All Pinia stores must implement an `initPromise` singleton guard pattern. Actions requiring a "ready" state (like `setupDemo`) must explicitly `await init()`.
+
+#### Rationale
+
+- Prevents intermediate "empty" state visibility.
+- Ensures absolute sequential consistency during parallel reloads.
+- Minimal overhead but high reliability gain.
+
+#### Consequences
+
+- Stores slightly more complex.
+- Initialization is guaranteed to be stable and atomic.
