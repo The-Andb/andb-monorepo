@@ -3,9 +3,11 @@ node_modules
 .env
 .cursor
 /ui/
+/ui-next/
 /landing/
 /core/
+/core-nest/
 /cli/
 .agent
 .antigravity
-
+/org/
