@@ -8,6 +8,7 @@
 
 - **Monorepo**: `core`, `ui`, `cli`, `landing`
 - **Core principle**: All logic in `@the-andb/core`
+- **New Core Engine**: `@the-andb/core-nest` (NestJS/TypeScript) - _In Development_
 - **UI**: Electron + Vue 3, presentation only
 - **Database focus**: MySQL schema comparison & sync
 - **Current Phase**: Phase 2 — Hardening (MySQL Deep Dive)
@@ -18,6 +19,7 @@
 
 - TypeScript for UI and new core code
 - Vue 3 Composition API (`<script setup>`)
+- NestJS for Core (Modules, Services, DI)
 - Tailwind CSS v3 for styling
 - All text must be i18n localized
 - Credentials encrypted via `core/src/utils/crypt.ts`
@@ -33,6 +35,7 @@
 - Pre-flight checks: replication lag, long queries, disk space
 - Schema diffing MUST be AST/semantic-based
 - DRY-RUN by default for all DDL operations
+- **Twin Engine Refactor**: `core-nest` must maintain strict 1:1 parity with `core`. Verify with "Mirror Tests".
 
 ---
 
@@ -58,15 +61,19 @@
 - Deep before Wide strategy — master MySQL first
 - Storage: FileStorage (CLI), SQLiteStorage (UI), HybridStorage (Pro)
 - **Store Init (Pinia)**: Use `initPromise` guards to prevent race conditions during concurrent `reloadData()` or component mounting. Overwriting `ref` state during slow loads is a major source of bugged "ghost items".
+- **Refactoring Strategy**: "Twin Engines" (Side-by-side build) is safer than in-place refactoring for critical core logic.
+- **Strategy Pattern**: Essential for supporting Multiple Drivers (`MysqlDriver`, `DumpDriver`) transparently behind `IDatabaseDriver`.
+- **Offline Comparison**: `DumpDriver` + `ComparatorService` allows comparing large SQL dumps efficiently without a running database.
 
 ---
 
-## � Design Patterns in Use
+## Design Patterns in Use
 
-- **Strategy**: Database drivers
-- **Factory**: `ConnectionFactory.create(config)`
+- **Strategy**: Database drivers (MySQL, Dump)
+- **Factory**: `DriverModule` (`useFactory`), `ConnectionFactory.create(config)`
 - **Singleton**: Connection pools, Logger
 - **Observer**: Migration progress, long operations
+- **Dependency Injection**: NestJS (Core)
 
 ---
 
@@ -79,16 +86,20 @@
 | `plans/MAIN_PLAN.md`                  | 2026 roadmap                  |
 | `plans/core/CORE_IMPROVEMENT_PLAN.md` | Core engine plan              |
 | `plans/QUALITY_CONTROL_PLAN.md`       | Testing strategy              |
+| `plans/core/CORE_PARITY_MAP.md`       | Legacy vs Nest parity status  |
 | `.cursorrules`                        | Full AI rules & safety checks |
 
 ---
 
 ## 📅 Session Log
 
-| Date       | Session Summary                                                                                                                          |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| 2026-01-26 | AI folder structure initialized with full context from AI.md, .cursorrules, and plans/                                                   |
-| 2026-01-26 | Implemented dump comparison Phase 2: added `isTargetDump` guard with toast to `openBatchMigrateModal()`, added i18n (EN/VI)              |
-| 2026-01-27 | Fixed `DumpDriver` trigger parsing, added bulk actions to global templates, and verified via E2E/Unit tests.                             |
-| 2026-01-27 | Resolved Connection Duplication bug via `initPromise` store guards and explicit project targeting in `addConnection`.                    |
-| 2026-01-27 | Analyzed connection duplication & project isolation feedback. Updated PLAN.md with 3-phase fix: Deduplication, Isolation, UI Refinement. |
+| Date       | Session Summary                                                                                                                           |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-01-26 | AI folder structure initialized with full context from AI.md, .cursorrules, and plans/                                                    |
+| 2026-01-26 | Implemented dump comparison Phase 2: added `isTargetDump` guard with toast to `openBatchMigrateModal()`, added i18n (EN/VI)               |
+| 2026-01-27 | Fixed `DumpDriver` trigger parsing, added bulk actions to global templates, and verified via E2E/Unit tests.                              |
+| 2026-01-27 | Resolved Connection Duplication bug via `initPromise` store guards and explicit project targeting in `addConnection`.                     |
+| 2026-01-27 | Analyzed connection duplication & project isolation feedback. Updated PLAN.md with 3-phase fix: Deduplication, Isolation, UI Refinement.  |
+| 2026-01-29 | **NestJS Migration**: Initialized `core-nest` with "Twin Engine" strategy. Ported `DDLParser`, implemented `MysqlDriver` & `DumpDriver`.  |
+| 2026-01-29 | **Core Logic**: Implemented `ComparatorService` & `MigratorService` for Tables. Verified successfully on real-world SQL dumps.            |
+| 2026-01-29 | **Full Parity**: Fixed ESLint, ported CLI commands (`generate`, `helper`), and extended comparator to support Views, Procs, and Triggers. |
