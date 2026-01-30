@@ -14,8 +14,8 @@ This project follows a **Polyrepo** structure managed under a single root direct
 
 | Directory         | Description                          | Git Repository                                                    |
 | ----------------- | ------------------------------------ | ----------------------------------------------------------------- |
-| **`ui/`**         | Desktop Application (Electron/Vue)   | [The-Andb/andb](https://github.com/The-Andb/andb)                 |
-| **`core/`**       | Core Database Engine (Logic/Drivers) | [The-Andb/andb-core](https://github.com/The-Andb/andb-core)       |
+| **`ui/`**         | Desktop Application (Electron/Vue)   | [The-Andb/next-ui](https://github.com/The-Andb/next-ui)           |
+| **`core/`**       | Core Database Engine (Logic/Drivers) | [The-Andb/core-nestjs](https://github.com/The-Andb/core-nestjs)   |
 | **`cli/`**        | Command Line Tool                    | [The-Andb/andb-cli](https://github.com/The-Andb/andb-cli)         |
 | **`landing/`**    | Marketing Website                    | [The-Andb/andb-landing](https://github.com/The-Andb/andb-landing) |
 | **`andb-plans/`** | Documentation, Specs, and Roadmaps   | _Tracked in root_                                                 |
@@ -49,10 +49,10 @@ Run the following commands to populate the ignored sub-directories with their re
 
 ```bash
 # UI (The Main App)
-git clone https://github.com/The-Andb/andb.git ui
+git clone https://github.com/The-Andb/next-ui.git ui
 
 # Core (The Library)
-git clone https://github.com/The-Andb/andb-core.git core
+git clone https://github.com/The-Andb/core-nestjs.git core
 
 # CLI (The Tooling)
 git clone https://github.com/The-Andb/andb-cli.git cli
