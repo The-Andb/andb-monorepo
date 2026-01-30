@@ -52,16 +52,22 @@ Run the following commands to populate the ignored sub-directories with their re
 
 ```bash
 # UI (The Main App)
-git clone https://github.com/The-Andb/andb-desktop.git ui
+git clone https://github.com/The-Andb/andb-desktop.git andb-desktop
 
 # Core (The Library)
-git clone https://github.com/The-Andb/andb-core.git core
+git clone https://github.com/The-Andb/andb-core.git andb-core
+
+# Legacy UI
+git clone https://github.com/The-Andb/andb-desktop-legacy.git andb-desktop-legacy
+
+# Legacy Core
+git clone https://github.com/The-Andb/andb-core-legacy.git andb-core-legacy
 
 # CLI (The Tooling)
-git clone https://github.com/The-Andb/andb-cli.git cli
+git clone https://github.com/The-Andb/andb-cli.git andb-cli
 
 # Landing Page (WWW)
-git clone https://github.com/The-Andb/andb-www.git landing
+git clone https://github.com/The-Andb/andb-www.git andb-www
 ```
 
 ---
@@ -75,7 +81,7 @@ Since `ui` and `cli` depend on `core`, you need to link them locally to test cha
 First, make sure `andb-core` is built and registered globally on your machine.
 
 ```bash
-cd core
+cd andb-core
 npm install
 npm run build      # IMPORTANT: Changes must be built to be visible
 npm link           # Registers '@the-andb/core' symlink globally
@@ -89,14 +95,14 @@ Link the local version of core into the consumer projects.
 **For Desktop UI:**
 
 ```bash
-cd ui
+cd andb-desktop
 npm link @the-andb/core
 ```
 
 **For CLI:**
 
 ```bash
-cd cli
+cd andb-cli
 npm link @the-andb/core
 ```
 
