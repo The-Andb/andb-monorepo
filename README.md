@@ -2,6 +2,12 @@
 
 Monorepo orchestration for the Andb ecosystem. This repository manages the high-level project structure, documentation (`plans/`), and docker configurations, while source code resides in separate "poly" repositories.
 
+⚠️ **Proprietary Software Notice** ⚠️
+
+This project is **Source-Available** but **NOT Open Source**.
+You are free to view, evaluate, and test this software locally, but strict commercial restrictions apply.
+See [LICENSE](./LICENSE) and [COMMERCIAL.md](./COMMERCIAL.md) for details.
+
 ## 📂 Repository Structure
 
 This project follows a **Polyrepo** structure managed under a single root directory.
@@ -14,6 +20,17 @@ This project follows a **Polyrepo** structure managed under a single root direct
 | **`landing/`**    | Marketing Website                    | [The-Andb/andb-landing](https://github.com/The-Andb/andb-landing) |
 | **`andb-plans/`** | Documentation, Specs, and Roadmaps   | _Tracked in root_                                                 |
 | **`docker/`**     | Infrastructure (Docker Compose)      | _Tracked in root_                                                 |
+
+---
+
+## ⚖️ License & Usage
+
+**The Andb Public License (APL-1.0)**
+
+- ✅ **Allowed**: View source, Clone repo, Run locally for evaluation/education.
+- ❌ **Prohibited**: Commercial use, SaaS hosting, Redistribution, Forking for public competition.
+
+For commercial licenses, please contact: `licensing@andb.dev`
 
 ---
 
@@ -48,7 +65,7 @@ git clone https://github.com/The-Andb/andb-landing.git landing
 
 ## 🔗 Local Development (Symlinking)
 
-Since `ui` and `cli` depend on `core`, you need to link them locally to test changes immediately without publishing to NPM.
+Since `ui` and `cli` depend on `core`, you need to link them locally to test changes immediately.
 
 ### Step 1: Build & Link Core
 
@@ -129,4 +146,4 @@ Default credentials for local testing:
 | **UAT**     | `*-uat`      | 3309         | 5435            | `root` / `postgres` | `root` / `postgres` | `andb_uat`   |
 | **Prod**    | `*-prod`     | 3310         | 5436            | `root` / `postgres` | `root` / `postgres` | `andb_prod`  |
 
-_Note: Data is automatically initialized using scripts in `docker/init-_.sql`.\*
+_Note: Data is automatically initialized using scripts in `docker/init-*.sql`._

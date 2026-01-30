@@ -8,9 +8,21 @@ This document outlines the strategic evolution of `@the-andb/core` from a functi
 
 ---
 
-## 🏗 Phase 0: The Great Decoupling (Foundation)
+## 🏗 Phase 0: The Great Decoupling (Foundation) - ✅ COMPLETED (Jan 29, 2026)
 
-w
+_Goal: Isolate the Core Engine from the UI Layer to solve Dependency Injection (DI) instability._
+
+- [x] **The Core Bridge Pattern**:
+  - Implemented `CoreBridge` as the **sole entry point** for the UI to interact with the backend.
+  - NestJS now initializes and runs independently inside its own context bubble.
+  - UI (Electron) no longer manually injects services; it calls `CoreBridge.execute('operation', payload)`.
+- [x] **Orchestration Service (The Conductor)**:
+  - Centralized logic for `export`, `compare`, `migrate` into a proper NestJS Service.
+  - Manages dependencies (`STORAGE`, `CONFIG`, `DRIVER`) internally using standard DI `constructor` injection.
+  - Eliminated "monkey-patching" of services in the UI layer.
+- [x] **String Token Architecture**:
+  - Replaced fragile Class-based injection tokens with robust `String` tokens (e.g., `'STORAGE_SERVICE'`).
+  - Solves the `UnknownElementException` caused by bundlers/symlinks in Monorepo setups.
 
 ## 🏗 Phase 1: Infrastructure & Foundation
 

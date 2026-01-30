@@ -7,12 +7,13 @@
 
 ## 📊 Strategic Timeline at a Glance
 
-| Phase       | Focus Area       | Key Value Proposition                            | Timeline       | Status          |
-| :---------- | :--------------- | :----------------------------------------------- | :------------- | :-------------- |
-| **Phase 1** | **Foundation**   | Stability, Auto-updates, Basic UX (MySQL)        | ✅ Done        | **Live**        |
-| **Phase 2** | **Hardening**    | MySQL Deep Dive, Architecture Refactor for Scale | Jan - Feb 2026 | **In Progress** |
-| **Phase 3** | **Expansion**    | PostgreSQL Support                               | Feb - Mar 2026 | Scheduled       |
-| **Phase 4** | **Monetization** | Pro Features (SSH, Safe Mode, Team Tools)        | Mar 2026+      | Planned         |
+| Phase         | Focus Area       | Key Value Proposition                            | Timeline       | Status          |
+| :------------ | :--------------- | :----------------------------------------------- | :------------- | :-------------- |
+| **Phase 1**   | **Foundation**   | Stability, Auto-updates, Basic UX (MySQL)        | ✅ Done        | **Live**        |
+| **Phase 2**   | **Hardening**    | MySQL Deep Dive, Architecture Refactor for Scale | Jan - Feb 2026 | **In Progress** |
+| **Phase 2.5** | **Marketing**    | High-Conversion Landing Page & Brand Presence    | Feb 2026       | **Planned**     |
+| **Phase 3**   | **Expansion**    | PostgreSQL Support                               | Feb - Mar 2026 | Scheduled       |
+| **Phase 4**   | **Monetization** | Pro Features (SSH, Safe Mode, Team Tools)        | Mar 2026+      | Planned         |
 
 ---
 
