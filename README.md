@@ -12,14 +12,17 @@ See [LICENSE](./LICENSE) and [COMMERCIAL.md](./COMMERCIAL.md) for details.
 
 This project follows a **Polyrepo** structure managed under a single root directory.
 
-| Directory         | Description                          | Git Repository                                                    |
-| ----------------- | ------------------------------------ | ----------------------------------------------------------------- |
-| **`ui/`**         | Desktop Application (Electron/Vue)   | [The-Andb/andb-desktop](https://github.com/The-Andb/andb-desktop) |
-| **`core/`**       | Core Database Engine (Logic/Drivers) | [The-Andb/andb-core](https://github.com/The-Andb/andb-core)       |
-| **`cli/`**        | Command Line Tool                    | [The-Andb/andb-cli](https://github.com/The-Andb/andb-cli)         |
-| **`landing/`**    | Marketing Website                    | [The-Andb/andb-www](https://github.com/The-Andb/andb-www)         |
-| **`andb-plans/`** | Documentation, Specs, and Roadmaps   | _Tracked in root_                                                 |
-| **`docker/`**     | Infrastructure (Docker Compose)      | _Tracked in root_                                                 |
+| Directory         | Description                          | Git Repository                                                                  |
+| ----------------- | ------------------------------------ | ------------------------------------------------------------------------------- |
+| **`ui/`**         | Desktop Application (Electron/Vue)   | [The-Andb/andb-desktop](https://github.com/The-Andb/andb-desktop)               |
+| **`core/`**       | Core Database Engine (Logic/Drivers) | [The-Andb/andb-core](https://github.com/The-Andb/andb-core)                     |
+| **`cli/`**        | Command Line Tool                    | [The-Andb/andb-cli](https://github.com/The-Andb/andb-cli)                       |
+| **`landing/`**    | Marketing Website                    | [The-Andb/andb-www](https://github.com/The-Andb/andb-www)                       |
+| **`andb-plans/`** | Documentation, Specs, and Roadmaps   | _Tracked in root_                                                               |
+| **`docker/`**     | Infrastructure (Docker Compose)      | _Tracked in root_                                                               |
+| **Legacy**        |                                      |                                                                                 |
+| -                 | Desktop Application (Legacy)         | [The-Andb/andb-desktop-legacy](https://github.com/The-Andb/andb-desktop-legacy) |
+| -                 | Core Engine (Node.js Legacy)         | [The-Andb/andb-core-legacy](https://github.com/The-Andb/andb-core-legacy)       |
 
 ---
 
