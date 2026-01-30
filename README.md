@@ -72,7 +72,7 @@ Since `ui` and `cli` depend on `core`, you need to link them locally to test cha
 
 ### Step 1: Build & Link Core
 
-First, make sure `core` is built and registered globally on your machine.
+First, make sure `andb-core` is built and registered globally on your machine.
 
 ```bash
 cd core
@@ -82,11 +82,11 @@ npm link           # Registers '@the-andb/core' symlink globally
 cd ..
 ```
 
-### Step 2: Consumer Projects (UI & CLI)
+### Step 2: Consumer Projects (andb-desktop & andb-cli)
 
 Link the local version of core into the consumer projects.
 
-**For UI:**
+**For Desktop UI:**
 
 ```bash
 cd ui
