@@ -25,4 +25,4 @@ You **maintain NO rights** to use The Andb for the following without a commercia
 
 We are currently in a public preview phase. Detailed pricing and commercial licensing options will be announced soon.
 
-For early access to commercial licenses or enterprise inquiries, please contact: **licensing@andb.dev**
+For early access to commercial licenses or enterprise inquiries, please contact: **ph4n4n@gmail.com**

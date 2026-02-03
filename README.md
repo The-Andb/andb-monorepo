@@ -33,7 +33,7 @@ This project follows a **Polyrepo** structure managed under a single root direct
 - ✅ **Allowed**: View source, Clone repo, Run locally for evaluation/education.
 - ❌ **Prohibited**: Commercial use, SaaS hosting, Redistribution, Forking for public competition.
 
-For commercial licenses, please contact: `licensing@andb.dev`
+For commercial licenses, please contact: `ph4n4n@gmail.com`
 
 ---
 

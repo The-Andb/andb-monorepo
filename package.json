@@ -2,28 +2,32 @@
   "name": "the-andb",
   "private": true,
   "workspaces": [
-    "ui",
-    "core",
-    "cli",
-    "landing"
+    "andb-desktop",
+    "andb-core",
+    "andb-cli",
+    "andb-www"
   ],
   "dependencies": {
     "ssh2": "^1.15.0"
   },
   "scripts": {
-    "dev:ui": "npm run electron:dev --workspace=ui",
-    "dev:cli": "npm run dev --workspace=cli",
-    "dev:landing": "npm run dev --workspace=landing",
-    "build:core": "npm run build --workspace=core",
-    "build:ui": "npm run build --workspace=ui",
-    "build:landing": "npm run build --workspace=landing",
-    "build:all": "npm run build:core && npm run build:ui && npm run build:landing",
-    "ui:prod": "npm run test:prod --workspace=ui",
-    "ui:package": "npm run electron:build --workspace=ui",
-    "ui:publish": "npm run electron:publish --workspace=ui",
+    "dev:desktop": "npm run electron:dev --workspace=andb-desktop",
+    "dev:webapp": "npm run dev --workspace=andb-desktop",
+    "dev:cli": "npm run dev --workspace=andb-cli",
+    "dev:www": "npm run dev --workspace=andb-www",
+    "build:core": "npm run build --workspace=andb-core",
+    "build:desktop": "npm run build --workspace=andb-desktop",
+    "build:www": "npm run build --workspace=andb-www",
+    "build:all": "npm run build:core && npm run build:desktop && npm run build:www",
+    "desktop:prod": "npm run test:prod --workspace=andb-desktop",
+    "desktop:package": "npm run electron:build --workspace=andb-desktop",
+    "desktop:publish": "npm run electron:publish --workspace=andb-desktop",
     "test": "npm test --workspaces",
-    "test:ui": "npm run test:ui --workspace=ui",
-    "test:e2e": "npm run test:e2e --workspace=ui",
-    "test:core": "npm test --workspace=core"
+    "test:desktop": "npm run test:ui --workspace=andb-desktop",
+    "test:e2e": "npm run test:e2e --workspace=andb-desktop",
+    "test:core": "npm test --workspace=andb-core"
+  },
+  "devDependencies": {
+    "electron": "^34.0.0"
   }
 }
