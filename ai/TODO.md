@@ -32,3 +32,4 @@
 - [x] 2026-01-29: Verified full comparison logic with `test-real-dumps.ts`
 - [x] 2026-01-29: Ported `andb export`, `andb compare`, `andb migrate` commands
 - [x] 2026-01-29: Implemented HTML Reporting engine with premium templates
+- [x] 2026-02-03: Implemented Restricted User Setup flow ("the_andb") with Trust-First UI and Health Check

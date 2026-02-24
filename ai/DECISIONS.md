@@ -155,19 +155,108 @@ While the NestJS architecture supports multi-driver dependency injection (Postgr
 **Status:** Accepted
 
 #### Context
+
 "Offline Comparison" (Dump File vs DB or Dump vs Dump) is a critical feature. User needs to compare standard SQL dump files (`.sql`) without importing them into a database server first.
 The current `IDatabaseDriver` interface assumes a connection to a live server.
 
 #### Decision
+
 Implement `DumpDriver` adhering to `IDatabaseDriver`.
+
 - It acts as a "Virtual Driver" that "connects" by parsing a local file.
 - It provides an `IntrospectionService` powered by parsed memory objects.
 - It is injectable via `DriverModule` using the same Factory logic (based on config `type: 'dump'`).
 
 #### Rationale
+
 - **Uniformity:** The `ComparatorService` and UI don't need to know if they are talking to a live DB or a file. They just call `driver.getIntrospectionService().listTables()`.
 - **Flexibility:** Enables powerful flows like "Prod DB vs Local Dump" or "Dump v1 vs Dump v2" using the exact same diffing engine.
 
 #### Consequences
+
 - Must implement a robust SQL Parser in `DumpDriver` to accurately mimic `SHOW CREATE TABLE`.
 - Limited functionality: `query()` method is stubbed/not supported.
+
+### ADR-006: Centralized SQL Generation in Core
+
+**Date:** 2026-02-04
+**Status:** Accepted
+
+#### Context
+
+User setup requires SQL scripts that are database-specific (MySQL, Postgres, etc.). Generating these in the UI (Vue components) violates the architectural rule of keeping business/database logic in `core`. It also makes maintenance difficult and error-prone across different adapters (UI, CLI).
+
+#### Decision
+
+Implement `generateUserSetupScript` in the `IDatabaseDriver` interface.
+
+- Each driver (e.g., `MysqlDriver`) implements its own script generation logic.
+- `OrchestrationService` exposes this through a unified API.
+- UI/CLI adapters only request the script and display/execute it.
+
+#### Rationale
+
+- **Single Source of Truth**: Database-specific logic belongs to the driver.
+- **Safety**: Inputs can be sanitized centrally.
+- **Consistency**: UI and CLI will always generate identical setup scripts.
+
+#### Consequences
+
+- Drivers are slightly more complex.
+
+### ADR-007: Inherit & Protect Connection Model
+
+**Date:** 2026-02-04
+**Status:** Accepted
+
+#### Context
+
+The application currently has redundant connection forms at both the Global (Settings) and Project levels. This leading to "duplicate form" fatigue and inconsistent security configurations. Additionally, SSH tunneling is required but difficult to manage if distributed across every project connection.
+
+#### Decision
+
+Implement an **"Inherit & Protect"** architectural model for database connections:
+
+1.  **Central Source of Truth**: All infrastructure details (Host, Port, Username, Password, SSH Tunneling) are defined ONLY at the Global level (Connection Templates).
+2.  **Enforced Inheritance**: Project-level connections MUST inherit from a Global Template and cannot override core host/credential settings.
+3.  **Project-Specific Context**: Projects are only allowed to define/override the `database` name (if applicable) and `environment` (e.g., UAT vs Prod) to keep maintenance focused.
+4.  **Global SSH**: SSH tunnels are configured once per template, ensuring all project instances sharing that infrastructure benefit from the same secure tunnel.
+
+#### Rationale
+
+- **Security Compliance**: Sensitive info is centralized, making it easier to rotate credentials.
+- **Maintenance**: Changing a server's IP in one Global Template updates all associated Project connections instantly.
+- **Architectural Clarity**: Clearly separates "Infrastructure" (Global) from "Application Context" (Project).
+
+#### Consequences
+
+- UI at Project level will be simplified (Select Template > Verify Masked Info).
+- Existing direct project connections must be migrated to the template-based model.
+- Requires robust Global Template management UI.
+
+### ADR-008: Strict Separation of CLI and Core Logic
+
+**Date:** 2026-02-23
+**Status:** Accepted
+
+#### Context
+
+`@the-andb/core` was acting as both the business logic library and the terminal interface by bundling `nest-commander` and CLI commands directly within its `AppModule` and `src/cli` directory. This violated the architecture principle where Core should be pure logic and CLI acts simply as an adapter. It also added unnecessary terminal dependencies and weight when Core was imported by `andb-ui`. At the same time, we needed to build `andb playground` to rapidly test semantic comparison of schemas locally.
+
+#### Decision
+
+Completely decouple CLI logic from `@the-andb/core` and move it to `@the-andb/cli`.
+
+- `@the-andb/core` becomes a pure library, exporting internal feature modules (`ParserModule`, `OrchestrationModule`, etc.).
+- `@the-andb/cli` handles its own NestJS context via `CliModule`, instantiates terminal commands, reads local `.sql` files, and delegates logic to the Core modules.
+
+#### Rationale
+
+- **YAGNI/DRY Architecture**: Keeps `core` strictly decoupled from terminal presentation logic.
+- **Weight**: UI application does not inadvertently load CLI packages (`commander`, `nest-commander`).
+- **Simplicity**: Provides a dedicated package for building advanced CI/CD scripts and the `playground` tool.
+
+#### Consequences
+
+- `core` can no longer be executed directly via terminal.
+- Setup requires a unified build process where `core` must be compiled and linked into `cli` before the terminal app functions.

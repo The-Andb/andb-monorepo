@@ -5,7 +5,8 @@
     "andb-desktop",
     "andb-core",
     "andb-cli",
-    "andb-www"
+    "andb-www",
+    "andb-test"
   ],
   "dependencies": {
     "ssh2": "^1.15.0"
@@ -25,7 +26,11 @@
     "test": "npm test --workspaces",
     "test:desktop": "npm run test:ui --workspace=andb-desktop",
     "test:e2e": "npm run test:e2e --workspace=andb-desktop",
-    "test:core": "npm test --workspace=andb-core"
+    "test:core": "npm test --workspace=andb-core",
+    "test:master:aio": "(npm run test:aio --workspace=andb-test; npm run test --workspace=andb-desktop -- --coverage --run; npm run test:e2e --workspace=andb-desktop) || true; npm run report:dashboard",
+    "report:dashboard": "npm run report:dashboard --workspace=andb-test",
+    "docker:up": "cd docker && docker-compose up -d",
+    "docker:down": "cd docker && docker-compose down"
   },
   "devDependencies": {
     "electron": "^34.0.0"

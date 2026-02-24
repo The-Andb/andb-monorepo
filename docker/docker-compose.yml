@@ -16,6 +16,8 @@ services:
       - mysql_dev_data:/var/lib/mysql
       - ./init-dev.sql:/docker-entrypoint-initdb.d/init.sql
     command: --default-authentication-plugin=mysql_native_password
+    networks:
+      - andb-network
     healthcheck:
       test:
         [
@@ -47,6 +49,8 @@ services:
       - mysql_stage_data:/var/lib/mysql
       - ./init-stage.sql:/docker-entrypoint-initdb.d/init.sql
     command: --default-authentication-plugin=mysql_native_password
+    networks:
+      - andb-network
     healthcheck:
       test:
         [
@@ -78,6 +82,8 @@ services:
       - mysql_uat_data:/var/lib/mysql
       - ./init-uat.sql:/docker-entrypoint-initdb.d/init.sql
     command: --default-authentication-plugin=mysql_native_password
+    networks:
+      - andb-network
     healthcheck:
       test:
         [
@@ -109,6 +115,8 @@ services:
       - mysql_prod_data:/var/lib/mysql
       - ./init-prod.sql:/docker-entrypoint-initdb.d/init.sql
     command: --default-authentication-plugin=mysql_native_password
+    networks:
+      - andb-network
     healthcheck:
       test:
         [
@@ -124,6 +132,28 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
+  # SSH Jump Host (Custom build for TCP forwarding)
+  ssh-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.ssh
+    container_name: andb-ssh
+    hostname: andb-ssh
+    ports:
+      - "2222:2222"
+    networks:
+      - andb-network
+    depends_on:
+      - mysql-dev
+      - mysql-stage
+      - mysql-uat
+      - mysql-prod
+    restart: unless-stopped
+
+networks:
+  andb-network:
+    driver: bridge
 
 volumes:
   mysql_dev_data:

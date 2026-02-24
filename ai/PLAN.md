@@ -1,87 +1,62 @@
-# 📋 The Andb - Current Plan
+# 🗺️ The Andb - Sprint Plan (Feb 2026)
 
-> Living document - Planner role
+> Living document — Updated: Feb 05, 2026
 
----
-
-## 🎯 Current Task: NestJS Refactor (Twin Engine Strategy)
-
-**Goal:** Rebuild `@the-andb/core` using **NestJS** and **TypeScript** (MySQL Only for now).
-
-**Strategy:** "Twin Engines" - Build `core-nest` side-by-side with `core` without disrupting the legacy engine until parity is reached.
-
-**Priority:** High (Foundation for Phase 3)
+## Current Focus: SSH Integration & Distribution
 
 ---
 
-## 📊 Status
+### ✅ Recently Completed
 
-| Phase          | Status     | Notes                                                         |
-| -------------- | ---------- | ------------------------------------------------------------- |
-| Analysis       | ✅ Done    | Architecture defined (ADR-003, ADR-004)                       |
-| Planning       | ✅ Done    | Master plan created                                           |
-| Infrastructure | ✅ Done    | Phase 1 Complete. ESLint & Linting added.                     |
-| Interfaces     | ✅ Done    | Phase 2 Complete (Parser, Interfaces)                         |
-| Driver Logic   | ✅ Done    | Phase 3 Complete (Drivers + Dump + Live Test)                 |
-| Logic Engines  | ✅ Done    | Phase 4 Complete. Expanded to all DDL types.                  |
-| CLI Features   | ✅ Done    | Phase 4.6: Ported `export`, `compare`, `migrate` & Reporting. |
-| Switchover     | 🚀 Running | Phase 5 (Bridge & UI Integration).                            |
-| Hardening      | ⏳ Pending | Phase 6 & 7 (Blue/Green & Topological Sort).                  |
+- [x] **SSH Tunneling in Core**: Migrated SSH logic from UI to Core (`ssh-tunnel.ts`)
+- [x] **MysqlDriver SSH Support**: Auto-detect and establish tunnel before DB connection
+- [x] **OrchestrationService**: Map UI ssh config → Core ISshConfig, read privateKeyPath
+- [x] **Restricted User Setup (SCA)**: Full Auto/Manual flow with verification suite
 
 ---
 
-## 📝 Task Breakdown
+### 🚧 In Progress (This Week)
 
-### Phase 4.6: Main CLI Commands (✅ Done)
+#### 1. Distribution & Build
 
-- [x] **4.6.1: `ExportCommand`** (Introspection -> JSON/SQL)
-- [x] **4.6.2: `CompareCommand`** (Comparison -> Report)
-- [x] **4.6.3: `MigrateCommand`** (Execution)
-- [x] **4.6.4: HTML Report Generator** (Premium templates)
+- [ ] **macOS Build**: Configure `electron-builder` for v3.1.0 release
+- [ ] **Code Signing**: Apple Developer cert integration
+- [ ] **Auto-Update**: Test Squirrel/electron-updater flow
 
-### Phase 5: Switchover & Integration (🚀 Running)
+#### 2. Connection UX Polish
 
-- [x] **5.1: E2E Testing Framework** - Verify `core-nest` logic parity.
-- [x] **5.2: CoreBridge Implementation**
-  - [x] Create `CoreBridge` singleton in `@the-andb/core`.
-  - [x] Implement `init()` with explicit `userDataPath` for storage isolation.
-  - [x] Map legacy `Container` methods to NestJS services (Container Polyfill).
-- [x] **5.3: Desktop (Electron) Refactor**
-  - [x] Unify CLI entry point to use `nest-commander`
-  - [x] Validate Sidebar schema loading via `SQLiteStorage`.
-- [x] **5.4: CLI Unified Interface**
-  - [x] Implement `InitCommand` in `@the-andb/core`.
-  - [x] Move `andb-cli` to use `nest-commander` with `AppModule`.
-  - [x] Deprecate old `andb.js` wrapper logic.
-- [x] **5.5: Archive Legacy Core**
-  - [x] Push all changes in `andb-core-legacy` and `andb-desktop-legacy` to remote.
-  - [x] Move folders to `legacy/` internal storage.
-  - [x] Remove legacy packages from root `package.json` workspaces.
+- [ ] **Template SSH Form**: Add SSH fields to `ConnectionTemplateManager.vue`
+- [ ] **Test Connection via SSH**: Validate SSH tunnel in test-connection flow
+- [ ] **Error Messages**: Improve SSH-specific error handling (key not found, auth failed)
 
-### Phase 6: Advanced Deployment (⏳ Backlog)
+#### 3. Core Stability
 
-- [ ] **6.1: Blue/Green Deployment Strategy**
-  - [ ] Implement Shadow Table creation logic.
-  - [ ] Atomic rename/swap mechanism.
-  - [ ] Safe-rollback for failed DDL transitions.
-- [ ] **6.2: Pre-flight Safety Checks**
-  - [ ] Replication lag detection.
-  - [ ] Large table DDL warning (Online DDL detection).
-
-### Phase 7: Dependency Intelligence (⏳ Backlog)
-
-- [ ] **7.1: Topological Sort Engine**
-  - [ ] Build DDL dependency graph (Foreign Keys, View base tables).
-  - [ ] Auto-order migration scripts to prevent "missing reference" errors.
-- [ ] **7.2: Cross-connection Validation**
-  - [ ] Verify target server version compatibility.
+- [ ] **Session Hygiene**: Standardize `utf8mb4`, timezone on connect
+- [ ] **Connection Timeout**: Implement configurable timeout for SSH + DB
+- [ ] **Retry Logic**: Basic retry for transient network errors
 
 ---
 
-## 📅 History
+### 📅 Next Sprint (Feb 10-17)
 
-- **Feb 02 (10:45)**: Expanded Plan with detailed Phase 5-7 tasks based on System Audit.
-- **Jan 29 (12:05)**: Standardized ESLint config and fixed all lint errors to improve dev experience.
-- **Jan 29 (11:55)**: Ported `generate` and `helper` commands. Verified script generation in `package.json`.
-- **Jan 29 (11:43)**: Added Phase 4.5 for CLI Generator parity.
-- **Jan 29 (11:32)**: Verified Real World Dump Comparison (f1 vs f2).
+| Task                      | Priority | Notes                             |
+| ------------------------- | -------- | --------------------------------- |
+| PostgreSQL Driver (Spike) | High     | Research pg introspection queries |
+| Windows Build             | Medium   | electron-builder Windows config   |
+| Linux AppImage            | Low      | Test on Ubuntu 22.04              |
+
+---
+
+### ⚠️ Blockers & Risks
+
+- **SSH Key Permissions**: Cross-platform file access for private keys in Electron
+- **macOS 26 Compatibility**: Electron 28.x SIGTRAP issue (needs testing)
+- **Large Schema Performance**: 5000+ table stress test pending
+
+---
+
+### 📝 Notes
+
+- SSH logic now fully in Core → UI chỉ gửi config, không xử lý connect
+- Cần test SSH tunnel với Docker openssh-server (đã setup trong `docker/`)
+- Sắp tới cần refactor `DriverFactory` để inject sshConfig cleaner

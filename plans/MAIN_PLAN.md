@@ -1,55 +1,113 @@
 # 🎯 The Andb Executive Roadmap (2026)
 
 **Mission:** Transform `The Andb` from a personal tool into a commercial-grade database management product.
-**Current Status:** Phase 1 Complete (Foundation Ready). Entering Phase 2 (Hardening).
+
+**Current Status:** Phase 6.5 (Polish & Pro Features) — SSH Integration Complete
 
 ---
 
-## 📊 Strategic Timeline at a Glance
+## 📊 Strategic Timeline
 
-| Phase         | Focus Area       | Key Value Proposition                            | Timeline       | Status          |
-| :------------ | :--------------- | :----------------------------------------------- | :------------- | :-------------- |
-| **Phase 1**   | **Foundation**   | Stability, Auto-updates, Basic UX (MySQL)        | ✅ Done        | **Live**        |
-| **Phase 2**   | **Hardening**    | MySQL Deep Dive, Architecture Refactor for Scale | Jan - Feb 2026 | **In Progress** |
-| **Phase 2.5** | **Marketing**    | High-Conversion Landing Page & Brand Presence    | Feb 2026       | **Planned**     |
-| **Phase 3**   | **Expansion**    | PostgreSQL Support                               | Feb - Mar 2026 | Scheduled       |
-| **Phase 4**   | **Monetization** | Pro Features (SSH, Safe Mode, Team Tools)        | Mar 2026+      | Planned         |
-
----
-
-## 📅 Monthly Key Deliverables
-
-### **January - February 2026: The "Deep" Strategy (MySQL & Core)**
-
-_Goal: Perfect the experience for the existing user base before expanding. "Deep before Wide"._
-
-- **MySQL Mastery:** Full support for Advanced Objects (Stored Procs, Triggers, Events).
-- **Core Abstraction:** Refactoring the engine to be database-agnostic (preparing for Postgres).
-- **Performance:** Optimizing for large schemas (5,000+ tables) to ensure enterprise readiness.
-
-### **February - March 2026: Market Expansion (PostgreSQL)**
-
-_Goal: Double the addressable market by plugging PostgreSQL into the now-stabilized Core._
-
-- **PostgreSQL Adapter:** Seamless integration using the new abstract core.
-- **Schema Support:** Handling complex hierarchies (`DB > Schema > Table`).
-- **Type Mapping:** Support for JSONB, UUID, Array types.
-
-### **March 2026 Onwards: The "Pro" Value & Commercialization**
-
-_Goal: Launch paid features targeting senior developers and teams._
-
-- **🔐 Pro Connectivity:** SSH Tunneling & SSL for secure remote access.
-- **�️ Production Safety:** "Transaction Guard" (Auto-commit OFF) to prevent data loss.
-- **🤝 Collaboration:** Team syncing and advanced data tools.
+| Phase         | Focus Area             | Key Deliverables                             | Timeline     | Status         |
+| :------------ | :--------------------- | :------------------------------------------- | :----------- | :------------- |
+| **Phase 0**   | **Decoupling**         | CoreBridge, NestJS DI, String Tokens         | Jan 2026     | ✅ Complete    |
+| **Phase 1-4** | **Foundation**         | MySQL Driver, Comparison Engine, CLI         | Jan 2026     | ✅ Complete    |
+| **Phase 5**   | **Monorepo**           | Electron Build, License, Legacy Archive      | Feb 2026     | ✅ Complete    |
+| **Phase 6**   | **Secure Connections** | Restricted User Setup (SCA), Trust UI        | Feb 2026     | ✅ Complete    |
+| **Phase 6.5** | **SSH & Polish**       | Native SSH Tunneling, Distribution Prep      | Feb 2026     | 🚧 In Progress |
+| **Phase 7**   | **Enterprise**         | PostgreSQL, Resilient Execution, AST Parsing | Feb-Mar 2026 | ⏳ Planned     |
+| **Phase 8**   | **Commercialization**  | Pro License, Team Tools, Cloud Auth          | Mar 2026+    | ⏳ Planned     |
 
 ---
 
-## 💰 Commercial Strategy (Open Core)
+## 📦 Package Structure
 
-- **Community Edition (Free/MIT):** Core engine, MySQL/Postgres support, CLI, Basic UI. **(Growth Engine)**
-- **Pro Edition (Closed Source/Paid):** Advanced Security (SSH/SSL), Production Safeguards, Team Collaboration. **(Revenue Engine)**
+| Package          | Role                           | Tech Stack                 |
+| ---------------- | ------------------------------ | -------------------------- |
+| `@the-andb/core` | Pure business logic, stateless | NestJS, TypeScript, mysql2 |
+| `@the-andb/ui`   | Electron + Vue 3 desktop       | Vue 3, Pinia, Tailwind     |
+| `@the-andb/cli`  | Terminal interface             | nest-commander             |
+| `andb-www`       | Landing page & docs            | Astro/Static               |
+
+**Core Principle:** All logic in `core`. UI/CLI are adapters only.
 
 ---
 
-_Verified by Engineering Team: Jan 2026_
+## 🏆 Phase 6.5 Deliverables (Current)
+
+### ✅ Completed
+
+- **SSH Tunneling**: Native `ssh2` integration in Core (`ssh-tunnel.ts`)
+- **MysqlDriver**: Auto-detect `sshConfig` and establish tunnel before connect
+- **OrchestrationService**: Map UI ssh object → Core ISshConfig
+
+### 🎯 Remaining
+
+- **Distribution**: macOS v3.1.0 build with code signing
+- **Connection Templates**: SSH fields in global template manager
+- **Error Handling**: SSH-specific error messages
+
+---
+
+## 🗺️ Phase 7: Enterprise Features (Feb-Mar 2026)
+
+| Feature                 | Priority | Description                                          |
+| ----------------------- | -------- | ---------------------------------------------------- |
+| **PostgreSQL Driver**   | High     | Implement `IDriver` for Postgres with schema support |
+| **Resilient Execution** | High     | Retry policies, Connection pooling                   |
+| **AST Parsing**         | Medium   | Semantic comparison (ignore whitespace, aliases)     |
+| **Topological Sort**    | Medium   | DDL dependency graph for safe migration order        |
+| **Pre-flight Checks**   | Medium   | Replication lag, active queries, disk space          |
+
+---
+
+## 💰 Phase 8: Commercial Strategy (Mar 2026+)
+
+### Open Core Model
+
+- **Community Edition (Free):** Core engine, MySQL/PostgreSQL, CLI, Basic UI
+- **Pro Edition (Paid):** SSH Tunneling\*, Safe Mode, Team Collaboration, Priority Support
+
+\*Note: SSH is currently in Community but may move to Pro tier
+
+### Pro Features Pipeline
+
+| Feature           | Description                             |
+| ----------------- | --------------------------------------- |
+| Transaction Guard | Auto-commit OFF, explicit confirmation  |
+| Team Sync         | Shared projects, audit logs             |
+| Cloud Auth        | AWS RDS IAM, GCP Cloud SQL integration  |
+| Data Masking      | Sanitize prod data for dev environments |
+
+---
+
+## 📊 Feature Parity Status
+
+| Area             | Legacy           | Next-Gen            | Status     |
+| ---------------- | ---------------- | ------------------- | ---------- |
+| Architecture     | Monolithic JS    | Modular NestJS (DI) | ✅ Done    |
+| MySQL Driver     | mysql2           | mysql2 + SSH        | ✅ Done    |
+| Dump Driver      | N/A              | FileStorage-based   | ✅ Done    |
+| SSH Tunneling    | Separate utility | Driver-integrated   | ✅ Done    |
+| Tables Compare   | Text Diff        | Semantic Diff       | ✅ Done    |
+| Views/Routines   | Text Diff        | Normalized Diff     | ✅ Done    |
+| Migration        | String Concat    | MigratorService     | ✅ Done    |
+| PostgreSQL       | Experimental     | Dedicated Driver    | ⏳ Planned |
+| Transaction Safe | N/A              | Virtual Dry Run     | ⏳ Planned |
+
+---
+
+## 📅 History
+
+| Date   | Event                                                                   |
+| ------ | ----------------------------------------------------------------------- |
+| Feb 23 | Decoupled CLI from Core, built `andb playground` for local diff testing |
+| Feb 05 | SSH Tunneling migrated to Core (ssh-tunnel.ts, MysqlDriver)             |
+| Feb 03 | Restricted User Setup (SCA) flow completed                              |
+| Feb 02 | Monorepo unified, License updated to Proprietary                        |
+| Jan 29 | CoreBridge pattern, NestJS DI stabilized                                |
+| Jan 27 | CLI ported to nest-commander                                            |
+
+---
+
+_Verified by Engineering Team: Feb 2026_

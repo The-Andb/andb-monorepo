@@ -1,0 +1,27 @@
+# Custom SSH Server for The Andb Testing
+# Enables TCP forwarding for SSH tunnel tests
+
+FROM alpine:3.19
+
+RUN apk add --no-cache openssh-server
+
+# Create user for testing
+RUN adduser -D -s /bin/sh andbuser && \
+    echo "andbuser:andbpass" | chpasswd
+
+# Generate host keys
+RUN ssh-keygen -A
+
+# Configure sshd - replace default config to enable TCP forwarding
+RUN mkdir -p /run/sshd && \
+    echo "Port 2222" > /etc/ssh/sshd_config && \
+    echo "PermitRootLogin no" >> /etc/ssh/sshd_config && \
+    echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config && \
+    echo "AllowTcpForwarding yes" >> /etc/ssh/sshd_config && \
+    echo "GatewayPorts yes" >> /etc/ssh/sshd_config && \
+    echo "PermitTunnel yes" >> /etc/ssh/sshd_config && \
+    echo "Subsystem sftp internal-sftp" >> /etc/ssh/sshd_config
+
+EXPOSE 2222
+
+CMD ["/usr/sbin/sshd", "-D", "-e"]
