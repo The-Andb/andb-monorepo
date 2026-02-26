@@ -1,82 +1,93 @@
-# 📋 The Andb - Sprint Tracker
+# 📋 Sprint Plan — Ship in 14 Days
 
-> Living document — Planner role
-> Updated: Feb 05, 2026
-
----
-
-## 🎯 Current Phase: 6.5 (SSH & Distribution)
-
-**Goal:** Complete SSH integration in Core and prepare distribution packages.
-
-**Priority:** High
+> **Sprint Goal:** Make `andb` usable by 1 external developer.
+> **Deadline:** Mar 10, 2026
+> **Rule:** No feature creep. Only these 8 items.
 
 ---
 
-## 📊 Phase Status
+## 🎯 Sprint Items
 
-| Phase     | Status     | Notes                                |
-| --------- | ---------- | ------------------------------------ |
-| Phase 0   | ✅ Done    | CoreBridge, NestJS DI, String Tokens |
-| Phase 1-4 | ✅ Done    | Drivers, Comparison, Export, CLI     |
-| Phase 5   | ✅ Done    | Monorepo, Electron Build, License    |
-| Phase 6   | ✅ Done    | Restricted User Setup (SCA)          |
-| Phase 6.5 | 🚧 Active  | SSH Tunneling in Core, Distribution  |
-| Phase 7   | ⏳ Planned | PostgreSQL, Resilient Execution      |
+### 1. ✅ Fix 3 Critical Engine Bugs (DONE — Feb 24)
 
----
+- [x] **BUG-001**: `AFTER \`FIRST\``→`FIRST` keyword (`comparator.service.ts`)
+- [x] **BUG-002**: FULLTEXT KEY parsed as column → added to index detection (`parser.service.ts`)
+- [x] **BUG-003**: FK DROP+ADD same name → split into 2 ALTER statements (`mysql.migrator.ts`)
 
-## 📝 Phase 6.5 Task Breakdown
-
-### SSH Integration (✅ Complete)
-
-- [x] **6.5.1: SshTunnel Utility** — Create `ssh-tunnel.ts` in Core
-- [x] **6.5.2: MysqlDriver Update** — Integrate SSH stream into mysql2 connection
-- [x] **6.5.3: OrchestrationService** — Map UI ssh config to Core ISshConfig
-- [x] **6.5.4: PrivateKey Reader** — Read key from path if privateKeyPath provided
-
-### Distribution (🚧 In Progress)
-
-- [ ] **6.5.5: macOS Build** — electron-builder config for v3.1.0
-- [ ] **6.5.6: Code Signing** — Apple Developer certificate
-- [ ] **6.5.7: Auto-Update** — Test electron-updater flow
-- [ ] **6.5.8: Windows Build** — electron-builder Windows config
-- [ ] **6.5.9: Linux AppImage** — Test on Ubuntu 22.04
-
-### Polish (⏳ Pending)
-
-- [ ] **6.5.10: SSH Form in Templates** — Add SSH fields to ConnectionTemplateManager
-- [ ] **6.5.11: SSH Error Messages** — Improve error handling for SSH failures
-- [ ] **6.5.12: Connection Timeout** — Configurable timeout for SSH + DB
+**Result:** 24/24 sandbox + 32/32 E2E = **56/56 tests pass**.
 
 ---
 
-## 📝 Phase 7 Preview (Enterprise)
+### 2. CLI Exit Codes
 
-### PostgreSQL Support
+- [ ] Exit 0: No schema differences detected
+- [ ] Exit 1: Differences detected (migration available)
+- [ ] Exit 2: Destructive changes detected (DROP TABLE/COLUMN)
 
-- [ ] **7.1: PostgresDriver** — Implement IDriver interface
-- [ ] **7.2: Schema Introspection** — Handle `database > schema > table` hierarchy
-- [ ] **7.3: Type Mapping** — JSONB, UUID, Arrays
+**Why:** CI pipelines gate on exit codes. Without this, `andb compare` is unusable in CI.
 
-### Resilient Execution
+---
 
-- [ ] **7.4: Retry Policies** — Exponential backoff for transient errors
-- [ ] **7.5: Connection Pooling** — Smart pool management
-- [ ] **7.6: Advisory Locks** — GET_LOCK / pg_advisory_lock
+### 3. JSON Output Mode
 
-### Intelligence
+- [ ] `andb compare --format json` outputs structured diff
+- [ ] Schema: `{ hasChanges, destructive, operations[], alterSQL[] }`
+- [ ] Human-readable remains default (`--format text`)
 
-- [ ] **7.7: AST Parsing** — Semantic comparison engine
-- [ ] **7.8: Topological Sort** — DDL dependency graph
+---
+
+### 4. Destructive Change Warning
+
+- [ ] Detect DROP TABLE in diff operations
+- [ ] Detect DROP COLUMN in diff operations
+- [ ] Print `⚠️ Destructive change detected` to stderr
+- [ ] Set exit code 2 when destructive ops found
+
+---
+
+### 5. Auto Backup Before Apply
+
+- [ ] `andb migrate --backup` runs `mysqldump` on affected tables before ALTER
+- [ ] Backup saved to `./andb-backups/<timestamp>/` as `.sql` files
+- [ ] Print backup location before proceeding
+- [ ] Backup is opt-in (Phase 2: make it default)
+
+---
+
+### 6. Expose DB ↔ DB Compare CLI
+
+- [ ] `andb compare --source-db <config> --target-db <config>`
+- [ ] Reuse existing `compareSchema()` from Core
+- [ ] Config: `--host`, `--port`, `--user`, `--password`, `--database`
+
+**Why:** This is the #1 marketing feature. "Compare two live databases."
+
+---
+
+### 7. README: 5-Minute Quickstart
+
+- [ ] Install section (`npm install -g @the-andb/cli` or Docker)
+- [ ] First diff in 3 commands
+- [ ] Show JSON output example
+- [ ] Show CI usage example
+- [ ] Known limitations section
+
+---
+
+### 8. Find 3 Beta Users
+
+- [ ] Post on dev community (Reddit r/mysql, Discord, dev.to)
+- [ ] Ask 3 contacts to try on their staging DB
+- [ ] Document feedback
 
 ---
 
 ## 📅 History
 
-- **Feb 05 (10:30)**: SSH Tunneling merged to Core. MysqlDriver now handles SSH internally.
-- **Feb 03 (11:10)**: Phase 6 complete. SCA flow with premium trust-centric UI.
-- **Feb 03 (10:05)**: Phase 5 complete. Monorepo unified, Proprietary license.
-- **Feb 02 (10:45)**: Expanded plan with Phase 5-7 tasks.
-- **Jan 29 (12:05)**: ESLint standardized, all lint errors fixed.
-- **Jan 29 (11:55)**: CLI generate and helper commands ported.
+| Date   | Event                                                    |
+| :----- | :------------------------------------------------------- |
+| Feb 24 | Sprint defined. 53 E2E+sandbox tests green.              |
+| Feb 24 | Production-ready checklist created and refined.          |
+| Feb 23 | Deep scenario matrix (17 new scenarios) + sandbox layer. |
+| Feb 05 | SSH Tunneling merged to Core.                            |
+| Feb 03 | Monorepo unified, Phase 6 (SCA) complete.                |

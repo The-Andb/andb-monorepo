@@ -1,12 +1,69 @@
-# Andb Main Hierarchy
+# The Andb Main Hierarchy
 
-Monorepo orchestration for the Andb ecosystem. This repository manages the high-level project structure, documentation (`plans/`), and docker configurations, while source code resides in separate "poly" repositories.
+Monorepo orchestration for The Andb ecosystem. This repository manages the high-level project structure, documentation (`plans/`), and docker configurations, while source code resides in separate "poly" repositories.
 
 ⚠️ **Proprietary Software Notice** ⚠️
 
 This project is **Source-Available** but **NOT Open Source**.
 You are free to view, evaluate, and test this software locally, but strict commercial restrictions apply.
 See [LICENSE](./LICENSE) and [COMMERCIAL.md](./COMMERCIAL.md) for details.
+
+---
+
+## ⚡ Quickstart (5 Minutes to First Diff)
+
+The fastest way to experience The Andb's semantic diffing is by comparing the bundled test databases using the CLI.
+
+### 1. Build & Link the Tooling
+
+Assuming you have cloned the sub-repositories (see Setup Instructions below), build the core engine and link the CLI:
+
+```bash
+cd andb-core && npm install && npm run build && npm link && cd ..
+cd andb-cli && npm install && npm link @the-andb/core && npm link && cd ..
+```
+
+### 2. Start Test Databases
+
+Spin up the pre-configured MySQL Docker containers:
+
+```bash
+docker-compose -f docker/docker-compose.yml up -d
+```
+
+_(This starts `mysql-dev` on port 3307 and `mysql-prod` on port 3310)_
+
+### 3. Configure Connections
+
+Create an `andb.yaml` file in your root folder with the connection details:
+
+```yaml
+getDBDestination:
+  dev:
+    host: "127.0.0.1"
+    port: 3307
+    database: "andb_dev"
+    username: "root"
+    password: "root"
+    type: "mysql"
+  prod:
+    host: "127.0.0.1"
+    port: 3310
+    database: "andb_prod"
+    username: "root"
+    password: "root"
+    type: "mysql"
+```
+
+### 4. Run Your First Diff!
+
+Use the CLI to compare the `dev` database against `prod`:
+
+```bash
+andb compare dev prod
+```
+
+---
 
 ## 📂 Repository Structure
 

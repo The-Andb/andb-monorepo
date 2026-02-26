@@ -1,42 +1,40 @@
-# 🧪 @the-andb/core Technical Testing Plan
+# 🧪 Core Engine Testing Plan
 
-## 🎯 Objectives
+> Updated: Feb 24, 2026
 
-Ensure the core engine is robust, database-agnostic, and safe for production operations.
+## Current Test Coverage
 
-## 📊 Current Test Suite (Jest)
+### E2E Scenario Matrix (32 tests)
 
-Located in `core/test/`:
+- 3 no-change normalization tests (zero false positive verification)
+- 12 ALTER TABLE operation tests (column, index, FK)
+- 2 production-realistic schema evolution tests
+- 3 combined migration stress tests
+- - legacy scenarios (add/modify/drop/view/proc/trigger)
 
-- **Service Integration:**
-  - `comparator.test.js`: Checks schema diff logic.
-  - `exporter.test.js`: Validates JDBC-like introspection.
-  - `migrator.test.js`: Tests SQL generation accuracy.
-- **Support Logic:**
-  - `ddl.parser.test.js`: High-complexity parsing logic.
-  - `monitor.test.js`: Real-time operation tracking.
-- **Data Access:**
-  - `repositories/*`: Unit tests for local persistence.
+### Sandbox Execution Layer (21 tests)
 
-## 🚀 Quality Control Roadmap
+- Real MySQL 8.0 execution via Docker
+- Ephemeral databases per scenario (CREATE → ALTER → VERIFY → DROP)
+- Structural comparison: columns, indexes, FKs
+- 5 bugs found and documented
 
-### Priority 1: Semantic Correction (Short-term)
+### Unit Tests (Core)
 
-- **Goal:** Move from text-based to AST-based comparison for MySQL.
-- **Action:** Extend `ddl.parser.test.js` with edge cases for Stored Procedures and complex Triggers.
+- `comparator.test.js`: Schema diff logic
+- `migrator.test.js`: ALTER SQL generation
+- `exporter.test.js`: Introspection accuracy
+- `ddl.parser.test.js`: DDL parsing edge cases
 
-### Priority 2: Infrastructure Safety (Medium-term)
+## Sprint Testing Priorities
 
-- **Goal:** Verify transactional dry-runs.
-- **Action:** Create `core/test/service/dry-run.test.js` to simulate migrations and verify rollbacks.
+1. **Fix 3 engine bugs** → Un-skip from sandbox → 24 sandbox tests
+2. **Add exit code tests** → `andb compare` returns 0/1/2
+3. **Add JSON output tests** → `--format json` produces valid JSON
+4. **Performance benchmark** → 300 tables, 1000 indexes, 200 FKs
 
-### Priority 3: Multidatabase Readiness (Long-term)
+## Future
 
-- **Goal:** Ensure the same logic works for Postgres.
-- **Action:** Abstract `exporter.test.js` into generic suites that can be reused for different drivers.
-
-## 🛠️ Tooling & Standards
-
-- **Framework:** Jest
-- **CI Trigger:** Every commit to `main` branch.
-- **Coverage Goal:** 80% for `src/service` and `src/utils`.
+- MySQL 5.7 compatibility matrix
+- MariaDB best-effort testing
+- Large schema benchmarks (2000+ tables)

@@ -1,113 +1,100 @@
-# 🎯 The Andb Executive Roadmap (2026)
+# 🎯 The Andb — Product Roadmap
 
-**Mission:** Transform `The Andb` from a personal tool into a commercial-grade database management product.
+**Mission:** A CLI-first MySQL schema diff engine that detects drift and generates deterministic migration scripts with preview and backup.
 
-**Current Status:** Phase 6.5 (Polish & Pro Features) — SSH Integration Complete
+**Value Prop:** _"Andb detects schema drift automatically and generates deterministic migration scripts with preview and backup — removing manual diff mistakes."_
+
+**Current Status:** Phase 1 → Provable Engine (80% technical, 30% market)
 
 ---
 
-## 📊 Strategic Timeline
+## 📊 Product Phases
 
-| Phase         | Focus Area             | Key Deliverables                             | Timeline     | Status         |
-| :------------ | :--------------------- | :------------------------------------------- | :----------- | :------------- |
-| **Phase 0**   | **Decoupling**         | CoreBridge, NestJS DI, String Tokens         | Jan 2026     | ✅ Complete    |
-| **Phase 1-4** | **Foundation**         | MySQL Driver, Comparison Engine, CLI         | Jan 2026     | ✅ Complete    |
-| **Phase 5**   | **Monorepo**           | Electron Build, License, Legacy Archive      | Feb 2026     | ✅ Complete    |
-| **Phase 6**   | **Secure Connections** | Restricted User Setup (SCA), Trust UI        | Feb 2026     | ✅ Complete    |
-| **Phase 6.5** | **SSH & Polish**       | Native SSH Tunneling, Distribution Prep      | Feb 2026     | 🚧 In Progress |
-| **Phase 7**   | **Enterprise**         | PostgreSQL, Resilient Execution, AST Parsing | Feb-Mar 2026 | ⏳ Planned     |
-| **Phase 8**   | **Commercialization**  | Pro License, Team Tools, Cloud Auth          | Mar 2026+    | ⏳ Planned     |
+| Phase       | Name                  | Goal                                            | Status     |
+| :---------- | :-------------------- | :---------------------------------------------- | :--------- |
+| **Phase 1** | **Provable Engine**   | 1 external dev runs `andb compare` successfully | 🚧 Active  |
+| **Phase 2** | **Trustable Product** | 1 team uses on staging for 2 weeks, 0 incidents | ⏳ Next    |
+| **Phase 3** | **Revenue Ready**     | 1 paying customer                               | ⏳ Planned |
+
+---
+
+## 🔧 Phase 1: Provable Engine (Now → 14 days)
+
+### ✅ Done
+
+- Diff engine deterministic — 32 E2E + 21 sandbox scenarios on Docker MySQL
+- No false positives — INT display width, BTREE, column reorder normalization
+- Column change detection (type, null, default)
+- Index change detection (composite, prefix, unique, fulltext)
+- Foreign key change detection (add, drop, cascade change, multi-column)
+- CLI non-interactive mode
+- SSH tunneling in Core
+
+### 🚨 Must Ship (14-day sprint)
+
+1. Fix 3 engine bugs (AFTER FIRST, FULLTEXT AFTER, FK ordering)
+2. CLI exit codes (0=no diff, 1=diff, 2=destructive)
+3. JSON output mode (`--format json`)
+4. Destructive change warning
+5. Auto backup before apply
+6. Expose DB ↔ DB compare CLI
+7. README: 5-minute quickstart
+8. 3 external beta users
+
+### Known Limitations (Document, don't fix)
+
+- Charset / collation change detection
+- Engine change detection (InnoDB → MyISAM)
+- Multi-table file parsing (only first table)
+- Version-comment normalization
+
+---
+
+## 🛡️ Phase 2: Trustable Product
+
+- Auto backup before apply (`mysqldump` snapshot)
+- `⚠️ Destructive change detected` warnings
+- DB ↔ SQL file comparison
+- Clean structured CLI output (no NestJS debug noise)
+- MySQL 5.7 compatibility testing
+- Performance benchmark (300 tables, 1000 indexes, 200 FKs)
+- Migration failure recovery documentation
+
+---
+
+## 💰 Phase 3: Revenue Ready
+
+- Docker image (GHCR / DockerHub)
+- GitHub Actions + GitLab CI examples
+- License via Keygen.sh or LemonSqueezy (NOT in-house)
+- 14-day trial
+- Landing page with Get Started flow
+- 1 case study / battle story
+
+---
+
+## ❌ Explicitly Delayed
+
+| Item                     | Reason                                   |
+| :----------------------- | :--------------------------------------- |
+| PostgreSQL               | After MySQL rock solid                   |
+| Auto rollback generation | Backup + manual revert enough            |
+| Policy engine            | Warning enough for Phase 2               |
+| Environment tagging      | User manages via config                  |
+| Team licenses            | Sell individual first                    |
+| AST-based parsing        | Current regex/semantic parser sufficient |
+| Telemetry                | No users = nothing to collect            |
 
 ---
 
 ## 📦 Package Structure
 
-| Package          | Role                           | Tech Stack                 |
-| ---------------- | ------------------------------ | -------------------------- |
-| `@the-andb/core` | Pure business logic, stateless | NestJS, TypeScript, mysql2 |
-| `@the-andb/ui`   | Electron + Vue 3 desktop       | Vue 3, Pinia, Tailwind     |
-| `@the-andb/cli`  | Terminal interface             | nest-commander             |
-| `andb-www`       | Landing page & docs            | Astro/Static               |
+| Package          | Role                                 | Status    |
+| :--------------- | :----------------------------------- | :-------- |
+| `@the-andb/core` | Pure business logic (NestJS, mysql2) | ✅ Active |
+| `@the-andb/cli`  | Terminal interface (nest-commander)  | ✅ Active |
+| `@the-andb/test` | E2E + Sandbox test suite (Jest)      | ✅ Active |
+| `andb-desktop`   | Electron + Vue 3 desktop app         | ✅ Built  |
+| `andb-www`       | Landing page                         | ⏳ Next   |
 
-**Core Principle:** All logic in `core`. UI/CLI are adapters only.
-
----
-
-## 🏆 Phase 6.5 Deliverables (Current)
-
-### ✅ Completed
-
-- **SSH Tunneling**: Native `ssh2` integration in Core (`ssh-tunnel.ts`)
-- **MysqlDriver**: Auto-detect `sshConfig` and establish tunnel before connect
-- **OrchestrationService**: Map UI ssh object → Core ISshConfig
-
-### 🎯 Remaining
-
-- **Distribution**: macOS v3.1.0 build with code signing
-- **Connection Templates**: SSH fields in global template manager
-- **Error Handling**: SSH-specific error messages
-
----
-
-## 🗺️ Phase 7: Enterprise Features (Feb-Mar 2026)
-
-| Feature                 | Priority | Description                                          |
-| ----------------------- | -------- | ---------------------------------------------------- |
-| **PostgreSQL Driver**   | High     | Implement `IDriver` for Postgres with schema support |
-| **Resilient Execution** | High     | Retry policies, Connection pooling                   |
-| **AST Parsing**         | Medium   | Semantic comparison (ignore whitespace, aliases)     |
-| **Topological Sort**    | Medium   | DDL dependency graph for safe migration order        |
-| **Pre-flight Checks**   | Medium   | Replication lag, active queries, disk space          |
-
----
-
-## 💰 Phase 8: Commercial Strategy (Mar 2026+)
-
-### Open Core Model
-
-- **Community Edition (Free):** Core engine, MySQL/PostgreSQL, CLI, Basic UI
-- **Pro Edition (Paid):** SSH Tunneling\*, Safe Mode, Team Collaboration, Priority Support
-
-\*Note: SSH is currently in Community but may move to Pro tier
-
-### Pro Features Pipeline
-
-| Feature           | Description                             |
-| ----------------- | --------------------------------------- |
-| Transaction Guard | Auto-commit OFF, explicit confirmation  |
-| Team Sync         | Shared projects, audit logs             |
-| Cloud Auth        | AWS RDS IAM, GCP Cloud SQL integration  |
-| Data Masking      | Sanitize prod data for dev environments |
-
----
-
-## 📊 Feature Parity Status
-
-| Area             | Legacy           | Next-Gen            | Status     |
-| ---------------- | ---------------- | ------------------- | ---------- |
-| Architecture     | Monolithic JS    | Modular NestJS (DI) | ✅ Done    |
-| MySQL Driver     | mysql2           | mysql2 + SSH        | ✅ Done    |
-| Dump Driver      | N/A              | FileStorage-based   | ✅ Done    |
-| SSH Tunneling    | Separate utility | Driver-integrated   | ✅ Done    |
-| Tables Compare   | Text Diff        | Semantic Diff       | ✅ Done    |
-| Views/Routines   | Text Diff        | Normalized Diff     | ✅ Done    |
-| Migration        | String Concat    | MigratorService     | ✅ Done    |
-| PostgreSQL       | Experimental     | Dedicated Driver    | ⏳ Planned |
-| Transaction Safe | N/A              | Virtual Dry Run     | ⏳ Planned |
-
----
-
-## 📅 History
-
-| Date   | Event                                                                   |
-| ------ | ----------------------------------------------------------------------- |
-| Feb 23 | Decoupled CLI from Core, built `andb playground` for local diff testing |
-| Feb 05 | SSH Tunneling migrated to Core (ssh-tunnel.ts, MysqlDriver)             |
-| Feb 03 | Restricted User Setup (SCA) flow completed                              |
-| Feb 02 | Monorepo unified, License updated to Proprietary                        |
-| Jan 29 | CoreBridge pattern, NestJS DI stabilized                                |
-| Jan 27 | CLI ported to nest-commander                                            |
-
----
-
-_Verified by Engineering Team: Feb 2026_
+**Core Principle:** All logic in `core`. CLI/UI are adapters.

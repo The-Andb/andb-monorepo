@@ -2,7 +2,7 @@
 
 > **Rules for AI:**
 >
-> - Always read CONTEXT.md and PLAN.md first
+> - Always read CONTEXT.md, **RULES.md** and PLAN.md first
 > - Do NOT write code unless explicitly asked
 > - Prefer small, reviewable changes
 > - Any architecture change must be written to DECISIONS.md

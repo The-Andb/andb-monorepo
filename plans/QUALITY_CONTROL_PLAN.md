@@ -1,86 +1,56 @@
-# 🛡️ Quality Control & Testing Master Plan (2026)
+# 🛡️ Quality Control Plan
 
-## 📌 Executive Summary
+> Updated: Feb 24, 2026
 
-This document defines the high-level quality assurance strategy for `The Andb`. As we pivot from a functional tool to an enterprise-grade product (Phase 2: Hardening), strict QC and automated testing are mandatory to ensure **Safety**, **Stability**, and **Semantic Correctness**.
+## Testing Architecture
 
----
+| Layer               | Tool                | Coverage                                       | Status         |
+| :------------------ | :------------------ | :--------------------------------------------- | :------------- |
+| **E2E (CLI)**       | Jest                | 32 scenarios (playground matrix)               | ✅ Green       |
+| **Sandbox (MySQL)** | Jest + Docker MySQL | 21 scenarios (ALTER execution verified)        | ✅ Green       |
+| **Integration**     | Jest                | Docker MySQL driver, SSH tunnel, introspection | ✅ Established |
+| **Unit (Core)**     | Jest                | Comparator, migrator, parser, exporter         | ✅ Established |
+| **UI (Desktop)**    | Vitest + Playwright | Vue 3 components + Electron E2E                | ✅ Established |
 
-## 🏗️ 1. Global QC Architecture
+## Test Inventory
 
-| Layer                | Technology     | Responsibility                                    | Current Status |
-| :------------------- | :------------- | :------------------------------------------------ | :------------- |
-| **Core Integration** | Jest           | Deep logic, semantic parsing, driver stability    | 🟢 Established |
-| **UI Logic**         | Vitest         | Pinia store isolation, business logic, components | 🟡 Developing  |
-| **End-to-End**       | Playwright     | Full Electron app flow, cross-platform UI         | 🟢 Established |
-| **Automated Audit**  | Custom Scripts | Security, Perf, SEO, Accessibility                | 🔴 Planned     |
+### @the-andb/test (53 tests)
 
----
+**E2E Playground Matrix** (`e2e/cli.playground.spec.ts`) — 32 tests:
 
-## ⚙️ 2. @the-andb/core (The Engine)
+- Tier 1: Normalization (int-display-width, implicit-btree, reorder-columns)
+- Tier 2: Column positioning (add-column-first, add-column-middle)
+- Tier 3: Complex indexes (fulltext, unique-to-normal, prefix-length)
+- Tier 4: FK complexity (cascade-change, fk-drop, fk-multi-column)
+- Tier 5: Combined migrations (combined-column-index, drop-column-with-index, full-table-evolution)
+- Tier 6: Production realistic (e-commerce-users, audit-log-table)
+- Legacy: add-column, modify-column, change-index, drop-index, rename-column, etc.
 
-### Strategy: "Semantic Reliability"
+**Sandbox Execution Layer** (`e2e/sandbox.playground.spec.ts`) — 21 tests:
 
-Core testing focuses on the accuracy of database introspection and comparison logic.
+- Executes ALTER SQL on real Docker MySQL 8.0
+- Verifies final schema matches expected target (columns, indexes, FKs)
+- 5 known engine bugs documented and skipped with reason
 
-#### Existing Test Inventory (Core)
+### @the-andb/core (unit/integration tests)
 
-- **Services:**
-  - `comparator.test.js`: Validates schema diff generation logic.
-  - `migrator.test.js`: Ensures SQL generation for migrations is safe.
-  - `exporter.test.js` / `exporter.driver.test.js`: Tests database introspection.
-  - `monitor.test.js` / `container.test.js`: Internal lifecycle management.
-- **Storage:**
-  - `comparison.repository.test.js`, `ddl.repository.test.js`, `migration.repository.test.js`: Persistence layer tests.
-- **Utils:**
-  - `ddl.parser.test.js`: Critical test for semantic SQL parsing.
-  - `file.helper.test.js`: IO operations.
+- `comparator.test.js`: Schema diff logic
+- `migrator.test.js`: SQL generation accuracy
+- `exporter.test.js`: Introspection validation
+- `ddl.parser.test.js`: Complex SQL parsing
 
-#### QC Goals for Core:
+## Known Engine Bugs (from Sandbox)
 
-1. **Semantic Parsing Coverage**: Increase DDL parser tests to cover complex MySQL objects (Stored Procs, Triggers).
-2. **Transaction Safety**: Implement tests specifically for dry-runs and rollback simulations.
-3. **Driver Agnosticism**: Prepare test suites that can run across both MySQL and future PostgreSQL drivers.
+| Bug                           | Impact                     | Priority    |
+| :---------------------------- | :------------------------- | :---------- |
+| `AFTER \`FIRST\`` syntax      | Invalid MySQL SQL          | 🔴 Must fix |
+| AFTER on FULLTEXT KEY         | Invalid MySQL SQL          | 🔴 Must fix |
+| FK ADD before DROP            | Duplicate constraint error | 🔴 Must fix |
+| Multi-table parsing           | Only first table compared  | 🟡 Document |
+| Version-comment normalization | False positive MODIFY      | 🟡 Document |
 
----
+## Quality Gates
 
-## 🎨 3. @the-andb/ui (The Interface)
-
-### Strategy: "Predictable Interaction"
-
-UI testing ensures that complex project-based state (Pinia) remains isolated and the Electron wrapper behaves correctly.
-
-#### Existing Test Inventory (UI)
-
-- **Unit Tests (`*.unit.test.ts`):**
-  - `projectIsolation.unit.test.ts`: Ensures switching projects clears state correctly.
-  - `miller-column/store.unit.test.ts`: Tests high-perf tree navigation logic.
-- **E2E Tests (`*.e2e.spec.ts`):**
-  - `app.e2e.spec.ts` / `skeleton.e2e.spec.ts`: Launch and structure.
-  - `connection.e2e.spec.ts`: MySQL & Dump creation flows.
-  - `dashboard.e2e.spec.ts`: UI stats and recent activity.
-  - `dump-ops.e2e.spec.ts`: File-based comparison workflows.
-  - `projects.e2e.spec.ts`, `schema-explorer.e2e.spec.ts`, `compare.e2e.spec.ts`, `settings.e2e.spec.ts`: Screen-specific flow verification.
-
-#### QC Goals for UI:
-
-1. **State Resilience**: Resolve the flakiness in `projectIsolation.unit.test.ts`.
-2. **Selector Hardening**: Move from text-based selectors to `data-test` IDs for headless stability.
-3. **Visual Regression**: (Planned) Implement screenshot comparison for core diff views.
-
----
-
-## 🚀 4. Automated QC Pipeline (Future)
-
-To achieve "Hero" status, we will implement an automated checklist triggered on every major change/release.
-
-1. **Phase A (Security)**: `security_scan.py` & `vulnerability_scanner`.
-2. **Phase B (Consistency)**: `lint_runner.py` & `schema_validator.py`.
-3. **Phase C (Stability)**: `test_runner.py` (Core + UI Unit).
-4. **Phase D (Integration)**: `playwright_runner.py` (E2E).
-5. **Phase E (Performance)**: `lighthouse_audit.py` & `bundle_analyzer.py`.
-
----
-
-_Created: Jan 2026_
-_Next Audit: Feb 2026_
+- **Merge to main:** All 53 tests must pass
+- **Before ship:** 24+ sandbox tests pass (after bug fixes)
+- **Coverage target:** 80% for `src/modules/` in core

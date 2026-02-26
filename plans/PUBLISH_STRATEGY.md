@@ -1,51 +1,57 @@
-# 📦 NPM Publishing Strategy (The "Switcheroo" Plan)
+# 📦 Distribution Strategy
 
-> **WARNING**: Review this document BEFORE running `npm publish`!
+> Updated: Feb 24, 2026
 
-## 🎯 Objective
+## Phase 1: CLI First (14-day sprint)
 
-Migrate package names to reflect the new Architecture (NestJS/Vue3) while preserving Legacy support.
+```bash
+# Primary: npm global install
+npm install -g @the-andb/cli
+andb compare --source db1 --target db2
 
-## 📅 The Plan
+# Alternative: npx (zero install)
+npx @the-andb/cli compare -s schema.sql -t live-db
+```
 
-### Phase 1: The Legacy Handover
+### Package: `@the-andb/cli`
 
-1.  **Publish Legacy Core**:
-    - Package: `andb-core-legacy`
-    - NPM Name: `@the-andb/core-legacy`
-    - Version: `3.x.x` (Continue from last stable core version)
-    - Command:
-      ```bash
-      cd andb-core-legacy
-      npm publish --access public
-      ```
+- Version: `4.0.0-beta.1`
+- Tag: `beta` until 3 external users confirm stability
+- Scope: `@the-andb` (existing npm org)
 
-2.  **Publish Legacy Desktop (Optional)**:
-    - Package: `andb-desktop-legacy`
-    - NPM Name: `@the-andb/desktop-legacy` (was `@the-andb/ui`)
-    - Note: Desktop apps are usually distributed via GitHub Releases (DMG/EXE), not NPM. This might not be needed unless used as a lib.
+## Phase 2: Docker (Post-beta)
 
-### Phase 2: The New Era (Major Bump)
+```dockerfile
+FROM node:20-alpine
+RUN npm install -g @the-andb/cli
+ENTRYPOINT ["andb"]
+```
 
-1.  **Publish NestJS Core**:
-    - Package: `andb-core`
-    - NPM Name: **`@the-andb/core`** (Reclaiming the throne 👑)
-    - Version: **`4.0.0`** (Breaking Change!)
-    - Tag: start with `next` or `beta` first.
-    - Command:
-      ```bash
-      cd andb-core
-      npm version 4.0.0-beta.1
-      npm publish --tag beta --access public
-      ```
+```bash
+# CI usage
+docker run --rm ghcr.io/the-andb/cli compare \
+  --source-host db1.staging \
+  --target-host db2.staging
+```
 
-2.  **Publish Desktop New**:
-    - Package: `andb-desktop`
-    - Name: `@the-andb/desktop`
-    - Dependency: Must point to `@the-andb/core@^4.0.0` (or beta).
+### Registry: GitHub Container Registry (GHCR)
 
-## 🛡️ Checklist before Publish
+- Auto-build on tag push
+- Multi-arch: linux/amd64, linux/arm64
 
-- [ ] Did you bump `andb-core` (NestJS) to v4.0.0?
-- [ ] Did you rename `andb-core-legacy` to `@the-andb/core-legacy` in package.json?
-- [ ] Did you check `npm whoami` to ensure you have permissions?
+## Phase 3: Desktop (Parallel track)
+
+- Electron app via GitHub Releases (DMG/EXE/AppImage)
+- Not priority for 14-day sprint
+- Desktop enhances but is NOT required for core value
+
+## Checklist Before First Publish
+
+- [ ] `npm whoami` confirms permissions on `@the-andb`
+- [ ] Version bumped to `4.0.0-beta.1`
+- [ ] README has install + quickstart
+- [ ] `andb --version` works
+- [ ] `andb compare --help` shows all options
+- [ ] Exit codes work (0/1/2)
+- [ ] JSON output works
+- [ ] No NestJS debug noise in production mode
