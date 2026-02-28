@@ -9,6 +9,7 @@ This document outlines the strategy to transform the current basic landing page 
 ## 🎯 The Core Purpose: Building TRUST & Solving PAIN
 
 > **Why this page exists?** Developers are terrified of running unknown tools on their Production DBs. This page must scream: **"Safe. Professional. Essential."**
+> **Vision:** "It’s not built to replace large platforms – just a practical tool to solve real problems." We don't oversell; we deliver focused utility.
 
 ---
 
@@ -24,25 +25,25 @@ This document outlines the strategy to transform the current basic landing page 
 
 ### 1. Hero Section (The Promise)
 
-- **Headline**: "Stop Guessing. Start Orchestrating."
-- **Sub-headline**: "The intelligent database client that compares, syncs, and safeguards your schemas across environments. **Local-first & privacy-focused.**"
-- **Primary CTA**: "Download for macOS" (Beta).
-- **Visual**: A split-screen video/gif showing a "Diff -> Safety Check -> Migrate" workflow. **Show the tool doing the work.**
+- **Headline**: "Practical Schema Management. No fluff."
+- **Sub-headline**: "Not a replacement for your heavy IDE. Just a sharp tool to export DDL, compare schemas offline, and generate migration scripts safely."
+- **Primary CTA**: "Download Beta"
+- **Secondary CTA**: "Explore CLI"
+- **Visual**: A split-screen video/gif showing "Export -> Diff -> Generate Script". **Show the tool doing the work.**
 
-### 2. The "Pain" vs "The Andb" (The Hook)
+### 2. The Core Value Proposition (The Hook)
 
-- **Problem**: "Manual SQL scripts? Blindly running Apply? Risking Prod data?"
-- **Solution**:
-  - ✅ **Deep Comparison**: Not just text diff, but semantic structure analysis.
-  - ✅ **Safety Guardrails**: Dry-runs, snapshots, and destruction prevention.
-  - ✅ **Unified Workflow**: Dev -> Stage -> Prod pipeline in one app.
+- **Export DDL to Local**: "Extract tables, procedures, functions, and triggers to flat files."
+- **Offline Schema Diff**: "Compare environments locally without sharing schemas or data to the cloud."
+- **Auto-Generate Migrations**: "Instantly get accurate `ALTER` scripts from structural differences."
+- **Integrate CI/CD pipelines via CLI**: "Hooks directly into your CI/CD pipelines to catch drift before deployment."
 
 ### 3. Functionality Grid (The Toolkit)
 
-- **Comparison Engine**: "Catch drift before it causes an outage."
-- **Smart Migration**: "Generate `ALTER` scripts automatically."
+- **AI Ready via MCP**: "Give AI agents safe, structured access to your database schema through our MCP server."
+- **Deep Comparison**: "Not just text diff, but semantic structure analysis."
 - **Multi-Driver**: MySQL (Deep support), Postgres (Coming soon), SQLite.
-- **Privacy**: "**Your data never leaves your machine.** No cloud mandates. No tracking."
+- **Privacy First**: "**Your data never leaves your machine.** No cloud mandates. No tracking."
 
 ### 4. Comparison / "Why Andb?"
 

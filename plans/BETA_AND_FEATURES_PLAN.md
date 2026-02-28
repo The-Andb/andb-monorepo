@@ -165,20 +165,27 @@ Transform MCP from a simple bridge into a **smart database assistant** that AI a
    - [ ] Error messages should be AI-friendly (structured, not stack traces)
    - [ ] Add `andb://health` resource for status checks
 
-2. [ ] **Phase 2: Smart Analysis Tools**
+2. [ ] **Phase 2: Desktop Management Tab (CLI & MCP)**
+   - [ ] Build a new tab in the Desktop App (`CLI & MCP`)
+   - [ ] **CLI Panel:** Auto-detect if `andb` is in `PATH`. Button to "Install CLI tool" (symlink to binary).
+   - [ ] **MCP Panel:** Auto-detect popular AI assistants (Cursor, Cline, Windsurf).
+   - [ ] 1-Click Install: Append the MCP config block into the respective editor's `mcp.json` or config file.
+   - [ ] Status indicators showing which tools/editors currently have The Andb active.
+
+3. [ ] **Phase 3: Smart Analysis Tools**
    - [ ] `analyze_schema` — Return schema statistics (table count, index coverage, FK graph, column types distribution)
    - [ ] `detect_drift` — Compare two envs and return human-readable drift summary
    - [ ] `suggest_indexes` — Analyze query patterns vs existing indexes (basic heuristic)
    - [ ] `explain_migration` — Given a diff, explain what each ALTER does in plain English
    - [ ] `validate_migration` — Dry-run check: will this migration succeed? (FK deps, data type compat)
 
-3. [ ] **Phase 3: Multi-Step Workflows**
+4. [ ] **Phase 4: Multi-Step Workflows**
    - [ ] `plan_deployment` — Given src/dest, generate a full migration plan with ordering (FK dependency graph)
    - [ ] `backup_and_migrate` — Atomic: backup → migrate → verify → report
    - [ ] `rollback_migration` — Given a migration ID, generate rollback SQL from snapshots
    - [ ] `compare_all_envs` — Compare DEV→STAGE→PROD in one call, return drift matrix
 
-4. [ ] **Phase 4: Resources & Prompts**
+5. [ ] **Phase 5: Resources & Prompts**
    - [ ] `andb://config` — Expose project config
    - [ ] `andb://schema/{env}/{db}` — Expose full schema as resource
    - [ ] `andb://diff/{src}/{dest}` — Expose latest diff as resource
@@ -286,12 +293,12 @@ Week 7-8:  Design → DDL Pipeline
 
 ---
 
-## Unknowns (Need Clarification)
+## Resolved Decisions (Free/Built-in Stack)
 
-- [ ] **Beta backend hosting:** Vercel serverless? Supabase? Custom server?
-- [ ] **Email service:** Resend? Mailgun? SendGrid?
-- [ ] **Bug tracking destination:** GitHub Issues? Linear? Supabase table?
-- [ ] **Feature voting:** Public or private? Canny? GitHub Discussions?
-- [ ] **MCP publishing:** npm package? Smithery marketplace?
-- [ ] **ERD library choice:** Vue Flow? Konva? Custom SVG?
-- [ ] **Beta key enforcement:** Hard gate (can't use without key) vs soft gate (collect email but still allow usage)?
+- ✅ **Beta backend hosting:** Vercel Serverless + Supabase (Free tier rộng rãi, không tốn công quản lý server).
+- ✅ **Email service:** Resend (100 free emails/day - quá đủ cho giai đoạn Beta kín).
+- ✅ **Bug tracking destination:** GitHub Issues (Dùng API bắn thẳng report thành issue gắn mác `beta-bug`, free và tập trung).
+- ✅ **Feature voting:** GitHub Discussions (Có sẵn, free, user cũng quen workflow của GitHub).
+- ✅ **MCP publishing:** npm package (Chuẩn mực, free, dễ tiếp cận nhất cho dev).
+- ✅ **ERD library choice:** Vue Flow (Native Vue, open source MIT, phù hợp nhất cho dạng node-based UI).
+- ✅ **Beta key enforcement:** Soft gate (Màn hình đăng ký thu thập email để build audience, nhưng nếu lỡ rớt mạng hoặc API lỗi thì vẫn cho vô app dùng, giảm tối đa ma sát).
