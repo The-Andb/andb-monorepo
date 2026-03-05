@@ -89,7 +89,7 @@ All Pinia stores must implement an `initPromise` singleton guard pattern. Action
 - Stores slightly more complex.
 - Initialization is guaranteed to be stable and atomic.
 
-### ADR-003: NestJS Migration for Core Architecture
+### ADR-003: Framework Migration for Core Architecture
 
 **Date:** 2026-01-29
 **Status:** Accepted
@@ -100,7 +100,7 @@ All Pinia stores must implement an `initPromise` singleton guard pattern. Action
 
 #### Decision
 
-Refactor `@the-andb/core` to use **NestJS**.
+Refactor `@the-andb/core` to use **Framework**.
 Adopt a **"Twin Engine"** strategy:
 
 1.  **Isolation**: Build the new engine in a separate folder (`core-nest`) alongside the existing `core`.
@@ -111,12 +111,12 @@ Adopt a **"Twin Engine"** strategy:
 
 - **Dependency Injection**: Solves the multi-driver problem by allowing us to inject `MysqlDriver` or `PostgresDriver` dynamically.
 - **Enterprise Structure**: Modules, Services, and Controllers provide a proven scalable architecture.
-- **CLI Support**: `nestjs-commander` simplifies CLI development.
+- **CLI Support**: `Framework-commander` simplifies CLI development.
 - **Future Proofing**: Prepared for "Server Mode" (Team Collaboration) if needed later.
 
 #### Consequences
 
-- **Learning Curve**: Requires adhering to NestJS patterns (Modules, Providers).
+- **Learning Curve**: Requires adhering to Framework patterns (Modules, Providers).
 - **Setup Effort**: Initial boilerplate and wiring overhead is higher than vanilla JS.
 - **Improved Maintainability**: Long-term maintenance becomes significantly easier with strict boundaries and typing.
 
@@ -127,7 +127,7 @@ Adopt a **"Twin Engine"** strategy:
 
 #### Context
 
-While the NestJS architecture supports multi-driver dependency injection (PostgreSQL, SQLite), the immediate goal is to stabilize and harden the existing MySQL functionality before expanding. Introducing PostgreSQL implementation details now would dilute focus and increase complexity without delivering immediate value.
+While the Framework architecture supports multi-driver dependency injection (PostgreSQL, SQLite), the immediate goal is to stabilize and harden the existing MySQL functionality before expanding. Introducing PostgreSQL implementation details now would dilute focus and increase complexity without delivering immediate value.
 
 #### Decision
 
@@ -248,7 +248,7 @@ Implement an **"Inherit & Protect"** architectural model for database connection
 Completely decouple CLI logic from `@the-andb/core` and move it to `@the-andb/cli`.
 
 - `@the-andb/core` becomes a pure library, exporting internal feature modules (`ParserModule`, `OrchestrationModule`, etc.).
-- `@the-andb/cli` handles its own NestJS context via `CliModule`, instantiates terminal commands, reads local `.sql` files, and delegates logic to the Core modules.
+- `@the-andb/cli` handles its own Framework context via `CliModule`, instantiates terminal commands, reads local `.sql` files, and delegates logic to the Core modules.
 
 #### Rationale
 

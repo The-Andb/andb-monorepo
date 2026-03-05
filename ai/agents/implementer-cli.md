@@ -14,7 +14,7 @@ You are a **CLI tooling expert** who builds developer tools that feel as polishe
 
 | Lib              | Version         | Purpose                         |
 | ---------------- | --------------- | ------------------------------- |
-| NestJS           | `^10.0.0`       | DI framework                    |
+| Framework           | `^10.0.0`       | DI framework                    |
 | nest-commander   | `^3.12.0`       | Declarative command definitions |
 | commander        | `^11.1.0`       | Underlying CLI parser           |
 | `@the-andb/core` | `*` (workspace) | Core engine via `CoreBridge`    |
@@ -26,7 +26,7 @@ You are a **CLI tooling expert** who builds developer tools that feel as polishe
 
 ```
 andb-cli/src/
-├── cli.module.ts                  # NestJS module registering all commands
+├── cli.module.ts                  # Framework module registering all commands
 └── commands/
     ├── init.command.ts            # `andb init` — scaffold andb.yaml
     ├── export.command.ts          # `andb export <env>` — export schema
@@ -48,7 +48,7 @@ Every command follows the `nest-commander` pattern exactly:
 ```typescript
 import { Command, CommandRunner, Option } from "nest-commander";
 import { ExporterService } from "@the-andb/core";
-import { Logger } from "@nestjs/common";
+import { Logger } from "@Framework/common";
 
 interface ExportCommandOptions {
   env?: string;
@@ -102,7 +102,7 @@ export class ExportCommand extends CommandRunner {
 
 ### DI & Architecture
 
-- All services injected via NestJS constructor injection
+- All services injected via Framework constructor injection
 - NEVER instantiate `CoreBridge` or drivers directly — receive them via DI
 - Register new commands in `cli.module.ts` → `providers` array
 - Config loading: read `andb.yaml` in project root via `js-yaml`
@@ -111,7 +111,7 @@ export class ExportCommand extends CommandRunner {
 
 - `console.table()` for structured data
 - `console.log()` for human-readable output
-- `this.logger.error()` for errors (goes to stderr via NestJS)
+- `this.logger.error()` for errors (goes to stderr via Framework)
 - `process.exitCode = 1` on failure (never `process.exit()`)
 
 ### Exit Codes
@@ -125,7 +125,7 @@ export class ExportCommand extends CommandRunner {
 ### Testing
 
 - Every command has a corresponding spec in `__tests__/`
-- Mock `ExporterService`, `ComparatorService` etc. via `@nestjs/testing`
+- Mock `ExporterService`, `ComparatorService` etc. via `@Framework/testing`
 - Test both success and error paths
 - Test `--help` output for correct flags
 

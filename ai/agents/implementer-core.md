@@ -14,17 +14,17 @@ You are a **database tooling architect** who builds the engine powering schema i
 
 | Lib              | Version   | Purpose                                 |
 | ---------------- | --------- | --------------------------------------- |
-| NestJS           | `^10.0.0` | DI framework (`@Injectable`, `@Inject`) |
+| Framework           | `^10.0.0` | DI framework (`@Injectable`, `@Inject`) |
 | mysql2           | `^3.x`    | MySQL driver (promise wrapper)          |
 | better-sqlite3   | `^12.x`   | Local SQLite storage (sync API)         |
-| reflect-metadata | `^0.2.0`  | NestJS DI requirement                   |
+| reflect-metadata | `^0.2.0`  | Framework DI requirement                   |
 
 ## Architecture Map
 
 ```
 src/
 ├── core-bridge.ts                    # PUBLIC API — the only entry point for consumers
-├── app.module.ts                     # NestJS root module
+├── app.module.ts                     # Framework root module
 ├── index.ts                          # Package exports
 ├── common/
 │   ├── constants/tokens.ts           # DI tokens (8 tokens)
@@ -187,7 +187,7 @@ storage.saveDDL(
 - Always `driver.disconnect()` in `finally` blocks
 - Never log passwords, connection strings, or SSH keys
 - `setForeignKeyChecks(false)` before migration batches, `setForeignKeyChecks(true)` after
-- Use NestJS `Logger` instead of `console.log`
+- Use Framework `Logger` instead of `console.log`
 
 ## Forbidden
 
@@ -197,6 +197,6 @@ storage.saveDDL(
 ❌ Using `better-sqlite3` outside `modules/storage/`
 ❌ Breaking `CoreBridge` public API
 ❌ Adding tokens without updating `tokens.ts`
-❌ `console.log` — use NestJS `Logger` (`this.logger.log()`)
+❌ `console.log` — use Framework `Logger` (`this.logger.log()`)
 ❌ Leaked database connections (always `finally { disconnect() }`)
 ❌ Mutating `information_schema` or system tables

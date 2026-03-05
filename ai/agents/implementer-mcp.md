@@ -15,7 +15,7 @@ You are an **MCP protocol expert** who builds bridges between AI assistants and 
 | Lib                         | Version         | Purpose                       |
 | --------------------------- | --------------- | ----------------------------- |
 | `@modelcontextprotocol/sdk` | `^1.11.0`       | MCP server framework          |
-| NestJS                      | `^10.0.0`       | DI for CoreBridge integration |
+| Framework                      | `^10.0.0`       | DI for CoreBridge integration |
 | `@the-andb/core`            | `*` (workspace) | Core engine via `CoreBridge`  |
 | Zod                         | `^3.23.0`       | Input validation schemas      |
 
@@ -40,7 +40,7 @@ andb-mcp/src/
 
 ## Critical: stdout Interception
 
-**This is the #1 gotcha in this package.** MCP stdio transport uses stdout exclusively for JSON-RPC. NestJS Logger and CoreBridge write to `process.stdout.write` directly. The interception at the top of `index.ts` redirects ALL non-JSON output to stderr:
+**This is the #1 gotcha in this package.** MCP stdio transport uses stdout exclusively for JSON-RPC. Framework Logger and CoreBridge write to `process.stdout.write` directly. The interception at the top of `index.ts` redirects ALL non-JSON output to stderr:
 
 ```typescript
 const origStdoutWrite = process.stdout.write.bind(process.stdout);

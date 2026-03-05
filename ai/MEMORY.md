@@ -8,7 +8,7 @@
 
 - **Monorepo**: `core`, `ui`, `cli`, `landing`
 - **Core principle**: All logic in `@the-andb/core`
-- **New Core Engine**: `@the-andb/core-nest` (NestJS/TypeScript) - _In Development_
+- **New Core Engine**: `@the-andb/core-nest` (Framework/TypeScript) - _In Development_
 - **UI**: Electron + Vue 3, presentation only
 - **Database focus**: MySQL schema comparison & sync
 - **Current Phase**: Phase 2 — Hardening (MySQL Deep Dive)
@@ -19,7 +19,7 @@
 
 - TypeScript for UI and new core code
 - Vue 3 Composition API (`<script setup>`)
-- NestJS for Core (Modules, Services, DI)
+- Framework for Core (Modules, Services, DI)
 - Tailwind CSS v3 for styling
 - All text must be i18n localized
 - Credentials encrypted via `core/src/utils/crypt.ts`
@@ -73,7 +73,7 @@
 - **Factory**: `DriverModule` (`useFactory`), `ConnectionFactory.create(config)`
 - **Singleton**: Connection pools, Logger
 - **Observer**: Migration progress, long operations
-- **Dependency Injection**: NestJS (Core)
+- **Dependency Injection**: Framework (Core)
 
 ---
 
@@ -100,7 +100,7 @@
 | 2026-01-27 | Fixed `DumpDriver` trigger parsing, added bulk actions to global templates, and verified via E2E/Unit tests.                                                                                                                                                                                                                                                       |
 | 2026-01-27 | Resolved Connection Duplication bug via `initPromise` store guards and explicit project targeting in `addConnection`.                                                                                                                                                                                                                                              |
 | 2026-01-27 | Analyzed connection duplication & project isolation feedback. Updated PLAN.md with 3-phase fix: Deduplication, Isolation, UI Refinement.                                                                                                                                                                                                                           |
-| 2026-01-29 | **NestJS Migration**: Initialized `core-nest` with "Twin Engine" strategy. Ported `DDLParser`, implemented `MysqlDriver` & `DumpDriver`.                                                                                                                                                                                                                           |
+| 2026-01-29 | **Framework Migration**: Initialized `core-nest` with "Twin Engine" strategy. Ported `DDLParser`, implemented `MysqlDriver` & `DumpDriver`.                                                                                                                                                                                                                           |
 | 2026-01-29 | **Core Logic**: Implemented `ComparatorService` & `MigratorService` for Tables. Verified successfully on real-world SQL dumps.                                                                                                                                                                                                                                     |
 | 2026-01-29 | **Full Parity**: Fixed ESLint, ported CLI commands (`generate`, `helper`), and extended comparator to support Views, Procs, and Triggers.                                                                                                                                                                                                                          |
 | 2026-02-04 | **Restricted User Flow**: Implemented `generateUserSetupScript` in `core` (Strategy pattern) and exposed via IPC/Preload. Refactored UI to fetch script from backend for transparency and security-first UX. Fixed SQL syntax for MySQL grants.                                                                                                                    |

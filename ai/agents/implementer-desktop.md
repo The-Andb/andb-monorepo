@@ -38,7 +38,7 @@ andb-desktop/
 ├── electron/
 │   ├── main.ts                        # IPC handlers (60+ handlers), window management
 │   └── services/
-│       └── andb-builder.ts            # CoreBridge wrapper, NestJS init
+│       └── andb-builder.ts            # CoreBridge wrapper, Framework init
 ├── src/
 │   ├── App.vue                        # Root layout
 │   ├── main.ts                        # Vue app init
