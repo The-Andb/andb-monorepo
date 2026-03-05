@@ -4,7 +4,9 @@
 
 **Value Prop:** _"Andb detects schema drift automatically and generates deterministic migration scripts with preview and backup — removing manual diff mistakes."_
 
-**Current Status:** Phase 1 → Provable Engine (80% technical, 30% market)
+**Strategic Direction:** Evolving from "DB Compare Tool" → "Production Safety System" — see [guard.plan.md](file:///Volumes/FlexibleWorkplace/The-Andb/plans/guard.plan.md) for the 6-month execution plan.
+
+**Current Status:** Phase 2 → Trustable Product (Safety & Orchestration refactored)
 
 ---
 
@@ -12,8 +14,8 @@
 
 | Phase       | Name                  | Goal                                            | Status     |
 | :---------- | :-------------------- | :---------------------------------------------- | :--------- |
-| **Phase 1** | **Provable Engine**   | 1 external dev runs `andb compare` successfully | 🚧 Active  |
-| **Phase 2** | **Trustable Product** | 1 team uses on staging for 2 weeks, 0 incidents | ⏳ Next    |
+| **Phase 1** | **Provable Engine**   | 1 external dev runs `andb compare` successfully | ✅ Done    |
+| **Phase 2** | **Trustable Product** | 1 team uses on staging for 2 weeks, 0 incidents | 🚧 Active  |
 | **Phase 3** | **Revenue Ready**     | 1 paying customer                               | ⏳ Planned |
 
 ---
@@ -52,8 +54,11 @@
 
 ## 🛡️ Phase 2: Trustable Product
 
+- ✅ SafetyReport Engine — SQL classified as SAFE / WARNING / CRITICAL
+- ✅ Structured Dry-run — full preview without DB writes
+- ✅ Pure Dispatcher — `OrchestrationService` refactored, `testConnection` relocated
 - Auto backup before apply (`mysqldump` snapshot)
-- `⚠️ Destructive change detected` warnings
+- `⚠️ Destructive change detected` warnings in UI
 - DB ↔ SQL file comparison
 - Clean structured CLI output (no NestJS debug noise)
 - MySQL 5.7 compatibility testing
@@ -62,8 +67,10 @@
 
 ---
 
-## 💰 Phase 3: Revenue Ready
+## 💰 Phase 3: Revenue Ready (aligned with [guard.plan.md](file:///Volumes/FlexibleWorkplace/The-Andb/plans/guard.plan.md))
 
+- Drift Detection Agent (CLI scheduler → cloud snapshots)
+- Deployment Guard (CI plugin — GitHub Actions first)
 - Docker image (GHCR / DockerHub)
 - GitHub Actions + GitLab CI examples
 - License via Keygen.sh or LemonSqueezy (NOT in-house)

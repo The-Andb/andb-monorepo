@@ -63,23 +63,22 @@ Use the CLI to compare the `dev` database against `prod`:
 andb compare dev prod
 ```
 
----
+> [!TIP]
+> **Clean Pipe CLI**: The CLI separates informational logs (`stderr`) from data output (`stdout`). You can safely pipe the output to a file: `andb compare dev prod > result.sql`.
 
 ## 📂 Repository Structure
 
 This project follows a **Polyrepo** structure managed under a single root directory.
 
-| Directory         | Description                          | Git Repository                                                                  |
-| ----------------- | ------------------------------------ | ------------------------------------------------------------------------------- |
-| **`ui/`**         | Desktop Application (Electron/Vue)   | [The-Andb/andb-desktop](https://github.com/The-Andb/andb-desktop)               |
-| **`core/`**       | Core Database Engine (Logic/Drivers) | [The-Andb/andb-core](https://github.com/The-Andb/andb-core)                     |
-| **`cli/`**        | Command Line Tool                    | [The-Andb/andb-cli](https://github.com/The-Andb/andb-cli)                       |
-| **`landing/`**    | Marketing Website                    | [The-Andb/andb-www](https://github.com/The-Andb/andb-www)                       |
-| **`andb-plans/`** | Documentation, Specs, and Roadmaps   | _Tracked in root_                                                               |
-| **`docker/`**     | Infrastructure (Docker Compose)      | _Tracked in root_                                                               |
-| **Legacy**        |                                      |                                                                                 |
-| -                 | Desktop Application (Legacy)         | [The-Andb/andb-desktop-legacy](https://github.com/The-Andb/andb-desktop-legacy) |
-| -                 | Core Engine (Node.js Legacy)         | [The-Andb/andb-core-legacy](https://github.com/The-Andb/andb-core-legacy)       |
+| Directory         | Description                         | Git Repository                                                    |
+| ----------------- | ----------------------------------- | ----------------------------------------------------------------- |
+| **`ui/`**         | Desktop Application (Electron/Vue)  | [The-Andb/andb-desktop](https://github.com/The-Andb/andb-desktop) |
+| **`core/`**       | Core Database Engine (**Zero-Dep**) | [The-Andb/andb-core](https://github.com/The-Andb/andb-core)       |
+| **`cli/`**        | Command Line Tool (**Nest-Free**)   | [The-Andb/andb-cli](https://github.com/The-Andb/andb-cli)         |
+| **`mcp/`**        | MCP Server (AI-Driven Schema Ops)   | [The-Andb/andb-mcp](https://github.com/The-Andb/andb-mcp)         |
+| **`landing/`**    | Marketing Website                   | [The-Andb/andb-www](https://github.com/The-Andb/andb-www)         |
+| **`andb-plans/`** | Documentation, Specs, and Roadmaps  | _Tracked in root_                                                 |
+| **`docker/`**     | Infrastructure (Docker Compose)     | _Tracked in root_                                                 |
 
 ---
 
@@ -114,14 +113,11 @@ git clone https://github.com/The-Andb/andb-desktop.git andb-desktop
 # Core (The Library)
 git clone https://github.com/The-Andb/andb-core.git andb-core
 
-# Legacy UI
-git clone https://github.com/The-Andb/andb-desktop-legacy.git andb-desktop-legacy
-
-# Legacy Core
-git clone https://github.com/The-Andb/andb-core-legacy.git andb-core-legacy
-
 # CLI (The Tooling)
 git clone https://github.com/The-Andb/andb-cli.git andb-cli
+
+# MCP Server
+git clone https://github.com/The-Andb/andb-mcp.git andb-mcp
 
 # Landing Page (WWW)
 git clone https://github.com/The-Andb/andb-www.git andb-www

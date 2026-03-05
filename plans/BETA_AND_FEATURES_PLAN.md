@@ -209,7 +209,8 @@ A **visual database design tool** inside The Andb desktop app. Design schemas vi
 
 ### Breakdown
 
-1. [ ] **Phase 1: ERD Viewer (Read-Only)**
+1. [/] **Phase 1: ERD Viewer (Read-Only)**
+   - [x] Initial sidebar entry added (hidden by `erDiagram` feature flag)
    - [ ] Parse existing schema from storage → Generate ERD (Entity Relationship Diagram)
    - [ ] Display tables as cards with columns, types, keys
    - [ ] Draw FK relationships as lines between tables

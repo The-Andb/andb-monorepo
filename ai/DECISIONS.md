@@ -258,5 +258,64 @@ Completely decouple CLI logic from `@the-andb/core` and move it to `@the-andb/cl
 
 #### Consequences
 
-- `core` can no longer be executed directly via terminal.
-- Setup requires a unified build process where `core` must be compiled and linked into `cli` before the terminal app functions.
+### ADR-009: Sidebar Depth Optimization (Category-Level Navigation)
+
+**Date:** 2026-03-04
+**Status:** Accepted
+
+#### Context
+
+The Sidebar's Schema Explorer tree was rendering individual database objects (Tables, Views, Procedures, Functions, Triggers, Events) as the final leaf nodes. In large schemas with hundreds or thousands of objects, this caused massive DOM bloat, high memory consumption, and significant scroll-lag. Furthermore, the UI already supports "Miller Columns" or main-view browsing, making the sidebar representation redundant for deep exploration.
+
+#### Decision
+
+Limit the Schema Explorer tree depth to **DDL Category level** (e.g., "Tables", "Views").
+
+- Individual objects (leaf nodes) will NO LONGER be rendered in the sidebar.
+- Clicking on a Category will now correctly trigger navigation or filtering in the main view (GlobalSchemaView).
+- Associated logic for individual object selection (`selectObject`, `selectedObjectId`, `refreshObject`) is removed from the Sidebar to reduce bundle size and complexity.
+
+#### Rationale
+
+- **Performance**: Instant render times even for very large databases.
+- **UX**: Cleaner, more focused navigation that aligns with the "Deep Browse in Main View" pattern.
+- **Maintainability**: Reduced template complexity and fewer reactive state dependencies.
+
+#### Consequences
+
+- Main view must handle object list display and filtering comprehensively as it is now the primary path for individual object selection.
+- Search within the Sidebar must still be effective, likely by highlighting matching categories.
+- User will use the main view (Miller column or List) to perform specific object actions (e.g., refresh single table, view DDL).
+
+---
+
+### ADR-010: Strategic Repositioning — DB Guard (Production Safety System)
+
+**Date:** 2026-03-04
+**Status:** Accepted
+
+#### Context
+
+The Andb started as a "DB Compare Tool" — a utility for diffing and migrating MySQL schemas. While technically sound, this positioning limits market appeal and monetization potential. The core engine is already capable of detecting schema drift, classifying risk, and generating deterministic migration scripts.
+
+#### Decision
+
+Reposition the product from **"DB Compare Tool"** to **"Production Safety System" (DB Guard)**. The 6-month execution plan is documented in [guard.plan.md](file:///Volumes/FlexibleWorkplace/The-Andb/plans/guard.plan.md).
+
+Key pillars:
+
+1. **Risk Prevention** — Block risky deployments via CI integration.
+2. **Drift Detection** — Continuous monitoring of schema divergence across environments.
+3. **Audit Timeline** — Historical schema change tracking for compliance.
+
+#### Rationale
+
+- "Sell risk reduction, not features" — teams pay for preventing outages, not for diffing.
+- The `SafetyReport` engine (SAFE/WARNING/CRITICAL) already provides the foundation.
+- CI/CD integration (GitHub Actions) is the primary distribution channel for DevOps teams.
+
+#### Consequences
+
+- Phase 3 of the roadmap now includes Drift Detection Agent and Deployment Guard.
+- ICP shifts from solo developers to teams (5–30 engineers) with multiple environments.
+- Pricing model will follow Free → Team ($29–79/mo) → Growth ($149+/mo) tiers.

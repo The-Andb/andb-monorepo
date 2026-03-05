@@ -18,11 +18,19 @@
 
 ---
 
-### 2. CLI Exit Codes
+### 1b. ✅ Post-Roast UX & Stability (DONE — Mar 04)
 
-- [ ] Exit 0: No schema differences detected
-- [ ] Exit 1: Differences detected (migration available)
-- [ ] Exit 2: Destructive changes detected (DROP TABLE/COLUMN)
+- [x] **UX-001**: **Sidebar Depth Optimization** (Stopped rendering individual object leaves to fix DOM bloat).
+- [x] **FIX-001**: Resolved `activePair` redeclaration and template nesting errors in `Sidebar.vue`.
+- [x] **PERF-001**: Reduced sidebar DOM load by ~80% for large schemas.
+
+---
+
+### 2. ✅ CLI Exit Codes (DONE — Mar 04)
+
+- [x] Exit 0: No schema differences detected
+- [x] Exit 1: Differences detected (migration available)
+- [x] Exit 2: Destructive changes detected (DROP TABLE/COLUMN)
 
 **Why:** CI pipelines gate on exit codes. Without this, `andb compare` is unusable in CI.
 
@@ -36,12 +44,13 @@
 
 ---
 
-### 4. Destructive Change Warning
+### 4. ✅ Destructive Change Warning (DONE — Mar 04)
 
-- [ ] Detect DROP TABLE in diff operations
-- [ ] Detect DROP COLUMN in diff operations
-- [ ] Print `⚠️ Destructive change detected` to stderr
-- [ ] Set exit code 2 when destructive ops found
+- [x] Detect DROP TABLE in diff operations
+- [x] Detect DROP COLUMN in diff operations
+- [x] Print SafetyReport with CRITICAL/WARNING/SAFE classification to stderr
+- [x] Set exit code 2 when destructive ops found
+- [x] Added `--dry-run` flag to `andb migrate` for preview-only mode
 
 ---
 
@@ -86,6 +95,8 @@
 
 | Date   | Event                                                    |
 | :----- | :------------------------------------------------------- |
+| Mar 04 | Core Safety & Orchestration refactor complete. 17 tests. |
+| Mar 04 | Guard Plan (ADR-010) integrated into roadmap.            |
 | Feb 24 | Sprint defined. 53 E2E+sandbox tests green.              |
 | Feb 24 | Production-ready checklist created and refined.          |
 | Feb 23 | Deep scenario matrix (17 new scenarios) + sandbox layer. |
