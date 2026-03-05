@@ -26,13 +26,13 @@ Our mission is delivered through three specialized pillars:
 
 The engine behind everything. A stateless, high-performance logic library written in TypeScript that handles SQL parsing, dependency graphing, and migration strategies.
 
-- **Next-Gen:** `@the-andb/core` (Framework modular architecture).
+- **Status:** `@the-andb/core` (Vanilla TypeScript architecture).
 
-#### 🎨 [The Face (UI)](https://github.com/The-Andb/andb)
+#### 🎨 [The Face (Desktop)](https://github.com/The-Andb/andb-desktop)
 
-The command center for database architects. A cross-platform Electron application that makes schema comparison and conflict resolution as easy as a Git merge.
+The command center for database architects. A professional desktop application that makes schema comparison and conflict resolution as intuitive as a Git merge.
 
-- **Next-Gen:** `ui-next` (Vue 3 + Vite + Electron).
+- **Status:** `@the-andb/desktop` (Vue 3 + Vite + Electron).
 
 #### 🛠️ [The Tool (CLI)](https://github.com/The-Andb/andb-cli)
 
@@ -42,9 +42,6 @@ The bridge to CI/CD. A powerful terminal utility for automating exports, imports
 
 <p align="left">
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/Framework-E0234E?style=for-the-badge&logo=framework&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" />
-  <img src="https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white" />
   <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" />
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
   <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
@@ -54,8 +51,8 @@ The bridge to CI/CD. A powerful terminal utility for automating exports, imports
 
 ### 🚀 Roadmap 2026
 
-- [x] **Framework Core Rewrite** - Modularizing the brain of Andb.
-- [ ] **Andb UI Next** - High-performance desktop experience with Vue 3.
+- [x] **Vanilla Core Rewrite** - Modularizing the engine with 100% TypeScript.
+- [x] **Desktop Beta** - High-performance desktop experience with Vue 3.
 - [ ] **AI SQL Engine** - Intelligently predicting schema conflicts and fixes.
 - [ ] **Enterprise Connectors** - Oracle, SQL Server, and Cloud Native support.
 
