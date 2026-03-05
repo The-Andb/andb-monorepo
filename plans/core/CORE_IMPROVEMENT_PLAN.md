@@ -8,7 +8,7 @@
 ## ✅ Phase 0: Foundation — DONE
 
 - [x] CoreBridge pattern (UI/CLI decoupled from service internals)
-- [x] NestJS DI with string tokens
+- [x] Framework DI with string tokens
 - [x] Abstract `IDatabaseDriver` interface
 - [x] MySQL driver with SSH tunneling
 
@@ -27,7 +27,7 @@
 - [x] Exit codes (0/1/2)
 - [x] JSON / YAML output mode
 - [x] Destructive change warnings
-- [x] Clean structured logging (remove NestJS noise)
+- [x] Clean structured logging (remove Framework noise)
 - [ ] Auto backup (`mysqldump`) before apply
 - [ ] DB ↔ DB comparison CLI (Standardized)
 - [ ] README quickstart & Beta user finding

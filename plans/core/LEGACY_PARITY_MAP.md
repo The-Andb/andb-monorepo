@@ -1,4 +1,4 @@
-# [EXHAUSTIVE] Legacy → NestJS Core Parity Map
+# [EXHAUSTIVE] Legacy → Framework Core Parity Map
 
 > Mỗi function, mỗi logic rẽ nhánh, mỗi quy tắc skip của legacy PHẢI được tái hiện chính xác. Checklist này là source of truth cuối cùng. Status 100% chỉ khi tất cả các mục nhỏ này được tích [x].
 
@@ -6,7 +6,7 @@
 
 ## 1. Comparator Service (`comparator.js` 615 lines)
 
-| #    | Legacy Method / Logic                          | Purpose                                           | NestJS Equivalent                                 | Status    |
+| #    | Legacy Method / Logic                          | Purpose                                           | Framework Equivalent                                 | Status    |
 | ---- | ---------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | --------- |
 | 1.1  | `compare(ddl, name)`                           | Entry point wrapper                               | `OrchestrationService.compareSchema()`            | ✅ Ported |
 | 1.2  | `reportDLLChange(srcEnv, type, destEnv, name)` | Orchestrates full diff process                    | `ComparatorService.reportDLLChange()`             | ✅ Ported |
@@ -30,7 +30,7 @@
 
 ## 2. Migrator Service (`migrator.js` 631 lines)
 
-| #    | Legacy Method / Logic                       | Purpose                                | NestJS Equivalent                            | Status    |
+| #    | Legacy Method / Logic                       | Purpose                                | Framework Equivalent                            | Status    |
 | ---- | ------------------------------------------- | -------------------------------------- | -------------------------------------------- | --------- |
 | 2.1  | `migrate(ddl, fromList, name)`              | Entry point wrapper                    | `OrchestrationService.migrateSchema()`       | ✅ Ported |
 | 2.2  | `_genericMigrate` / `_migrateSingleObject`  | Orchestration of migration logic       | `OrchestrationService.migrateSchema()`       | ✅ Ported |
@@ -52,7 +52,7 @@
 
 ## 3. Storage Layer (`repositories/` & `entities/`)
 
-| #    | Legacy Repository / Entity Logic                  | Purpose                                      | NestJS Equivalent                         | Status    |
+| #    | Legacy Repository / Entity Logic                  | Purpose                                      | Framework Equivalent                         | Status    |
 | ---- | ------------------------------------------------- | -------------------------------------------- | ----------------------------------------- | --------- |
 | 3.1  | **`COLLATE NOCASE` Schema**                       | Case-insensitive lookups in SQLite           | `StorageService._initSchema()`            | ✅ Ported |
 | 3.2  | `DDLRepository.listNames(..., fallbackCI)`        | List objects with fallback to CI database    | `StorageService.getDDLList()`             | ✅ Ported |
@@ -70,7 +70,7 @@
 
 ## 4. Driver & Exporter (Unified 100% Parity)
 
-| #   | Legacy Component                          | NestJS Equivalent                                | Status    |
+| #   | Legacy Component                          | Framework Equivalent                                | Status    |
 | --- | ----------------------------------------- | ------------------------------------------------ | --------- |
 | 4.1 | `ExporterService` (Unified export schema) | `ExporterService.exportSchema()`                 | ✅ Ported |
 | 4.2 | `ConnectionFactory` (SSH / Native)        | `DriverFactoryService` + `ssh-tunnel.ts`         | ✅ Ported |
@@ -82,4 +82,4 @@
 
 ## Final Parity Status: 100% ✅
 
-All core lifecycle methods, safety guards, and storage optimizations from the legacy comparator/migrator system have been successfully ported to the NestJS implementation.
+All core lifecycle methods, safety guards, and storage optimizations from the legacy comparator/migrator system have been successfully ported to the Framework implementation.

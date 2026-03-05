@@ -54,4 +54,4 @@ docker run --rm ghcr.io/the-andb/cli compare \
 - [ ] `andb compare --help` shows all options
 - [ ] Exit codes work (0/1/2)
 - [ ] JSON output works
-- [ ] No NestJS debug noise in production mode
+- [ ] No Framework debug noise in production mode

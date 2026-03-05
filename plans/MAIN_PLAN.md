@@ -60,7 +60,7 @@
 - Auto backup before apply (`mysqldump` snapshot)
 - `⚠️ Destructive change detected` warnings in UI
 - DB ↔ SQL file comparison
-- Clean structured CLI output (no NestJS debug noise)
+- Clean structured CLI output (no Framework debug noise)
 - MySQL 5.7 compatibility testing
 - Performance benchmark (300 tables, 1000 indexes, 200 FKs)
 - Migration failure recovery documentation
@@ -98,7 +98,7 @@
 
 | Package          | Role                                 | Status    |
 | :--------------- | :----------------------------------- | :-------- |
-| `@the-andb/core` | Pure business logic (NestJS, mysql2) | ✅ Active |
+| `@the-andb/core` | Pure business logic (Framework, mysql2) | ✅ Active |
 | `@the-andb/cli`  | Terminal interface (nest-commander)  | ✅ Active |
 | `@the-andb/test` | E2E + Sandbox test suite (Jest)      | ✅ Active |
 | `andb-desktop`   | Electron + Vue 3 desktop app         | ✅ Built  |

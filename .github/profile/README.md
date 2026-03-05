@@ -26,7 +26,7 @@ Our mission is delivered through three specialized pillars:
 
 The engine behind everything. A stateless, high-performance logic library written in TypeScript that handles SQL parsing, dependency graphing, and migration strategies.
 
-- **Next-Gen:** `@the-andb/core-nest` (NestJS modular architecture).
+- **Next-Gen:** `@the-andb/core` (Framework modular architecture).
 
 #### 🎨 [The Face (UI)](https://github.com/The-Andb/andb)
 
@@ -42,7 +42,7 @@ The bridge to CI/CD. A powerful terminal utility for automating exports, imports
 
 <p align="left">
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Framework-E0234E?style=for-the-badge&logo=framework&logoColor=white" />
   <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" />
   <img src="https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white" />
   <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" />
@@ -54,7 +54,7 @@ The bridge to CI/CD. A powerful terminal utility for automating exports, imports
 
 ### 🚀 Roadmap 2026
 
-- [x] **NestJS Core Rewrite** - Modularizing the brain of Andb.
+- [x] **Framework Core Rewrite** - Modularizing the brain of Andb.
 - [ ] **Andb UI Next** - High-performance desktop experience with Vue 3.
 - [ ] **AI SQL Engine** - Intelligently predicting schema conflicts and fixes.
 - [ ] **Enterprise Connectors** - Oracle, SQL Server, and Cloud Native support.

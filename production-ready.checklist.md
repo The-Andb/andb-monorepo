@@ -68,7 +68,7 @@
 - [x] Fully non-interactive mode
 - [ ] **Exit codes** (0=no diff, 1=diff detected, 2=destructive) ← MUST for CI
 - [ ] **JSON output** (`--format json`) ← MUST for CI
-- [ ] **Structured logging** (clean output, not NestJS debug noise)
+- [ ] **Structured logging** (clean output, not Framework debug noise)
 - [ ] ~~Config file support~~ → **DELAYED** (CLI flags đủ cho Phase 1)
 
 > **Phản biện**: Không có exit code + JSON = không claim CI-ready. Phải có trước khi nói với user.
@@ -98,7 +98,7 @@
 - [ ] **Compare: DB ↔ DB** (core `compareSchema()` exists, CLI chưa expose)
   > Đây là marketing feature lớn nhất. Phải expose trước khi tìm user.
 - [ ] Compare: DB ↔ SQL file
-- [ ] Clean CLI output (kill NestJS `[Nest] LOG` noise)
+- [ ] Clean CLI output (kill Framework `[Nest] LOG` noise)
 - [ ] ~~Lock mechanism~~ → **DELAYED** (concurrent migration chỉ xảy ra ở team lớn)
 - [ ] ~~Version-control migration files~~ → **DELAYED**
 

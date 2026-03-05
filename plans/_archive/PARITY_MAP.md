@@ -9,7 +9,7 @@
 
 | Feature Area     | Legacy (`andb-core-legacy`)  | Next-Gen (`andb-core`) | Status     | Notes                       |
 | :--------------- | :--------------------------- | :--------------------- | :--------- | :-------------------------- |
-| **Architecture** | Monolithic / Node.js Scripts | Modular / NestJS       | ✅ Done    | Better DI, Testability      |
+| **Architecture** | Monolithic / Node.js Scripts | Modular / Framework       | ✅ Done    | Better DI, Testability      |
 | **Parsing**      | Regex-based (`sql-parser`)   | AST/Regex Hybrid       | ✅ Done    | More accurate               |
 | **Drivers**      |                              |                        |            |                             |
 | - MySQL          | Native mysql2                | mysql2 + SSH Tunnel    | ✅ Done    | SSH integrated in driver    |
