@@ -20,17 +20,17 @@ The Miller Column system distinguishes between **Branch Nodes** (Exploration) an
 
 _Purpose: Data exploration and context handover to the next column._
 
-| Level  | Node Type             | Triggers Next Column         | Metadata Handover (`rawData`)     | Primary Intent       |
-| :----- | :-------------------- | :--------------------------- | :-------------------------------- | :------------------- |
-| **0**  | **Project Root**      | Categories (Level 1)         | `project: Project`                | Select Active Base   |
-| **1**  | **Category (Pairs)**  | Sync Pairs List (Level 2a)   | `category: 'pairs'`               | Go to Sync Workflow  |
-| **1**  | **Category (Schema)** | Environments List (Level 2)  | `category: 'schema'`              | Explore Architecture |
-| **1**  | **Category (Config)** | Global Connection List       | `category: 'config'`              | Manage Credentials   |
-| **2**  | **Environment**       | Databases (Level 3)          | `envName`, `projectId`            | Explore Instance     |
-| **2a** | **Sync Pair**         | Changed Types (Level 3a)     | `pair: ConnectionPair`            | Compare & Sync       |
-| **3**  | **Database (Hybrid)** | Object Types (Level 4)       | `connection: DatabaseConnection`  | ERD / Table Drill    |
-| **3a** | **Pair Data Type**    | Pair Managed List (Level 4a) | `pair`, `type: 'tables'\|'views'` | Batch Diff Audit     |
-| **4**  | **Object Type**       | Entity List (Level 5)        | `type`, `parentConn`              | Filtered Selection   |
+| Level  | Node Type             | Triggers Next Column         | Metadata Handover (`rawData`)     | Primary Intent        |
+| :----- | :-------------------- | :--------------------------- | :-------------------------------- | :-------------------- |
+| **0**  | **Project Root**      | Categories (Level 1)         | `project: Project`                | Select Active Project |
+| **1**  | **Category (Pairs)**  | Sync Pairs List (Level 2a)   | `category: 'pairs'`               | Go to Sync Workflow   |
+| **1**  | **Category (Schema)** | Environments List (Level 2)  | `category: 'schema'`              | Explore Architecture  |
+| **1**  | **Category (Config)** | Global Connection List       | `category: 'config'`              | Manage Credentials    |
+| **2**  | **Environment**       | Databases (Level 3)          | `envName`, `projectId`            | Explore Instance      |
+| **2a** | **Sync Pair**         | Changed Types (Level 3a)     | `pair: ConnectionPair`            | Compare & Sync        |
+| **3**  | **Database (Hybrid)** | Object Types (Level 4)       | `connection: DatabaseConnection`  | ERD / Table Drill     |
+| **3a** | **Pair Data Type**    | Pair Managed List (Level 4a) | `pair`, `type: 'tables'\|'views'` | Batch Diff Audit      |
+| **4**  | **Object Type**       | Entity List (Level 5)        | `type`, `parentConn`              | Filtered Selection    |
 
 ### B. Leaf & Hybrid Nodes (The Workshop Terminal)
 

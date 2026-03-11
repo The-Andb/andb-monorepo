@@ -57,6 +57,7 @@
 - ✅ SafetyReport Engine — SQL classified as SAFE / WARNING / CRITICAL
 - ✅ Structured Dry-run — full preview without DB writes
 - ✅ Pure Dispatcher — `OrchestrationService` refactored, `testConnection` relocated
+- ✅ **Go to Definition** — Cmd/Ctrl+Click navigation with optimized Regex caching
 - Auto backup before apply (`mysqldump` snapshot)
 - `⚠️ Destructive change detected` warnings in UI
 - DB ↔ SQL file comparison

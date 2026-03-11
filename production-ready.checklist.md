@@ -88,6 +88,8 @@
   > _"We automatically snapshot before apply."_ → User relax 50%.
 - [ ] Warning: `⚠️ Destructive change detected` khi DROP TABLE/COLUMN
 - [ ] Warning: Type change may cause data loss (e.g. `varchar` → `int`)
+- [x] **Go to Definition (UI/UX)**: Cmd/Ctrl+Click navigation for SQL identifiers.
+  > ✅ Optimized with Regex caching for high performance. Handles delimiters & dot-notation.
 
 > **Phản biện**: Cần policy engine (block DROP on prod)?
 > **Trả lời**: KHÔNG. Warning đủ cho Phase 2. Policy = Phase 4+.
