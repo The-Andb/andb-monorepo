@@ -319,3 +319,31 @@ Key pillars:
 - Phase 3 of the roadmap now includes Drift Detection Agent and Deployment Guard.
 - ICP shifts from solo developers to teams (5–30 engineers) with multiple environments.
 - Pricing model will follow Free → Team ($29–79/mo) → Growth ($149+/mo) tiers.
+### ADR-011: Stable Release v4.0.0 (The Andb)
+
+**Date:** 2026-03-11
+**Status:** Accepted
+
+#### Context
+
+The project has reached a level of stability across the Core engine, CLI, and Desktop application that warrants a transition from Beta to the first major Stable release. We have achieved 100% unit test pass rates and successfully implemented long-requested features like Search Content and Go to Definition.
+
+#### Decision
+
+Launch **The Andb v4.0.0** (Stable).
+
+- Bump versions: Core/CLI/MCP to `4.0.0`, Desktop to `3.1.0`, WWW to `1.1.0`.
+- Finalize the rebranding from "Andb" to "**The Andb**" with the tagline "**Simplest Database Migration Tool**".
+- Standardize internal dependencies to explicit stable versions instead of `workspace:*` for final artifacts.
+
+#### Rationale
+
+- **Market Readiness**: The product is now ready for production use by teams and professional developers.
+- **Brand Consistency**: Solidifies the brand identity before aggressive growth in Phase 3.
+- **Quality Assurance**: 100% test coverage and successful real-world schema migrations provide the necessary confidence.
+
+#### Consequences
+
+- Need for formal release notes and production distribution channels.
+- Transition from "building features" to "maintaining stability & incremental growth".
+- Shift in documentation tone to authoritative and professional.

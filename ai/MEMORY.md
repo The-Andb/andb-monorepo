@@ -11,7 +11,7 @@
 - **New Core Engine**: `@the-andb/core-nest` (Framework/TypeScript) - _In Development_
 - **UI**: Electron + Vue 3, presentation only
 - **Database focus**: MySQL schema comparison & sync
-- **Current Phase**: Phase 2 — Hardening (MySQL Deep Dive)
+- **Current Phase**: Phase 3 — Expansion (Stable Release & Advanced Features)
 
 ---
 
@@ -111,3 +111,4 @@
 | 2026-03-04 | **Core Safety & Orchestration Refactor**: Implemented `SafetyReport` engine (SAFE/WARNING/CRITICAL classification) in `MigratorService`. Refactored `OrchestrationService` to pure dispatcher. Relocated `testConnection` to `SecurityOrchestrator`. Enhanced `SchemaOrchestrator` with structured dry-run and decomposed migration logic. 17/17 unit tests pass.  |
 | 2026-03-04 | **Guard Plan Integration**: Adopted strategic repositioning from "DB Compare Tool" → "Production Safety System" (ADR-010). Integrated `guard.plan.md` into `MAIN_PLAN.md` and aligned Phase 3 with Drift Detection + Deployment Guard goals.                                                                                                                       |
 | 2026-03-11 | **Go to Definition & Telemetry**: Implemented Cmd/Ctrl+Click navigation for SQL identifiers across all viewers (`DDLViewer`, `MirrorDiffView`, `SchemaTreeMode`, `DDLDetailModal`). Centralized highlighting logic in `navigation.ts` with Regex caching. Disabled local PostHog telemetry to prevent CSP errors in dev.                                            |
+| 2026-03-11 | **Stable Release v4.0.0 (The Andb)**: Officially transitioned from Beta to Stable. Bumped all package versions (@the-andb/core/cli/mcp to 4.0.0, desktop to 3.1.0, www to 1.1.0). Finalized branding as **The Andb**. Published stable Core/CLI to NPM. Successfully built and released Desktop v3.1.0 to GitHub. Updated all internal documentation and synced all repositories. |

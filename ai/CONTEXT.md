@@ -16,7 +16,7 @@
 
 **Mission:** Transform from personal tool into commercial-grade database management product.
 
-**Current Status:** Phase 2 (Hardening) — MySQL Deep Dive & Core Refactor
+**Current Status:** Phase 3 (Expansion) — Stable Release v4.0.0 & Advanced Features
 
 ---
 
@@ -25,9 +25,10 @@
 | Package          | Role                           | Storage       |
 | ---------------- | ------------------------------ | ------------- |
 | `@the-andb/core` | Pure business logic, stateless | Agnostic      |
-| `@the-andb/ui`   | Electron + Vue 3 desktop       | SQLiteStorage |
+| `@the-andb/desktop`| Electron + Vue 3 desktop       | SQLiteStorage |
 | `@the-andb/cli`  | Terminal interface             | FileStorage   |
-| `landing`        | Marketing/docs                 | —             |
+| `@the-andb/mcp`  | MCP Protocol adapter           | —             |
+| `andb-www`       | Marketing/docs (Landing)       | —             |
 
 **Core Principle:** All logic in `core`. UI/CLI are adapters only.
 
@@ -142,9 +143,9 @@
 | Phase   | Focus                               | Timeline     |
 | ------- | ----------------------------------- | ------------ |
 | Phase 1 | Foundation                          | ✅ Done      |
-| Phase 2 | MySQL Deep Dive + Core Refactor     | Jan-Feb 2026 |
-| Phase 3 | PostgreSQL Support                  | Feb-Mar 2026 |
-| Phase 4 | Pro Features (SSH, Safe Mode, Team) | Mar+ 2026    |
+| Phase 2 | MySQL Deep Dive + Core Refactor     | ✅ Done (v4.0.0) |
+| Phase 3 | Stable Release & Advanced Features  | Mar 2026     |
+| Phase 4 | Team Features & Drift Detection     | Apr+ 2026    |
 
 ---
 
