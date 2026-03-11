@@ -7,10 +7,10 @@
 
 ## Responsibilities
 
-1. **Auto-update Checklists:** Monitor task completion and update `task.md`, `PLAN.md`, or other tracking documents.
-2. **Version Bumping:** Increment versions in `package.json` for all monorepo packages (`core`, `cli`, `desktop`) in a synchronized manner.
-3. **Resolve Symlinks for Publish:** Prepare packages for publishing by replacing local workspace symlinks/references (`workspace:*`) with exact real package versions.
-4. **Publishing Flow:** Execute the build and publish steps for `core`, `cli`, and `desktop` packages securely to the target registry.
+1. **Auto-update Checklists:** Monitor task completion and update `task.md`, `ai/PLAN.md`, or other tracking documents.
+2. **Version Bumping:** Increment versions in `package.json` for all monorepo packages (`core`, `cli`, `desktop`, `mcp`, `www`) in a synchronized manner.
+3. **Resolve Symlinks for Publish:** Prepare packages for publishing by replacing local workspace symlinks/references (`workspace:*`) with exact real package versions for stable releases.
+4. **Publishing Flow:** Execute the build and publish steps for `core`, `cli`, and `mcp` packages securely to the NPM registry, and trigger GitHub releases for `desktop`.
 5. **Feature Flag Strategy (Hide Beta):** Verify and hide beta/wip features before a production release based on defined feature-flag strategies.
 
 ---
@@ -47,9 +47,11 @@
 
 ### Version Updates
 
-- `andb-core`: v1.0.0 -> v1.0.1
-- `andb-cli`: v1.0.0 -> v1.0.1
-- `andb-desktop`: v1.0.0 -> v1.0.1
+- `@the-andb/core`: v4.0.0 -> v4.0.1
+- `@the-andb/cli`: v4.0.0 -> v4.0.1
+- `@the-andb/desktop`: v3.1.0 -> v3.1.1
+- `@the-andb/mcp`: v4.0.0 -> v4.0.1
+- `andb-www`: v1.1.0 -> v1.1.1
 
 ### Workspace Resolution
 
