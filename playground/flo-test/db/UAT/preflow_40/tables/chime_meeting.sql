@@ -1,0 +1,22 @@
+CREATE TABLE `chime_meeting` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `meeting_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `external_meeting_id` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT 'set conference id to this filed',
+  `external_meeting_type` varchar(20) COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'CONFERENCE',
+  `media_region` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `media_placement` json DEFAULT NULL,
+  `spend_time` int DEFAULT NULL COMMENT 'seconds',
+  `status` enum('PENDING','STARTED','ENDED') COLLATE utf8mb4_general_ci DEFAULT 'PENDING',
+  `channel_id` int NOT NULL DEFAULT '0',
+  `channel_title` varchar(200) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `host_user_id` bigint NOT NULL,
+  `created_date` double(13,3) NOT NULL,
+  `updated_date` double(13,3) NOT NULL,
+  `start_time` int DEFAULT NULL,
+  `end_time` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `chime_meeting_meeting_id_IDX` (`meeting_id`) USING BTREE,
+  KEY `chime_meeting_external_meeting_id_IDX` (`external_meeting_id`,`external_meeting_type`) USING BTREE,
+  KEY `idx_status` (`status`),
+  KEY `chime_meeting_channel_id_IDX` (`channel_id`,`start_time`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci

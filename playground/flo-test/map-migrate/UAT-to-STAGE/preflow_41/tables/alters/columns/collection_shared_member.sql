@@ -1,0 +1,3 @@
+ALTER TABLE `collection_shared_member`
+MODIFY COLUMN `access` tinyint NOT NULL COMMENT 'This is permission shared collection.\n OWNER = 0\n  READ = 1\n  READ_WRITE = 2' COLLATE latin1_swedish_ci,
+MODIFY COLUMN `shared_status` tinyint unsigned NOT NULL DEFAULT '0' COMMENT 'The status of the shared collection,\n\n WAITING = 0,\n  JOINED = 1,\n  DECLINED = 2,\n  REMOVED = 3, // remove by owner, un-share\n  LEAVED = 4, // leave share (member leave)\n  TEMP_REMOVE = -1 // worker mark it remove after 1 hour' COLLATE latin1_swedish_ci;

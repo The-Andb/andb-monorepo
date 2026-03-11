@@ -1,0 +1,5 @@
+CREATE TRIGGER `BF_INS_USAGE` BEFORE INSERT ON `usages` FOR EACH ROW BEGIN
+  --
+  CALL u2025_upsertUserUsageLog(NEW.user_id);
+  --
+END

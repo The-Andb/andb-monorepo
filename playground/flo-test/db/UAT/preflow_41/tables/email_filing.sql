@@ -1,0 +1,14 @@
+CREATE TABLE `email_filing` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint unsigned NOT NULL,
+  `collection_id` bigint unsigned NOT NULL,
+  `account_id` bigint unsigned DEFAULT '0',
+  `priority` tinyint DEFAULT '0',
+  `email_subject` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `frequency_used` int DEFAULT '0',
+  `created_date` double(13,3) NOT NULL,
+  `updated_date` double(13,3) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idx_user_id` (`user_id`),
+  KEY `idx_collection_id` (`collection_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1

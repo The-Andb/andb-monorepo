@@ -1,0 +1,42 @@
+{
+  "columns": {
+    "missing": {
+      "setting": [
+        "incoming_call",
+        "incoming_mail",
+        "filter_chat"
+      ]
+    },
+    "updated": 6
+  },
+  "functions": {
+    "deprecated": 115,
+    "new": 7,
+    "ote": 1,
+    "total": 254,
+    "updated": 3
+  },
+  "indexes": {
+    "updated": 7
+  },
+  "procedures": {
+    "deprecated": 73,
+    "new": 12,
+    "ote": 0,
+    "total": 200,
+    "updated": 8
+  },
+  "tables": {
+    "deprecated": 11,
+    "new": 9,
+    "ote": 0,
+    "total": 205,
+    "updated": 93
+  },
+  "triggers": {
+    "total": 17,
+    "new": 0,
+    "deprecated": 2,
+    "updated": 0
+  }
+}

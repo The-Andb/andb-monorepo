@@ -1,0 +1,20 @@
+{
+  "functions": {
+    "total": 0
+  },
+  "procedures": {
+    "total": 0
+  },
+  "tables": {
+    "total": 2,
+    "new": 4,
+    "deprecated": 0,
+    "updated": 0
+  },
+  "triggers": {
+    "total": 0,
+    "new": 0,
+    "deprecated": 0,
+    "updated": 0
+  }
+}

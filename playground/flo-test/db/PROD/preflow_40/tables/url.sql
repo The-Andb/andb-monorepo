@@ -1,0 +1,21 @@
+CREATE TABLE `url` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint unsigned NOT NULL,
+  `url` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `uid` varbinary(1000) DEFAULT NULL,
+  `title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `order_number` decimal(20,10) DEFAULT '0.0000000000',
+  `order_update_time` double(13,3) DEFAULT '0.000',
+  `is_trashed` tinyint unsigned NOT NULL DEFAULT '0',
+  `recent_date` double(13,3) NOT NULL DEFAULT '0.000',
+  `created_date` double(13,3) NOT NULL DEFAULT '0.000',
+  `updated_date` double(13,3) NOT NULL DEFAULT '0.000',
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE KEY `uniq_on_user_id_and_uid` (`user_id`,`uid`) USING BTREE,
+  UNIQUE KEY `uniq_on_user_id_and_order_number` (`user_id`,`order_number`) USING BTREE,
+  KEY `idx_user_id` (`user_id`) USING BTREE,
+  KEY `idx_is_trashed` (`is_trashed`) USING BTREE,
+  KEY `idx_uid` (`uid`) USING BTREE,
+  FULLTEXT KEY `idx_title` (`title`),
+  FULLTEXT KEY `idx_url` (`url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci ROW_FORMAT=DYNAMIC COMMENT='utf8_unicode_ci'

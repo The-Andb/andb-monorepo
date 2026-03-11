@@ -1,0 +1,7 @@
+packages:
+  - 'andb-desktop'
+  - 'andb-core'
+  - 'andb-cli'
+  - 'andb-mcp'
+  - 'andb-www'
+  - 'andb-test'

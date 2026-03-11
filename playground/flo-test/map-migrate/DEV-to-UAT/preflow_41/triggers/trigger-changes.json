@@ -1,0 +1,8 @@
+[
+  {
+    "triggerName": "AFTER_UPDATE_USER",
+    "changes": [
+      "Trigger does not exist in destination"
+    ]
+  }
+]

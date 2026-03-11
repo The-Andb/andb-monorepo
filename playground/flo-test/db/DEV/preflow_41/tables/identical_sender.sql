@@ -1,0 +1,11 @@
+CREATE TABLE `identical_sender` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `filing_id` bigint unsigned DEFAULT NULL,
+  `user_id` bigint unsigned NOT NULL,
+  `suggested_collection_id` bigint unsigned DEFAULT NULL,
+  `email_address` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `created_date` double(13,3) DEFAULT NULL,
+  `updated_date` double(13,3) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `suggested_collection_id` (`suggested_collection_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci

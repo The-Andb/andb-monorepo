@@ -1,0 +1,9 @@
+ALTER TABLE `cal_todo`
+DROP COLUMN priority,
+DROP COLUMN organizer,
+DROP COLUMN category,
+DROP COLUMN state,
+DROP COLUMN review,
+DROP COLUMN blocker,
+DROP COLUMN point,
+DROP COLUMN assignee;

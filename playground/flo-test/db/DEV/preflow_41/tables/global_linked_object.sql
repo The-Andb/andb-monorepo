@@ -1,0 +1,21 @@
+CREATE TABLE `global_linked_object` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `type` tinyint unsigned NOT NULL COMMENT 'Link type: 1=CHAT, 2=COMMENT',
+  `object_type` varbinary(50) NOT NULL COMMENT 'Type of object being linked',
+  `object_uid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'UID of object being linked',
+  `object_collection_id` bigint unsigned NOT NULL DEFAULT '0' COMMENT 'Collection ID (default: USER_DEFINED)',
+  `channel_id` bigint unsigned DEFAULT NULL COMMENT 'Chat channel ID (for CHAT type)',
+  `message_uid` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Chat message UID (for CHAT type)',
+  `comment_collection_id` bigint unsigned DEFAULT NULL COMMENT 'Comment collection ID (for COMMENT type)',
+  `comment_id` bigint unsigned DEFAULT NULL COMMENT 'Comment ID (for COMMENT type)',
+  `created_date` double(13,3) NOT NULL COMMENT 'Unix timestamp in seconds with milliseconds',
+  `updated_date` double(13,3) DEFAULT NULL COMMENT 'Unix timestamp in seconds with milliseconds',
+  `user_id` bigint DEFAULT NULL COMMENT 'User who created the link',
+  `object_href` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`id`),
+  KEY `idx_object_type_object_uid` (`object_type`,`object_uid`) COMMENT 'Query links by object',
+  KEY `idx_comment` (`comment_id`) COMMENT 'Query links by comment',
+  KEY `idx_chat` (`message_uid`) COMMENT 'Query links by chat message',
+  KEY `idx_comment_collection_id` (`comment_collection_id`,`comment_id`),
+  KEY `idx_channel_id` (`channel_id`,`message_uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Links between objects (TODOs, etc.) and chat messages or comments'

@@ -1,0 +1,14 @@
+[
+  {
+    "triggerName": "AFTER_INSERT_CSM",
+    "changes": [
+      "Definition changed"
+    ]
+  },
+  {
+    "triggerName": "AFTER_UPDATE_CSM",
+    "changes": [
+      "Definition changed"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+CREATE TABLE `storage_colla_document_version` (
+  `uid` varchar(200) NOT NULL,
+  `document_uid` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `has_snapshot` tinyint(1) DEFAULT NULL,
+  `metadata` text CHARACTER SET latin1 COLLATE latin1_swedish_ci,
+  `created_date` double DEFAULT NULL,
+  `updated_date` double DEFAULT NULL,
+  `edit_date` double DEFAULT NULL,
+  `name` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1

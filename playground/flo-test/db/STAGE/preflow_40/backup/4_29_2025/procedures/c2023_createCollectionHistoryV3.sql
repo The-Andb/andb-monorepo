@@ -1,0 +1,108 @@
+CREATE PROCEDURE `c2023_createCollectionHistoryV3`(pnCollectionId       BIGINT(20)
+                                                                     ,pvObjectUid          VARBINARY(1000)
+                                                                     ,pvObjectHref         TEXT
+                                                                     ,pvObjectType         VARBINARY(50)
+                                                                     ,pnUserId             BIGINT(20)
+                                                                     ,pnAction             INT(11)
+                                                                     ,pnActionTime         DOUBLE(13,3)
+                                                                     ,pvAssignee           TEXT
+                                                                     ,pvContent            VARCHAR(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+                                                                     ,pnKanbanID           BIGINT(20)
+                                                                     ,pnCreatedDate        DOUBLE(13,3)
+                                                                     ,pnUpdatedDate        DOUBLE(13,3))
+sp_createHistory:BEGIN
+  --
+  DECLARE nHistoryID    BIGINT(20) DEFAULT 0;
+  DECLARE nCAID         BIGINT(20) DEFAULT 0;
+  DECLARE vEmail        VARCHAR(255);
+  DECLARE nOwnerID      BIGINT(20);
+  DECLARE nMemberID     BIGINT(20);
+  DECLARE nPermission   TINYINT(1);
+  --
+  START TRANSACTION;
+  -- CHECK permission
+  SET nPermission = c2024_checkPermissionHistory(0, pnCollectionId, pnKanbanID, pvObjectUid, pvObjectType, pnUserId);
+  -- do NOT validate existing collection WITH CASE CREATE trash (action=13)
+  IF (NOT (ifnull(nPermission, 0) = -5 AND pnAction  = 13)
+     -- do NOT validate existing linked collection WITH CASE recover trash (action=14)
+     AND NOT (ifnull(nPermission, 0) = -6 AND pnAction = 14)
+     -- do NOT validate existing kanban WITH CASE deleted (action=21,22)
+     AND NOT (ifnull(nPermission, 0) = -6 AND pnAction IN (21, 22))
+     --
+     AND ifnull(nPermission, 0) < 1) THEN
+    --
+    ROLLBACK;
+    SELECT nPermission id;
+    LEAVE sp_createHistory;
+    --
+  ELSE
+    -- ensure GET collection_activity_id suchess;
+    SET nCAID = c2022_createCollectionActivity(pnCollectionId, pvObjectUid, pvObjectType, pnCreatedDate, pnUpdatedDate);
+    --
+     IF ifnull(nCAID, 0) = 0 THEN
+       --
+       ROLLBACK;
+       SELECT 0 id;
+       LEAVE sp_createHistory;
+       --
+    END IF;
+    -- INSERT brandnew comment
+    SELECT ifnull(u.email, '')
+      INTO vEmail
+      FROM user u
+     WHERE u.id = pnUserId
+     LIMIT 1;
+    --
+    INSERT INTO collection_history
+      (collection_activity_id, email, action, action_time, assignees
+      ,content, kanban_id, created_date, updated_date)
+    VALUES
+      (nCAID, vEmail, pnAction, pnActionTime
+      ,CASE WHEN pnAction IN (17, 18) THEN ifnull(pvAssignee, '') ELSE '' END
+      ,pvContent, pnKanbanID, pnCreatedDate, pnUpdatedDate)
+    ON DUPLICATE KEY UPDATE created_date=VALUES(created_date)+0.001, updated_date=VALUES(updated_date)+0.001;
+    #
+    SELECT LAST_INSERT_ID() 
+    INTO nHistoryID;
+    --
+    IF ifnull(nHistoryID, 0) = 0 THEN
+      --
+      ROLLBACK;
+      SELECT 0 id;
+      LEAVE sp_createHistory;
+      --
+    END IF;
+    --
+    COMMIT;
+    --
+    -- RETURN value
+    SELECT ca.collection_id, ca.object_uid, ca.object_type, ca.object_href, ca.id
+        -- ,ca.category
+          ,ch.id, ch.collection_activity_id
+          ,ch.email, ch.action, ch.action_time
+          ,ch.content, ch.created_date, ch.updated_date
+          ,co.user_id owner_user_id
+          ,csm.calendar_uri member_calendar_uri
+          ,csm.shared_email member_email
+          ,co.calendar_uri owner_calendar_uri
+          ,u.username owner_username
+          ,ch.assignees
+          ,ch.kanban_id
+      FROM collection_history ch
+      JOIN collection_activity ca ON (ca.id = ch.collection_activity_id)
+      JOIN collection co ON (ca.collection_id = co.id)
+      LEFT JOIN collection_shared_member csm ON (co.id = csm.collection_id)
+      JOIN user u ON (u.id = co.user_id)
+     WHERE ch.id = nHistoryID
+       AND (co.user_id = pnUserId
+            OR csm.member_user_id = pnUserId)
+       AND ca.collection_id = CASE 
+                                WHEN ifnull(pnCollectionId, 0) = 0 
+                                    THEN ca.collection_id 
+                                ELSE pnCollectionId 
+                            END
+            GROUP BY ch.id;
+    --
+  END IF;
+  --
+END

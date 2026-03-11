@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+  <title>COMPARE RESULT: UAT with STAGE</title>
+  <style>
+    .highcharts-figure,
+    .highcharts-data-table table {
+      min-width: 310px;
+      max-width: 800px;
+      margin: 1em auto;
+    }
+
+    #container {
+      height: 400px;
+    }
+
+    .highcharts-data-table table {
+      font-family: Verdana, sans-serif;
+      border-collapse: collapse;
+      border: 1px solid #ebebeb;
+      margin: 10px auto;
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .highcharts-data-table caption {
+      padding: 1em 0;
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .highcharts-data-table th {
+      font-weight: 600;
+      padding: 0.5em;
+    }
+
+    .highcharts-data-table td,
+    .highcharts-data-table th,
+    .highcharts-data-table caption {
+      padding: 0.5em;
+    }
+
+    .highcharts-data-table thead tr,
+    .highcharts-data-table tr:nth-child(even) {
+      background: #f8f8f8;
+    }
+
+    .highcharts-data-table tr:hover {
+      background: #f1f7ff;
+    }
+
+    .ddl-wrapper {
+      display: inline-block;
+      width: 100%;
+      padding: 15px;
+    }
+
+    .ddl-wrapper .ddl-pane {
+      width: 30%;
+      float: left;
+    }
+
+    .ddl-wrapper .ddl-pane:not(:last-child) {
+      margin-right: 15px;
+      padding: 0;
+    }
+
+    .ddl-wrapper .ddl-pane pre {
+      border: solid 1px #f1f7ff;
+    }
+  </style>
+  <script src="./html/libs/highcharts.js"></script>
+  <script src="./html/libs/modules/exporting.js"></script>
+  <script src="./html/libs/modules/export-data.js"></script>
+  <script src="./html/libs/modules/accessibility.js"></script>
+  <script src="./html/libs/highlight.min.js"></script>
+  <link rel="stylesheet" href="./html/libs/highlight.min.css">
+</head>
+
+<body>
+
+  <figure class="highcharts-figure">
+    <div id="container"></div>
+  </figure>
+
+  <div class="grid function">
+    <h3>FUNCTIONS</h3>
+    <div class="ddl-wrapper">
+      <div class="ddl-pane">
+        <h4>New</h4>
+        <ul><li>minhtest_c2025_createNotificationForUserV3</li></ul>
+      </div>
+
+      <div class="ddl-pane">
+        <h4>Updated</h4>
+        <ul><li><a href="/reports/diff/STAGE/preflow_40/functions/.html"></a></li></ul>
+      </div>
+
+      <div class="ddl-pane">
+        <h4>Deprecated</h4>
+        <ul><li>OTE_generateCollectionNotificationMember</li>
+<li>OTE_generateCollectionNotificationMemberTrashed</li>
+<li>OTE_patchCommentByActivity</li>
+<li>OTE_patchIsCreator4Conference</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid procedure">
+    <h3>PROCEDURES</h3>
+    <div class="ddl-wrapper">
+      <div class="ddl-pane">
+        <h4>New</h4>
+        <ul><li>OTE_migrateDeletedItemChunk</li>
+<li>OTE_migrateSubscriptionIds</li>
+<li>l2025_getLinkedObjectsV3</li>
+<li>n2023_listOfNotificationOutdated_test</li>
+<li>n2024_listCollectionNeedToCleanupAt1AM_Test</li>
+<li>u2025_subscriptionUsageInUseV2</li></ul>
+      </div>
+
+      <div class="ddl-pane">
+        <h4>Updated</h4>
+        <ul><li><a href="/reports/diff/STAGE/preflow_40/procedures/adm2025_listOfUserV2.html">adm2025_listOfUserV2</a></li>
+<li><a href="/reports/diff/STAGE/preflow_40/procedures/adm2026_listOfTerminateUser.html">adm2026_listOfTerminateUser</a></li>
+<li><a href="/reports/diff/STAGE/preflow_40/procedures/n2025_listOfNotificationOutdated.html">n2025_listOfNotificationOutdated</a></li></ul>
+      </div>
+
+      <div class="ddl-pane">
+        <h4>Deprecated</h4>
+        <ul><li>OTE_patchCollectionActivityObjectHref</li>
+<li>OTE_patchLinkedCollectionObjectViaCalendar</li>
+<li>c2025_fixFloDAVSynctoken</li>
+<li>testn2023_listOfNotificationOutdated</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid table">
+    <h3>TABLES</h3>
+    <div style="">
+      <h3>TABLES MISSING COLUMNS</h3>
+      <pre>
+      <code class="json">{
+  "kanban": [
+    "hidden"
+  ],
+  "platform_setting": [
+    "incoming_call",
+    "incoming_mail",
+    "filter_chat"
+  ],
+  "realtime_message_attachment": [
+    "name"
+  ],
+  "storage_colla_document_version": [
+    "version",
+    "base_length"
+  ],
+  "storage_file": [
+    "storage",
+    "storage_mtime",
+    "storage_path"
+  ]
+}</code>
+   </pre>
+    </div>
+    <div class="ddl-wrapper">
+      <div class="ddl-pane">
+        <h4>New</h4>
+        <ul><li>storage_colla_document_changes</li></ul>
+      </div>
+
+      <div class="ddl-pane">
+        <h4>Updated</h4>
+        <ul><li>access_token</li>
+<li>accounts_config</li>
+<li>ad_setting_sub</li>
+<li>addressbookchanges</li>
+<li>addressbooks</li>
+<li>admin</li>
+<li>admin_promotion</li>
+<li>api_last_modified</li>
+<li>app_register</li>
+<li>app_token</li>
+<li>ar_internal_metadata</li>
+<li>cal_event</li>
+<li>cal_note</li>
+<li>cal_todo</li>
+<li>calendarchanges</li>
+<li>calendarinstances</li>
+<li>calendarobjects</li>
+<li>calendars</li>
+<li>calendarsubscriptions</li>
+<li>card_contact</li>
+<li>cards</li>
+<li>chime_meeting</li>
+<li>cloud</li>
+<li>collection</li>
+<li>collection_card</li>
+<li>collection_comment</li>
+<li>collection_criteria_history</li>
+<li>collection_icon</li>
+<li>collection_notification</li>
+<li>collection_shared_last_modified</li>
+<li>collection_system</li>
+<li>collection_user</li>
+<li>conference_channel</li>
+<li>conference_meeting</li>
+<li>conference_member</li>
+<li>config_push_silent</li>
+<li>contact_avatar</li>
+<li>contact_history</li>
+<li>criterion</li>
+<li>deleted_item_backup_20251002</li>
+<li>device_token</li>
+<li>doc_asset</li>
+<li>dynamic_key</li>
+<li>email_filing</li>
+<li>email_group</li>
+<li>email_group_user</li>
+<li>email_tracking</li>
+<li>file</li>
+<li>file_worker</li>
+<li>filter</li>
+<li>filter_action</li>
+<li>filter_action_value</li>
+<li>filter_condition</li>
+<li>filter_operator</li>
+<li>flo_invalid_link</li>
+<li>global_linked_object</li>
+<li>gmail_accesstoken</li>
+<li>gmail_history</li>
+<li>group</li>
+<li>group_user</li>
+<li>groupmembers</li>
+<li>identical_sender</li>
+<li>import_contact</li>
+<li>kanban</li>
+<li>kanban_card</li>
+<li>linked_collection_object</li>
+<li>linked_object</li>
+<li>locks</li>
+<li>mention_user</li>
+<li>metadata_email</li>
+<li>obj_collection</li>
+<li>os_version</li>
+<li>platform_release_push_notification</li>
+<li>platform_setting</li>
+<li>platform_setting_default</li>
+<li>principals</li>
+<li>propertystorage</li>
+<li>push_change</li>
+<li>push_noti_queue</li>
+<li>quota</li>
+<li>realtime_message</li>
+<li>realtime_message_attachment</li>
+<li>recent_object</li>
+<li>release</li>
+<li>release_group</li>
+<li>release_user</li>
+<li>report_cached_user</li>
+<li>restricted_user</li>
+<li>rule</li>
+<li>rule_filter_action</li>
+<li>rule_filter_condition</li>
+<li>schedulingobjects</li>
+<li>schema_migration</li>
+<li>send_mail</li>
+<li>sent_mail</li>
+<li>setting</li>
+<li>sort_object</li>
+<li>storage_colla_document_version</li>
+<li>storage_file</li>
+<li>storage_file_linked_collection</li>
+<li>subscription</li>
+<li>subscription_component</li>
+<li>subscription_detail</li>
+<li>subscription_feature</li>
+<li>subscription_purchase</li>
+<li>suggested_collection</li>
+<li>third_party_account</li>
+<li>timezone</li>
+<li>tmp_email_setting</li>
+<li>tracking_app</li>
+<li>trash_collection</li>
+<li>url</li>
+<li>user</li>
+<li>user_deleted</li>
+<li>user_internal</li>
+<li>user_platform_version</li>
+<li>user_release</li>
+<li>user_tracking_app</li>
+<li>virtual_alias</li>
+<li>virtual_domain</li></ul>
+      </div>
+
+      <div class="ddl-pane">
+        <h4>Deprecated</h4>
+        <ul><li>chime_meeting_call_maked</li>
+<li>collection_notification_member_bk_2</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    const chart = Highcharts.chart('container', {
+      chart: {
+        type: 'bar'
+      },
+      title: {
+        text: 'COMPARE RESULT: UAT with STAGE',
+        align: 'left'
+      },
+      xAxis: {
+        categories: ['Functions', 'Procedures', 'Tables', 'Columns', 'Indexes'],
+        title: {
+          text: null
+        },
+        gridLineWidth: 1,
+        lineWidth: 0
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: 'Quantity',
+          align: 'high'
+        },
+        labels: {
+          overflow: 'justify'
+        },
+        gridLineWidth: 0
+      },
+      tooltip: {
+        valueSuffix: ''
+      },
+      plotOptions: {
+        bar: {
+          borderRadius: '50%',
+          dataLabels: {
+            enabled: true
+          },
+          groupPadding: 0.1
+        }
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor:
+          Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+        shadow: true
+      },
+      credits: {
+        enabled: false
+      },
+      series: [
+        {
+          name: 'Total',
+          data: JSON.parse('[156,161,206,"-","-"]')
+        }, {
+          name: 'New',
+          data: JSON.parse('[1,6,1,"-","-"]')
+        }, {
+          name: 'Updated',
+          data: JSON.parse('[0,3,120,0,2]')
+        }, {
+          name: 'Deprecated',
+          data: JSON.parse('[4,4,2,"-","-"]')
+        }]
+    });
+
+    chart.update({
+      exporting: {
+        showTable: !chart.options.exporting.showTable
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+</body>
+
+</html>

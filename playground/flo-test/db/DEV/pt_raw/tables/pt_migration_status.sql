@@ -1,0 +1,20 @@
+CREATE TABLE `pt_migration_status` (
+  `id` int NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `owner_email` varchar(255) DEFAULT NULL,
+  `total_member` int NOT NULL DEFAULT '0',
+  `total_story` int DEFAULT '0',
+  `export_process` enum('exporting','success','pending','failed') NOT NULL DEFAULT 'pending',
+  `exported_story` int NOT NULL DEFAULT '0',
+  `migrate_process` enum('migrating','success','pending','failed') NOT NULL DEFAULT 'pending',
+  `migrated_story` int NOT NULL DEFAULT '0',
+  `collection_id` bigint DEFAULT '0',
+  `calendarid` int DEFAULT NULL,
+  `calendar_uri` varchar(255) DEFAULT NULL,
+  `collection_name` varchar(100) DEFAULT NULL,
+  `updated_date` double DEFAULT NULL,
+  `created_date` double DEFAULT NULL,
+  `env` enum('DEV','UAT','STAGE','PROD') DEFAULT NULL,
+  `ignore` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1

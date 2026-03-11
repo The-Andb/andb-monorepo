@@ -1,0 +1,95 @@
+CREATE PROCEDURE `s2024_getSubscription`(pnUserId BIGINT(20))
+usr_sub:BEGIN
+  --
+  DECLARE usedInByte BIGINT(20) DEFAULT 0;
+  DECLARE usedAccount BIGINT(20) DEFAULT 0;
+  DECLARE nSubId BIGINT(20);
+  --
+  SELECT (q.bytes + q.cal_bytes + q.card_bytes + q.file_bytes + q.qa_bytes + q.file_common_bytes)
+   INTO usedInByte
+   FROM quota q
+   JOIN `user` u ON (u.username = q.username)
+  WHERE u.id = pnUserId;
+  --   
+  SELECT count(tpa.id)
+    INTO usedAccount
+    FROM `third_party_account` tpa
+   WHERE tpa.user_id = pnUserId;
+  --
+  SELECT ifnull(max(sp.id), 0)
+    INTO nSubId
+    FROM subscription_purchase sp
+   WHERE sp.user_id = pnUserId;
+    --
+  IF nSubId = 0 THEN
+    --
+   SELECT 'Standard' `name`, 0 price
+      ,0 period, 0 subs_type
+      ,'' description, '' transaction_id
+      ,0 purchase_type, 0 purchase_status
+      ,0 subs_start_date, 0 subs_end_date
+      ,0 created_date, 0 updated_date
+      ,UNIX_TIMESTAMP() AS today
+      ,components.detail AS components
+  FROM subscription su
+  JOIN (
+    SELECT sd.sub_id,
+      CONCAT('[', GROUP_CONCAT(
+        JSON_OBJECT(
+                  'used', CASE sc.comp_type
+                      WHEN 1 THEN IFNUll(usedInByte, 0)
+                      WHEN 2 THEN usedAccount
+                      ELSE 0 END,
+                  'name', sc.name, 
+                  'comp_type', sc.comp_type, 
+                  'description', sd.description, 
+                  'sub_value', sd.sub_value
+                 )
+               ) , 
+            ']') detail
+      FROM subscription_detail sd
+ LEFT JOIN subscription_component sc ON (sc.id = sd.com_id)
+     WHERE sd.sub_id = 'ea0f0fa86f3320eac0a8155a4cc0b8e563dd'
+     GROUP BY sd.sub_id
+ ) components ON (components.sub_id = 'ea0f0fa86f3320eac0a8155a4cc0b8e563dd')
+ WHERE su. id = 'ea0f0fa86f3320eac0a8155a4cc0b8e563dd';
+    LEAVE usr_sub;
+    --
+  END IF;
+  --
+  SET SESSION group_concat_max_len = 50000;
+  --
+  SELECT su.name, su.price, su.period, su.subs_type
+        ,sp.description, sp.transaction_id, sp.purchase_type, sp.purchase_status
+        ,sp.start_date AS subs_start_date, sp.end_date AS subs_end_date
+        ,sp.created_date, sp.updated_date
+        ,UNIX_TIMESTAMP(now(3)) AS today
+        ,components.detail AS components
+  FROM subscription_purchase sp
+  LEFT JOIN subscription su ON (su.id = sp.sub_id)
+  JOIN (
+    SELECT sd.sub_id,
+      CONCAT('[', GROUP_CONCAT(
+        JSON_OBJECT(
+                  'used', CASE sc.comp_type
+                      WHEN 1 THEN IFNUll(usedInByte, 0)
+                      WHEN 2 THEN usedAccount
+                      ELSE 0 END,
+                  'name', sc.name, 
+                  'comp_type', sc.comp_type, 
+                  'description', sd.description, 
+                  'sub_value', sd.sub_value
+                 )
+               ) , 
+            ']') detail
+      FROM subscription_detail sd
+ LEFT JOIN subscription_component sc ON (sc.id = sd.com_id)
+     GROUP BY sd.sub_id
+ ) components ON (components.sub_id = sp.sub_id)
+WHERE sp.user_id = pnUserId
+  AND sp.is_current = 1
+GROUP BY sp.user_id;
+--
+SET SESSION group_concat_max_len = 1024;
+--
+END

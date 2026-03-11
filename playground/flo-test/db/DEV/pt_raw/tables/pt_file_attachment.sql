@@ -1,0 +1,22 @@
+CREATE TABLE `pt_file_attachment` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `filename` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `height` int NOT NULL,
+  `width` int NOT NULL,
+  `size` bigint NOT NULL,
+  `download_url` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `content_type` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `created_date` double(13,3) NOT NULL,
+  `updated_date` double(13,3) NOT NULL,
+  `pt_comment_id` bigint NOT NULL,
+  `dir` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `uid` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `uploader_id` int DEFAULT NULL,
+  `thumbnailable` tinyint(1) DEFAULT NULL,
+  `uploaded` tinyint(1) DEFAULT NULL,
+  `big_url` text CHARACTER SET latin1 COLLATE latin1_swedish_ci,
+  `thumbnail_url` text CHARACTER SET latin1 COLLATE latin1_swedish_ci,
+  `created_at` varchar(45) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `updated_at` varchar(45) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1

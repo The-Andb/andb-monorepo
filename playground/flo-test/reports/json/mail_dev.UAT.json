@@ -1,0 +1,22 @@
+{
+  "columns": {
+    "missing": null,
+    "updated": 0
+  },
+  "functions": {
+    "total": 0
+  },
+  "indexes": {
+    "updated": 0
+  },
+  "procedures": {
+    "total": 0
+  },
+  "tables": {
+    "deprecated": 0,
+    "new": 0,
+    "ote": 0,
+    "total": 12,
+    "updated": 0
+  }
+}

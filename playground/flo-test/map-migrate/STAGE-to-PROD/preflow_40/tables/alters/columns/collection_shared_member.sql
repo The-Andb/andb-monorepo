@@ -1,0 +1,2 @@
+ALTER TABLE `collection_shared_member`
+MODIFY COLUMN `access` tinyint NOT NULL DEFAULT '2' COMMENT 'This is permission shared collection.\n OWNER = 0\n  READ = 1\n  READ_WRITE = 2' COLLATE latin1_swedish_ci;

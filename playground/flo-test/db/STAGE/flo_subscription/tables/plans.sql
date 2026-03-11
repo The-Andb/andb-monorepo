@@ -1,0 +1,20 @@
+CREATE TABLE `plans` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `product_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `price` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `circle_life` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'monthly' COMMENT 'monthly, yearly',
+  `period` int NOT NULL DEFAULT '0' COMMENT '30, 365',
+  `auto_renew` tinyint(1) NOT NULL DEFAULT '1' COMMENT 'Allow auto renew',
+  `auto_renewal` tinyint(1) NOT NULL DEFAULT '1' COMMENT 'Allow auto renew',
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `order_number` int NOT NULL DEFAULT '1' COMMENT 'for sort',
+  `plan_group` int NOT NULL DEFAULT '0' COMMENT '1=Free, 2=Standard, 3=Premium',
+  `is_active` tinyint(1) NOT NULL DEFAULT '1',
+  `created_date` timestamp(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  `updated_date` timestamp(3) NULL DEFAULT CURRENT_TIMESTAMP(3),
+  PRIMARY KEY (`id`),
+  KEY `idx_circle_life` (`circle_life`),
+  KEY `idx_order_number` (`order_number`),
+  KEY `idx_price` (`price`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci

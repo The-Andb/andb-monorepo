@@ -1,0 +1,14 @@
+[
+  {
+    "triggerName": "BF_INS_USAGE",
+    "changes": [
+      "Definition changed"
+    ]
+  },
+  {
+    "triggerName": "BF_UPD_USAGE",
+    "changes": [
+      "Definition changed"
+    ]
+  }
+]

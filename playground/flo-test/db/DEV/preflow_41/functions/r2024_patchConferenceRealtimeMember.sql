@@ -1,0 +1,57 @@
+CREATE FUNCTION `r2024_patchConferenceRealtimeMember`(pnChannelId BIGINT(20)) RETURNS INT
+BEGIN
+    DECLARE no_more_rows    boolean;
+    DECLARE nCount          INT DEFAULT 0;
+    DECLARE nReturn         INT DEFAULT 0;
+    DECLARE nID             BIGINT(20);
+    DECLARE vEmail          VARCHAR(200);
+    DECLARE nRevokeTime     DOUBLE(13,3);
+    DECLARE vCName          VARCHAR(100);
+    DECLARE usr_cursor CURSOR FOR
+    # Start of: main script;
+    SELECT cm.email, rc.id, rc.name, cm.revoke_time, rc.name
+      FROM conference_member cm
+      JOIN realtime_channel rc ON (cm.channel_id = rc.internal_channel_id)
+ LEFT JOIN realtime_channel_member rcm ON (cm.email = rcm.email AND rc.id = rcm.channel_id)
+     WHERE rc.type = 'CONFERENCE'
+       AND rc.internal_channel_id = pnChannelId
+       AND rcm.id IS NULL
+       AND cm.email <> ''
+       AND cm.email IS NOT NULL
+     LIMIT 1000
+       ;
+    # END of: main script
+   DECLARE CONTINUE handler FOR NOT found SET no_more_rows = TRUE;
+   --
+   OPEN usr_cursor;
+   usr_loop: LOOP
+     -- start LOOP usr_cursor
+     FETCH usr_cursor 
+      INTO vEmail, nID, vCName, nRevokeTime, vCName;
+     -- stop LOOP WHEN no_more_rows
+     IF (no_more_rows) THEN
+       --
+       CLOSE usr_cursor;
+       LEAVE usr_loop;
+       --
+     END IF;
+     # main UPDATE
+     INSERT INTO `realtime_channel_member`
+      (`email`, `channel_id`, `channel_name`, `revoke_date`, `created_date`, `updated_date`)
+    VALUES
+      (vEmail, nID, vCName, IF(nRevokeTime = 0, NULL, nRevokeTime), unix_timestamp(now(3)), unix_timestamp(now(3)))
+    ON DUPLICATE KEY UPDATE revoke_date=VALUES(revoke_date), updated_date=VALUES(updated_date);
+     --
+     SET nCount = nCount + 1;
+     # main UPDATE
+     --
+   END LOOP usr_loop;
+   --
+   UPDATE realtime_channel rc
+      SET rc.patch_time = IF(nCount = 0, -unix_timestamp(now(3)), unix_timestamp(now(3)))
+    WHERE rc.internal_channel_id = pnChannelId
+      AND rc.`type` = 'CONFERENCE';
+   --
+   RETURN nCount;
+   --
+END

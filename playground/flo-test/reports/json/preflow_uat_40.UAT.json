@@ -1,0 +1,30 @@
+{
+  "columns": {
+    "missing": {},
+    "updated": 0
+  },
+  "functions": {
+    "deprecated": 9,
+    "new": 0,
+    "ote": 10,
+    "total": 125,
+    "updated": 0
+  },
+  "indexes": {
+    "updated": 0
+  },
+  "procedures": {
+    "deprecated": 2,
+    "new": 0,
+    "ote": 0,
+    "total": 64,
+    "updated": 0
+  },
+  "tables": {
+    "deprecated": 0,
+    "new": 0,
+    "ote": 0,
+    "total": 167,
+    "updated": 0
+  }
+}

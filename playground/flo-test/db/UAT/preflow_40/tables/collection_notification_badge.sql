@@ -1,0 +1,22 @@
+CREATE TABLE `collection_notification_badge` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_id` bigint NOT NULL COMMENT 'User id of member or owner collection',
+  `email` varchar(100) COLLATE utf8mb4_general_ci NOT NULL COMMENT 'Email of member or owner collection',
+  `collection_id` bigint NOT NULL DEFAULT '0',
+  `unread` int NOT NULL DEFAULT '0',
+  `object_type` varbinary(50) NOT NULL,
+  `action` int NOT NULL DEFAULT '0' COMMENT 'The action of the user changes the data of shared objects\n0: created (default )\n1: edited\n2: moved\n3: deleted\n4: completed (mark done) \n5: completed sub-task\n6: commented\n7: approved\n8: changed date\n9: changed time\n1:> changed location\n1:> rejected \n1:> started',
+  `status` tinyint NOT NULL DEFAULT '0' COMMENT 'show/hide/archive/trash...',
+  `assigner` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `assignment` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0. not assign, 1. assigned to me, 2. assigned by me',
+  `assignees` text COLLATE utf8mb4_general_ci NOT NULL,
+  `created_date` double(13,3) NOT NULL DEFAULT '0.000',
+  `updated_date` double(13,3) NOT NULL DEFAULT '0.000',
+  PRIMARY KEY (`id`),
+  KEY `idx_on_object_type` (`object_type`),
+  KEY `idx_email` (`email`),
+  KEY `idx_user_id` (`user_id`),
+  KEY `idx_collection_id` (`collection_id`),
+  KEY `idx_updated_date` (`updated_date`),
+  KEY `idx_created_date` (`created_date`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci

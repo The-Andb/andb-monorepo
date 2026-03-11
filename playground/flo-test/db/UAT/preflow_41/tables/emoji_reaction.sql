@@ -1,0 +1,21 @@
+CREATE TABLE `emoji_reaction` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_id` bigint unsigned NOT NULL,
+  `email` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `object_type` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'object_type: the type of the object >> chat (value = 0) or comment (value = 1)',
+  `object_uid` varchar(300) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `object_id` bigint NOT NULL DEFAULT '0',
+  `emoji_unicode` varchar(100) NOT NULL DEFAULT '',
+  `emoji_shortcut` varchar(100) NOT NULL DEFAULT '',
+  `created_date` double(13,3) NOT NULL,
+  `updated_date` double(13,3) NOT NULL,
+  `channel_id` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unq_reaction_by_user` (`user_id`,`object_type`,`object_uid`,`object_id`,`emoji_unicode`,`emoji_shortcut`),
+  KEY `idx_user_id` (`user_id`),
+  KEY `idx_object` (`object_type`,`object_uid`,`object_id`),
+  KEY `idx_emoji` (`emoji_unicode`),
+  KEY `idx_updated_date` (`updated_date`),
+  KEY `idx_object_uid` (`object_uid`),
+  KEY `idx_object_id` (`object_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='latin1_swedish_ci'

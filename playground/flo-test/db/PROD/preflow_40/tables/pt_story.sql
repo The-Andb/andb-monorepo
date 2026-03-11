@@ -1,0 +1,21 @@
+CREATE TABLE `pt_story` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `uid` varchar(200) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` varchar(200) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `pt_story_id` bigint DEFAULT NULL,
+  `type` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `priority` int DEFAULT NULL,
+  `estimate` int DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
+  `current_state` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `requested_by_id` bigint DEFAULT NULL,
+  `deadline` double DEFAULT NULL,
+  `url` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `created_date` double DEFAULT NULL,
+  `updated_date` double DEFAULT NULL,
+  `owned_by_id` bigint DEFAULT NULL,
+  `collection_id` bigint DEFAULT NULL,
+  `status_migrated` tinyint DEFAULT '0',
+  `position` int NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci

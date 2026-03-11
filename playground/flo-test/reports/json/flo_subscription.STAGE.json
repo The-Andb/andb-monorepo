@@ -1,0 +1,23 @@
+{
+  "functions": {
+    "total": 0
+  },
+  "procedures": {
+    "total": 15,
+    "new": 14,
+    "deprecated": 0,
+    "updated": 8
+  },
+  "tables": {
+    "total": 15,
+    "new": 0,
+    "deprecated": 1,
+    "updated": 6
+  },
+  "triggers": {
+    "total": 4,
+    "new": 0,
+    "deprecated": 0,
+    "updated": 0
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "columns": {
+    "missing": {
+      "cal_todo": [
+        "priority",
+        "organizer",
+        "category",
+        "state",
+        "review",
+        "blocker",
+        "point",
+        "assignee"
+      ],
+      "pt_project_activity": [
+        "project_id"
+      ],
+      "pt_project_epic": [
+        "project_id"
+      ],
+      "pt_project_tag": [
+        "project_id"
+      ],
+      "user": [
+        "migrated"
+      ]
+    },
+    "updated": 50
+  },
+  "functions": {
+    "deprecated": 0,
+    "new": 64,
+    "ote": 33,
+    "total": 193,
+    "updated": 0
+  },
+  "indexes": {
+    "updated": 19
+  },
+  "procedures": {
+    "deprecated": 1,
+    "new": 61,
+    "ote": 0,
+    "total": 176,
+    "updated": 1
+  },
+  "tables": {
+    "deprecated": 4,
+    "new": 1,
+    "ote": 0,
+    "total": 202,
+    "updated": 69
+  },
+  "triggers": {
+    "total": 17
+  }
+}
