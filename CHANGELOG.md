@@ -2,7 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.0.0-beta.5] - 2026-03-11
+## [2026-03-11] Release Update
+- **andb-core/cli**: 4.0.0-beta.2
+- **andb-desktop**: 3.1.0-beta.2
+- **andb-www**: 1.1.0-beta.2
 
 ### Added
 - **Search Content**: New `andb search` command in CLI and search functionality in Desktop to find content across database objects.
