@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      ssh2:
-        specifier: ^1.15.0
-        version: 1.17.0
     devDependencies:
       electron:
         specifier: ^34.0.0
