@@ -18,17 +18,23 @@
 
 **Current Status:** Phase 3 (Expansion) — Stable Release v4.0.0 & Advanced Features
 
+### Licensing
+
+- **Open Core Engine**: `@the-andb/core` & `@the-andb/cli` are licensed under **GPLv3**.
+- **Desktop UI**: `andb-desktop` is **Proprietary** (Premium UI).
+- **Privacy Focus**: Zero-Cloud, local-first commitment across all tiers.
+
 ---
 
 ## 🏗️ Package Structure (Monorepo)
 
-| Package          | Role                           | Storage       |
-| ---------------- | ------------------------------ | ------------- |
-| `@the-andb/core` | Pure business logic, stateless | Agnostic      |
-| `@the-andb/desktop`| Electron + Vue 3 desktop       | SQLiteStorage |
-| `@the-andb/cli`  | Terminal interface             | FileStorage   |
-| `@the-andb/mcp`  | MCP Protocol adapter           | —             |
-| `andb-www`       | Marketing/docs (Landing)       | —             |
+| Package             | Role                           | Storage       |
+| ------------------- | ------------------------------ | ------------- |
+| `@the-andb/core`    | Pure business logic, stateless | Agnostic      |
+| `@the-andb/desktop` | Electron + Vue 3 desktop       | SQLiteStorage |
+| `@the-andb/cli`     | Terminal interface             | FileStorage   |
+| `@the-andb/mcp`     | MCP Protocol adapter           | —             |
+| `andb-www`          | Marketing/docs (Landing)       | —             |
 
 **Core Principle:** All logic in `core`. UI/CLI are adapters only.
 
@@ -140,12 +146,12 @@
 
 ## 📊 Roadmap 2026
 
-| Phase   | Focus                               | Timeline     |
-| ------- | ----------------------------------- | ------------ |
-| Phase 1 | Foundation                          | ✅ Done      |
-| Phase 2 | MySQL Deep Dive + Core Refactor     | ✅ Done (v4.0.0) |
-| Phase 3 | Stable Release & Advanced Features  | Mar 2026     |
-| Phase 4 | Team Features & Drift Detection     | Apr+ 2026    |
+| Phase   | Focus                              | Timeline         |
+| ------- | ---------------------------------- | ---------------- |
+| Phase 1 | Foundation                         | ✅ Done          |
+| Phase 2 | MySQL Deep Dive + Core Refactor    | ✅ Done (v4.0.0) |
+| Phase 3 | Stable Release & Advanced Features | Mar 2026         |
+| Phase 4 | Team Features & Drift Detection    | Apr+ 2026        |
 
 ---
 

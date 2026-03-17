@@ -11,7 +11,8 @@
 2. Đọc `RULES.md` (file này) → hiểu luật
 3. Đọc agent file tương ứng (`agents/implementer-*.md`) → hiểu boundary
 4. Đọc `DECISIONS.md` → hiểu precedent
-5. **Discuss trước, code sau** — không bao giờ nhảy thẳng vào code
+5. Đọc `ai/SYSTEM_DESIGN.md` → hiểu architecture (Meat vs Bones)
+6. **Discuss trước, code sau** — không bao giờ nhảy thẳng vào code
 
 ---
 
@@ -42,13 +43,28 @@ MIGRATE → Live DB → Execute DDL        ✅ kết nối DB đích
 
 ---
 
+## 4. Open Ecosystem & KISS
+
+```
+[MIT] @the-andb/core (andb-core)   ↔   [Public Source] @the-andb/desktop (andb-desktop)
+```
+- **License Hybrid**: Core là MIT (Tự do). Desktop là **Public Source** (Mở mã nguồn để xem but Restricted sử dụng).
+ -> Gộp lại.
+- **Desktop Priority**: Desktop là sản phẩm flagship. Core phục vụ Desktop trước, phục vụ community sau.
+- **Bundled Delivery**: App Desktop khi build phải chứa sẵn mọi công cụ (Core, CLI, MCP) bản mới nhất.
+- **Separation of Concerns**: Dù bundled, nhưng logic DB vẫn nằm ở Core, logic UI nằm ở Desktop.
+- **System Design**: Xem chi tiết tại [ai/SYSTEM_DESIGN.md](file:///Volumes/FlexibleWorkplace/The-Andb/ai/SYSTEM_DESIGN.md).
+
+---
+
 ## Tham khảo chi tiết
 
 | Chủ đề                 | File                                  |
 | ---------------------- | ------------------------------------- |
+| System Design          | `ai/SYSTEM_DESIGN.md`                 |
 | Architecture & Storage | `plans/ARCHITECTURE.md`               |
 | Schema Conflict Rules  | `plans/core/SCHEMA_CONFLICT_RULES.md` |
 | Core Engine Rules      | `ai/agents/implementer-core.md`       |
 | Desktop Rules          | `ai/agents/implementer-desktop.md`    |
+| Licensing Strategy     | `ai/DECISIONS.md#adr-012`             |
 | Safety & Coding        | `ai/CONTEXT.md`                       |
-| Decisions Log          | `ai/DECISIONS.md`                     |

@@ -180,6 +180,14 @@ storage.saveDDL(
 );
 ```
 
+## Licensing & Boundary (CRITICAL)
+- **License**: `andb-core` is licensed under **MIT**. 
+  - It is the open-source heart. 
+  - It MUST NOT contain any code related to licensing, payment, or proprietary desktop-only UI features.
+  - It MUST NOT import from `andb-desktop`.
+  - Refer to [ai/SYSTEM_DESIGN.md](file:///Volumes/FlexibleWorkplace/The-Andb/ai/SYSTEM_DESIGN.md) for the "Meat vs Bones" map.
+- **Purity**: Always check if a new feature belongs in the engine (MIT) or the UI (Proprietary). If it's about database logic, it goes here. If it's about making the tool "premium", it goes in the desktop bridge.
+
 ## Safety Rules (Non-Negotiable)
 
 - `DDL operations = DRY-RUN by default` — never execute ALTER/DROP without explicit opt-in

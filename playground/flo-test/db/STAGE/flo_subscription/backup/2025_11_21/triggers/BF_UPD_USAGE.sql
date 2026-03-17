@@ -1,5 +1,0 @@
-CREATE TRIGGER `BF_UPD_USAGE` BEFORE UPDATE ON `usages` FOR EACH ROW BEGIN
-  --
-  CALL u2025_upsertUserUsageLog(OLD.user_id);
-  --
-END

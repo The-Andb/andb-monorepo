@@ -1,2 +1,0 @@
-ALTER TABLE `card_contact`
-MODIFY COLUMN `email_text` text COLLATE utf8mb4_unicode_ci GENERATED ALWAYS AS (lower(replace(replace(replace(replace(json_extract(`email_address`,_utf8mb4'$[*].value'),_utf8mb4'"',_utf8mb4''),_utf8mb4'[',_utf8mb4''),_utf8mb4']',_utf8mb4''),_utf8mb4', ',_utf8mb4','))) STORED;

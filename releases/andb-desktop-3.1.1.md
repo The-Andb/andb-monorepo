@@ -1,0 +1,12 @@
+# @the-andb/desktop v3.1.1 Release
+
+## ✨ New Features
+- **Instant Compare Ecosystem**: A brand new dedicated space for on-the-fly SQL code comparison. Seamlessly transition between the Global Schema View and Instant Compare using the new iOS-style Header Toggle Switch.
+- **"Go To Definition" Navigation**: Native IDE-like navigation within the DDL viewer. Cmd/Ctrl+click on any database identifier to instantly jump to its definition and schema node.
+- **Inline Object Selection**: Added intuitive single-click "Set as Source" and "Set as Target" pill buttons (represented by intuitive 🔥 Flame icons) directly into Schema tree lists. Includes mutual exclusivity logic to prevent overlapping selections.
+- **Real-Time SQL Highlighting**: Integrated Prism.js for rich, instantaneous syntax highlighting within the raw code input fields.
+
+## 🛠 Improvements & Fixes
+- Replaced the legacy Splitpanes interface with sequential, robust Input and MirrorDiff views.
+- Upgraded the UI to natively support interactive Playground links embedded within views.
+- Updated core engine IPC dependencies to v4.0.1.

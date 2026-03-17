@@ -25,6 +25,7 @@
 - Credentials encrypted via `core/src/utils/crypt.ts`
 - Error handling: Result-style `{ success, data?, error? }`
 - No `console.log` in core
+- **UX Preference**: Avoid Modals unless absolutely necessary. Prefer integrated views, overlays, or sliding panels.
 
 ---
 
@@ -112,3 +113,4 @@
 | 2026-03-04 | **Guard Plan Integration**: Adopted strategic repositioning from "DB Compare Tool" → "Production Safety System" (ADR-010). Integrated `guard.plan.md` into `MAIN_PLAN.md` and aligned Phase 3 with Drift Detection + Deployment Guard goals.                                                                                                                       |
 | 2026-03-11 | **Go to Definition & Telemetry**: Implemented Cmd/Ctrl+Click navigation for SQL identifiers across all viewers (`DDLViewer`, `MirrorDiffView`, `SchemaTreeMode`, `DDLDetailModal`). Centralized highlighting logic in `navigation.ts` with Regex caching. Disabled local PostHog telemetry to prevent CSP errors in dev.                                            |
 | 2026-03-11 | **Stable Release v4.0.0 (The Andb)**: Officially transitioned from Beta to Stable. Bumped all package versions (@the-andb/core/cli/mcp to 4.0.0, desktop to 3.1.0, www to 1.1.0). Finalized branding as **The Andb**. Published stable Core/CLI to NPM. Successfully built and released Desktop v3.1.0 to GitHub. Updated all internal documentation and synced all repositories. |
+| 2026-03-12 | **Nuanced Licensing Transition**: Re-licensed Core and CLI under **GPLv3** (Open Source) to ensure engine freedom. Established **Proprietary** status for the Desktop App to maintain premium UI/UX. Updated `andb-www` messaging to reflect "Open Core, Premium UI" and added "No Data Export" privacy commitment. |

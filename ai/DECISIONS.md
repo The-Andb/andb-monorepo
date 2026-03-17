@@ -347,3 +347,29 @@ Launch **The Andb v4.0.0** (Stable).
 - Need for formal release notes and production distribution channels.
 - Transition from "building features" to "maintaining stability & incremental growth".
 - Shift in documentation tone to authoritative and professional.
+
+### ADR-012: Transition to Nuanced Licensing (Open Core vs. Proprietary App)
+
+**Date:** 2026-03-12
+**Status:** Accepted
+
+#### Context
+
+The project was initially launched under the MIT license. To ensure the project's sustainability and prevent "Hollow-out" risks (where a third-party builds a better UI on top of our open core), we need a clear separation of concerns.
+
+#### Decision
+
+Adopt a **"Enterprise Bridge" Pattern**:
+1.  **Open Source Engine (GPLv3)**: `@the-andb/core` and `@the-andb/cli` remain the high-integrity, open-source foundation.
+2.  **Proprietary Bridge & UI**: The `andb-desktop` and any future `@the-andb/core-premium` components are **Proprietary**.
+3.  **Dual Licensing**: The project uses a dual-licensing model where the core engine is free for open-source use, but its proprietary brother (the Desktop App) utilizes it under a separate commercial grant to the author.
+
+#### Rationale
+
+- **Prevent Observability Gaps**: By keeping the "visualization orchestration" and "premium adapters" private, we ensure that the Desktop App remains the definitive way to experience The Andb.
+- **Shared Foundation, Unique Value**: The community benefits from the GPLv3 engine (CLI, CI/CD), while the proprietary app funds continued development.
+
+#### Consequences
+
+- `andb-core` will be audited to remove any "premium" logic that belongs in the private layer.
+- Branding clearly states: "Engineered with Open Core @the-andb/core (GPLv3)".

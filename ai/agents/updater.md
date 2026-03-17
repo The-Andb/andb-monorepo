@@ -32,6 +32,10 @@
 6. **Post-publish Cleanup:**
    - Revert symlinks/workspace references back to local development state if necessary.
    - Log release notes or update `DECISIONS.md`/history.
+7. **Create release file per module as well:**
+   - Create a file in the `releases` folder for each module.
+   - The file should be named `[module-name]-[version].md`.
+   - Update :www about new changes.
 
 ---
 

@@ -199,6 +199,11 @@ Usage in templates: `{{ $t('navigation.ddl.tables') }}`
 - **SQL highlighting:** PrismJS with `language-sql`
 - **Truncation:** `.truncate` class + `title` attribute for tooltips
 
+## Licensing & Boundary (CRITICAL)
+- **License**: `andb-desktop` is licensed under **MIT** (100% Free & Open Source).
+  - Refer to [ai/SYSTEM_DESIGN.md](file:///Volumes/FlexibleWorkplace/The-Andb/ai/SYSTEM_DESIGN.md) for the "Meat vs Bones" map.
+- **Data Privacy**: The app must respect the "Zero-Cloud" policy. User data (DB connections) stays local. Exported CSV/JSON data belongs to the user.
+
 ## Safety (Users Manage Production Databases)
 
 - Show confirmation dialogs before any destructive operation
