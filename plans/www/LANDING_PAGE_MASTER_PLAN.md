@@ -42,7 +42,7 @@ This document outlines the strategy to transform the current basic landing page 
 
 - **AI Ready via MCP**: "Give AI agents safe, structured access to your database schema through our MCP server."
 - **Deep Comparison**: "Not just text diff, but semantic structure analysis."
-- **Multi-Driver**: MySQL (Deep support), Postgres (Coming soon), SQLite.
+- **Multi-Driver**: MySQL (Deep support), Postgres, SQLite.
 - **Privacy First**: "**Your data never leaves your machine.** No cloud mandates. No tracking."
 
 ### 4. Comparison / "Why Andb?"

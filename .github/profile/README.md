@@ -63,7 +63,7 @@ The bridge to CI/CD. A powerful terminal utility for automating exports, imports
 We are an open-source first organization. Whether you are a DBA, a Fullstack Dev, or a UI/UX Designer, there's a place for you in the Andb ecosystem.
 
 - 💬 **Discussions**: [Join our GitHub Conversations](https://github.com/orgs/The-Andb/discussions)
-- ✨ **Contributing**: Read our [Organization Wiki](https://github.com/The-Andb/.github/wiki) (Coming Soon).
+- ✨ **Contributing**: Read our [Organization Wiki](https://github.com/The-Andb/.github/wiki)
 
 ---
 
