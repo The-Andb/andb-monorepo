@@ -1,4 +1,4 @@
-# @the-andb/core v4.0.1 Release
+# @the-andb/core v4.0.2 Release
 
 ## ✨ Core Engine Enhancements
 - **New IPC Commands**: Introduced the `compare-arbitrary` JSON-RPC operation to power the new Instant Compare capabilities in the desktop app, allowing on-the-fly AST comparisons without persisting to the database.
