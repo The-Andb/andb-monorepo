@@ -8,3 +8,4 @@
 ## 🛠 Fixes
 - Corrected database mock structures in `MigratorService` unit tests to achieve a 100% pass rate.
 - Aligned heuristic and AST-based safety level classifications within `ImpactAnalysisService`.
+- **Background Worker Process Hardening**: Resolved a fatal `Exit Code 1` unhandled promise rejection in `MysqlDriver` caused by missing username payloads during restricted SQL script generation.
