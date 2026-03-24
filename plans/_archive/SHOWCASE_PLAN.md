@@ -1,6 +1,6 @@
-# 🌐 The Andb Web Showcase Plan
+# 🌐 TheAndb Web Showcase Plan
 
-**Objective:** Transform the current landing page into a "Powerhouse Showcase" that demonstrates the core value of The Andb through interactivity and live data simulation.
+**Objective:** Transform the current landing page into a "Powerhouse Showcase" that demonstrates the core value of TheAndb through interactivity and live data simulation.
 
 ---
 

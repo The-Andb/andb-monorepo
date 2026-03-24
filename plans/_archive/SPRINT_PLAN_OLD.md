@@ -1,4 +1,4 @@
-# 🗺️ The Andb - Sprint Plan (Feb 2026)
+# 🗺️ TheAndb - Sprint Plan (Feb 2026)
 
 > Living document — Updated: Feb 05, 2026
 

@@ -1,4 +1,4 @@
-# Prompt / Spec cho Implementer — Secure Configuration Assistant (The Andb)
+# Prompt / Spec cho Implementer — Secure Configuration Assistant (TheAndb)
 
 ## 🎯 Mục tiêu
 
@@ -43,10 +43,10 @@ Màn hình này luôn giống nhau cho cả Auto & Manual, chỉ khác behavior 
 **Danh sách toggle (switch):**
 
 1.  **Read-Only Core (MANDATORY)** — luôn bật, không tắt được.
-    - _Description_: "Allows The Andb to understand your database structure without modifying data."
+    - _Description_: "Allows TheAndb to understand your database structure without modifying data."
 
 2.  **Schema Change Support (ALTER TABLE)**
-    - _Description_: "Allow The Andb to suggest and apply table modifications (ALTER TABLE) for synchronization."
+    - _Description_: "Allow TheAndb to suggest and apply table modifications (ALTER TABLE) for synchronization."
 
 3.  **View Management**
     - _Description_: "Allow updating view definitions when differences are detected across environments."
@@ -77,7 +77,7 @@ Màn hình này luôn giống nhau cho cả Auto & Manual, chỉ khác behavior 
 
 #### Thông báo bảo mật (Bắt buộc):
 
-> "Admin privileges are used only once to prepare the environment. Your password is processed in volatile memory and discarded immediately after setup. The Andb never stores your sensitive admin credentials."
+> "Admin privileges are used only once to prepare the environment. Your password is processed in volatile memory and discarded immediately after setup. TheAndb never stores your sensitive admin credentials."
 
 ---
 
@@ -166,12 +166,12 @@ FLUSH PRIVILEGES;
 **Hành động**:
 
 1.  Lưu connection.
-2.  Chuyển vào màn hình chính của The Andb.
+2.  Chuyển vào màn hình chính của TheAndb.
 
 ---
 
 ## 🎯 Điểm quan trọng Implementer phải tuân thủ
 
-- **Manual = Zero risk**: The Andb **KHÔNG** tự chạy bất kỳ lệnh nào lên DB.
+- **Manual = Zero risk**: TheAndb **KHÔNG** tự chạy bất kỳ lệnh nào lên DB.
 - **Automatic = One-time privilege**: Admin password chỉ dùng 1 lần, không lưu.
 - **Transparency**: Tất cả SQL phải minh bạch, User luôn có thể xem được.

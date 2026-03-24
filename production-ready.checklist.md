@@ -1,4 +1,4 @@
-# The Andb — Production Readiness Checklist
+# TheAndb — Production Readiness Checklist
 
 > **This is a serious product, not a side project.**
 

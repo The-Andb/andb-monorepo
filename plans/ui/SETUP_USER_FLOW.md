@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-The goal is to implement a professional, security-first connection flow. Instead of requiring `root` or `admin` credentials for daily operations, "The Andb" will guide users to create a dedicated user, `the_andb`, with the minimum permissions required for the app's functionality.
+The goal is to implement a professional, security-first connection flow. Instead of requiring `root` or `admin` credentials for daily operations, "TheAndb" will guide users to create a dedicated user, `the_andb`, with the minimum permissions required for the app's functionality.
 
 **This flow will be implemented as a "Global Setup Template"**, ensuring a consistent, high-trust experience across all database connection types.
 
@@ -16,7 +16,7 @@ To ensure user peace of mind, all UI elements must adhere to these messaging gui
 - **Visibility of Action**: Every SQL command generated must be readable. No "Black Box" operations.
 - **Safety Badge**: Use a persistent "Safe Environment" indicator throughout the setup.
 - **Micro-copy for Reassurance**:
-  - _"The Andb will NEVER delete your data."_
+  - _"TheAndb will NEVER delete your data."_
   - _"We only ask for permissions that allow us to read your database structure."_
   - _"The admin password you enter is used only for this session and is immediately discarded."_
 
@@ -36,7 +36,7 @@ To ensure user peace of mind, all UI elements must adhere to these messaging gui
 - **Permission Checklist**:
   - **READ (Mandatory)**: Export DDL, View Schema. (Description: "Required to visualize your database.")
   - **WRITE (Optional)**:
-    - [ ] Alter Table (Description: "Allow The Andb to suggest and apply schema changes.")
+    - [ ] Alter Table (Description: "Allow TheAndb to suggest and apply schema changes.")
     - [ ] Update Views (Description: "Allow updating view definitions.")
 - **Visuals**: Dynamic "Permission Level" meter (e.g., "Level 1: Read-Only" 🟢 to "Level 3: Full DDL Support" 🟠).
 
@@ -89,7 +89,7 @@ To ensure user peace of mind, all UI elements must adhere to these messaging gui
 | Keyword         | Action    | Message to User                                               |
 | :-------------- | :-------- | :------------------------------------------------------------ |
 | `DROP DATABASE` | **BLOCK** | "Deletion of databases is not permitted."                     |
-| `TRUNCATE`      | **BLOCK** | "Clearing table data is outside the scope of The Andb."       |
+| `TRUNCATE`      | **BLOCK** | "Clearing table data is outside the scope of TheAndb."        |
 | `DELETE`        | **BLOCK** | "DML operations (Data manipulation) are disabled for safety." |
 
 ---

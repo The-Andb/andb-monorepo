@@ -1,4 +1,4 @@
-# 🚀 The Andb — Beta Launch & Feature Expansion Plan
+# 🚀 TheAndb — Beta Launch & Feature Expansion Plan
 
 > **Created:** Feb 27, 2026
 > **Objective:** Launch a controlled beta program with feedback loops, while planning two major feature expansions (MCP Server + DB Design Module).
@@ -170,7 +170,7 @@ Transform MCP from a simple bridge into a **smart database assistant** that AI a
    - [ ] **CLI Panel:** Auto-detect if `andb` is in `PATH`. Button to "Install CLI tool" (symlink to binary).
    - [ ] **MCP Panel:** Auto-detect popular AI assistants (Cursor, Cline, Windsurf).
    - [ ] 1-Click Install: Append the MCP config block into the respective editor's `mcp.json` or config file.
-   - [ ] Status indicators showing which tools/editors currently have The Andb active.
+   - [ ] Status indicators showing which tools/editors currently have TheAndb active.
 
 3. [ ] **Phase 3: Smart Analysis Tools**
    - [ ] `analyze_schema` — Return schema statistics (table count, index coverage, FK graph, column types distribution)
@@ -205,7 +205,7 @@ Transform MCP from a simple bridge into a **smart database assistant** that AI a
 
 ### Vision
 
-A **visual database design tool** inside The Andb desktop app. Design schemas visually, generate DDL, and sync with live databases.
+A **visual database design tool** inside TheAndb desktop app. Design schemas visually, generate DDL, and sync with live databases.
 
 ### Breakdown
 

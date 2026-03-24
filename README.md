@@ -1,4 +1,4 @@
-# The Andb 🛸
+# TheAndb 🛸
 
 **Professional Database Schema Reliability Engine.**  
 AST-powered Safety, Semantic Diffing, and Multi-Environment Orchestration for High-Stakes Production.
@@ -9,7 +9,7 @@ AST-powered Safety, Semantic Diffing, and Multi-Environment Orchestration for Hi
 [![Safety: AST-Analyzed](https://img.shields.io/badge/Safety-AST--Analyzed-green?style=for-the-badge&logo=shield)](https://github.com/ph4n4n/the-andb-core)
 [![License: Source-Available](https://img.shields.io/badge/License-Source--Available-orange?style=for-the-badge)](./LICENSE)
 
-The Andb is a developer-first tool built to eliminate the common pain points of database migrations: accidental data loss, schema drift, and complex manual SQL generation. It understands your database structure not just as text, but as a semantic model.
+TheAndb is a developer-first tool built to eliminate the common pain points of database migrations: accidental data loss, schema drift, and complex manual SQL generation. It understands your database structure not just as text, but as a semantic model.
 
 ## ✨ Key Differentiators
 
@@ -22,7 +22,7 @@ The Andb is a developer-first tool built to eliminate the common pain points of 
 
 ## ⚡ Quickstart (5 Minutes)
 
-The fastest way to experience The Andb is comparing the bundled test databases.
+The fastest way to experience TheAndb is comparing the bundled test databases.
 
 ### 1. Build & Link
 
@@ -68,10 +68,10 @@ andb compare dev prod
 
 ## ⚖️ License
 
-**The Andb Public License (APL-1.0)**  
+**TheAndb Public License (APL-1.0)**  
 Free for evaluation, education, and local testing. Commercial use requires a license.  
 See [LICENSE](./LICENSE) and [COMMERCIAL.md](./COMMERCIAL.md).
 
 ---
 
-Built with ❤️ by **The Andb Team**. Contact: `ph4n4n@gmail.com`
+Built with ❤️ by **TheAndb Team**. Contact: `ph4n4n@gmail.com`

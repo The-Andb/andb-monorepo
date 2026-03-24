@@ -26,46 +26,36 @@ _Mục tiêu: Đảm bảo app chạy mượt với MySQL/MariaDB, UX ngon ngh�
 
 ---
 
-## 🏗️ Phase 2: MySQL Deep Dive & Architecture Hardening
+## �️ Phase 2: MySQL Deep Dive & Architecture Hardening
 
 **Timeline:** 3 Weeks (Jan 20 - Feb 10, 2026)
 
 _Mục tiêu: "Deep before Wide". Thay vì vội vã qua Postgres, ta sẽ hoàn thiện 100% tính năng cho MySQL để bán được cho MySQL Experts trước._
 
-### Week 1: Advanced Objects Support (Jan 20 - Jan 26)
+### Week 1: Advanced Objects Support
 
-- [x] **DDL Type Filtering**:
-  - [x] Filter Tree View by Tables, Views, Procedures, etc.
-  - [x] Sync filter state between List and Tree views.
 - [ ] **Stored Procedures & Functions**:
-  - [x] **Parser Refinement**: Tách header và body chuẩn xác hơn để tránh false-diff do format.
-  - [x] **Deterministic Checks**: Handle `DEFINER` clause comparison (ignore/strict modes).
-- [x] **Triggers Support**:
-  - [x] Fetch & Display Trigger DDL.
-  - [x] Compare Triggers (logic similar to Procedures).
-- [x] **Events & Views**:
-  - [x] Support Scheduled Events (MySQL).
-  - [ ] Views Dependency Sorting (đảm bảo View con được tạo sau View cha).
+  - [ ] Parser để tách và hiển thị body của Procedure/Function.
+  - [ ] Logic so sánh (Compare) diff cho Procedure.
+- [ ] **Triggers & Events**:
+  - [ ] Support Trigger DDL.
+  - [ ] Support Scheduled Events (MySQL).
+- [ ] **Views**: Hoàn thiện logic view dependencies (View A gọi View B).
 
 ### Week 2: Core Refactoring (The Abstraction)
 
 - [ ] **Abstract Core Engine**:
-  - [ ] Refactor `ConnectionManager`: Tách riêng logic MySQL ra khỏi core shared.
-  - [ ] Define `DatabaseAdapter` interface:
-    - `connect(config)`
-    - `fetchSchema(type)`
-    - `compare(source, target)`
-    - `generateScript(diff)`
-  - [ ] **IPC Layer**: Tạo lớp trung gian `Electron -> Adapter Registry -> Specific Adapter`.
+  - [ ] Refactor code hiện tại đang dính chặt với `mysql` driver.
+  - [ ] Tạo interface `DatabaseAdapter` chuẩn chỉnh (Chuẩn bị cho Postgres ở Phase 3).
+  - [ ] Tách biệt hoàn toàn UI và Electron IPC logic.
 
 ### Week 3: Performance & Reliability
 
 - [ ] **Large Scale Test**:
-  - [ ] Benchmark với 5,000+ tables (Giả lập môi trường Enterprise).
-  - [ ] **Virtualization Upgrade**: Implement `ag-grid` hoặc optimized virtual list cho Tree View nếu lag.
-- [ ] **Smart Sync Improvements**:
-  - [ ] **Ignore Whitespace**: Option để bỏ qua khác biệt về khoảng trắng/xuống dòng trong Store Proc.
-  - [ ] **Auto-Format**: Format SQL trước khi compare để tăng độ chính xác.
+  - [ ] Test với 5,000+ tables (Giả lập môi trường Enterprise).
+  - [ ] Tối ưu Virtual Scroll cho Tree View và Data Grid.
+- [ ] **Smart Sync**:
+  - [ ] Cải thiện thuật toán diff để giảm false-positive.
 
 ---
 

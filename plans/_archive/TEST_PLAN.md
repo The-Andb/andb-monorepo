@@ -1,6 +1,6 @@
-# Serious Test Plan for The Andb Desktop
+# Serious Test Plan for TheAndb Desktop
 
-This document outlines the testing strategy to ensure high reliability and zero regressions for The Andb Desktop application. We adopt a multi-layer testing approach tailored for an Electron + Vue 3 application.
+This document outlines the testing strategy to ensure high reliability and zero regressions for TheAndb Desktop application. We adopt a multi-layer testing approach tailored for an Electron + Vue 3 application.
 
 ## 1. Testing Architecture
 

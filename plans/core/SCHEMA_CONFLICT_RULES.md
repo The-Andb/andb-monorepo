@@ -1,6 +1,6 @@
-# ⚔️ The Andb Strict Schema Rules
+# ⚔️ TheAndb Strict Schema Rules
 
-Theo triết lý của The Andb, việc so sánh và đồng bộ Schema tuân thủ các quy tắc nghiêm ngặt sau để đảm bảo an toàn dữ liệu và tính minh bạch.
+Theo triết lý của TheAndb, việc so sánh và đồng bộ Schema tuân thủ các quy tắc nghiêm ngặt sau để đảm bảo an toàn dữ liệu và tính minh bạch.
 
 ## 1. � Conflict (Property Mismatch)
 
@@ -24,13 +24,13 @@ Theo triết lý của The Andb, việc so sánh và đồng bộ Schema tuân t
 
 - **Định nghĩa**: KHÔNG có ở **Source** nhưng lại TỒN TẠI ở **Target**.
   - _Ví dụ_: Production (Target) có cột `legacy_id` cũ, nhưng trong Codebase (Source) đã xóa cột này khỏi model.
-- **Hành động của The Andb**:
+- **Hành động của TheAndb**:
   - **Báo cáo**: Hiển thị là "Missing in Source" hoặc "Deprecated on Target".
-  - **Thao tác**: **KHÔNG ĐƯỢC DROP**. The Andb mặc định sẽ **BỎ QUA** (Ignore) các cột này trong quá trình migrate/sync. Chúng tôi bảo vệ dữ liệu cũ, user phải tự tay drop bằng lệnh SQL thủ công nếu thực sự muốn.
+  - **Thao tác**: **KHÔNG ĐƯỢC DROP**. TheAndb mặc định sẽ **BỎ QUA** (Ignore) các cột này trong quá trình migrate/sync. Chúng tôi bảo vệ dữ liệu cũ, user phải tự tay drop bằng lệnh SQL thủ công nếu thực sự muốn.
 
 ## 4. 🚫 The "NO DROP" Policy (Critical)
 
-**Quy tắc Bất di bất dịch**: The Andb **KHÔNG BAO GIỜ** tự động tạo lệnh `DROP` cho các cấu trúc chứa dữ liệu (Tables, Columns).
+**Quy tắc Bất di bất dịch**: TheAndb **KHÔNG BAO GIỜ** tự động tạo lệnh `DROP` cho các cấu trúc chứa dữ liệu (Tables, Columns).
 
 ### ❌ Data Objects (Table, Column)
 

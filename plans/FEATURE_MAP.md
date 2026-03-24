@@ -1,8 +1,8 @@
-# The Andb: Feature Ecosystem
+# TheAndb: Feature Ecosystem
 
 ```mermaid
 flowchart LR
-    Root(("The Andb"))
+    Root(("TheAndb"))
 
     %% Categories
     Desktop["Desktop App"]
@@ -68,7 +68,7 @@ flowchart LR
     %% Styling
     classDef category fill:#1e293b,stroke:#3b82f6,stroke-width:2px,color:#f8fafc;
     classDef feature fill:#0f172a,stroke:#475569,stroke-width:1px,color:#e2e8f0;
-    
+
     class Desktop,Core,CLI,AI,Web category;
     class SComp,SIntel,DepTools,Orch,AST,Trans,Head,Config,MCP,Veo,Web1,Web2,Web3,SComp1,SComp2,SComp3,SIntel1,SIntel2,SIntel3,DepTools1,DepTools2,DepTools3,Orch1,Orch2,AST1,AST2,AST3,Trans1,Trans2,Head1,Head2,Config1,Config2,MCP1,MCP2,Veo1,Veo2 feature;
 ```

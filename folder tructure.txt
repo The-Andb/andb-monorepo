@@ -1,0 +1,792 @@
+db
+├── DEV
+│   ├── flo_helper
+│   │   ├── backup
+│   │   │   ├── functions
+│   │   │   ├── procedures
+│   │   │   ├── tables
+│   │   │   └── triggers
+│   │   ├── current-ddl
+│   │   ├── functions
+│   │   ├── procedures
+│   │   ├── tables
+│   │   └── triggers
+│   ├── flo_helper_local
+│   │   ├── backup
+│   │   │   ├── functions
+│   │   │   ├── procedures
+│   │   │   ├── tables
+│   │   │   └── triggers
+│   │   ├── current-ddl
+│   │   ├── functions
+│   │   ├── procedures
+│   │   ├── tables
+│   │   └── triggers
+│   ├── flo_subscription
+│   │   ├── backup
+│   │   │   ├── functions
+│   │   │   ├── procedures
+│   │   │   ├── tables
+│   │   │   └── triggers
+│   │   ├── current-ddl
+│   │   ├── functions
+│   │   ├── procedures
+│   │   ├── tables
+│   │   └── triggers
+│   ├── mail_dev
+│   │   ├── current-ddl
+│   │   └── tables
+│   ├── preflow_41
+│   │   ├── backup
+│   │   │   ├── functions
+│   │   │   ├── procedures
+│   │   │   ├── tables
+│   │   │   └── triggers
+│   │   ├── current-ddl
+│   │   ├── functions
+│   │   ├── procedures
+│   │   ├── tables
+│   │   └── triggers
+│   └── pt_raw
+│       ├── current-ddl
+│       ├── functions
+│       └── tables
+├── PROD
+│   ├── mail
+│   │   ├── current-ddl
+│   │   ├── functions
+│   │   └── tables
+│   └── preflow_40
+│       ├── backup
+│       │   ├── 10_29_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 11_12_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 12_11_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 12_18_2023
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 12_2_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 1_30_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 2025_7_22
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 3_26_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 4_9_2025
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 5_21_2025
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 5_9_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 7_19_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 7_31_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 7_7_2025
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   └── 8_9_2024
+│       │       └── functions
+│       ├── current-ddl
+│       ├── functions
+│       ├── procedures
+│       ├── tables
+│       └── triggers
+├── STAGE
+│   ├── flo_helper
+│   │   ├── backup
+│   │   │   ├── 2026_2_5
+│   │   │   │   ├── functions
+│   │   │   │   ├── procedures
+│   │   │   │   └── triggers
+│   │   │   ├── 2026_3_10
+│   │   │   │   ├── functions
+│   │   │   │   ├── procedures
+│   │   │   │   └── triggers
+│   │   │   ├── functions
+│   │   │   ├── procedures
+│   │   │   ├── tables
+│   │   │   └── triggers
+│   │   ├── current-ddl
+│   │   ├── functions
+│   │   ├── procedures
+│   │   ├── tables
+│   │   └── triggers
+│   ├── flo_subscription
+│   │   ├── backup
+│   │   │   ├── 2025_10_21
+│   │   │   │   ├── functions
+│   │   │   │   ├── procedures
+│   │   │   │   └── triggers
+│   │   │   ├── 2025_11_11
+│   │   │   │   ├── functions
+│   │   │   │   ├── procedures
+│   │   │   │   └── triggers
+│   │   │   ├── 2025_11_12
+│   │   │   │   ├── functions
+│   │   │   │   ├── procedures
+│   │   │   │   └── triggers
+│   │   │   ├── 2025_11_21
+│   │   │   │   ├── functions
+│   │   │   │   ├── procedures
+│   │   │   │   └── triggers
+│   │   │   ├── 2025_11_27
+│   │   │   │   ├── functions
+│   │   │   │   ├── procedures
+│   │   │   │   └── triggers
+│   │   │   ├── 2025_12_1
+│   │   │   │   ├── functions
+│   │   │   │   ├── procedures
+│   │   │   │   └── triggers
+│   │   │   ├── 2025_12_10
+│   │   │   │   ├── functions
+│   │   │   │   ├── procedures
+│   │   │   │   └── triggers
+│   │   │   ├── 2025_12_2
+│   │   │   │   ├── functions
+│   │   │   │   ├── procedures
+│   │   │   │   └── triggers
+│   │   │   ├── 2025_12_8
+│   │   │   │   ├── functions
+│   │   │   │   ├── procedures
+│   │   │   │   └── triggers
+│   │   │   ├── 2025_12_9
+│   │   │   │   ├── functions
+│   │   │   │   ├── procedures
+│   │   │   │   └── triggers
+│   │   │   ├── 2026_2_26
+│   │   │   │   ├── functions
+│   │   │   │   ├── procedures
+│   │   │   │   └── triggers
+│   │   │   ├── functions
+│   │   │   ├── procedures
+│   │   │   ├── tables
+│   │   │   └── triggers
+│   │   ├── current-ddl
+│   │   ├── functions
+│   │   ├── procedures
+│   │   ├── tables
+│   │   └── triggers
+│   ├── mail
+│   │   ├── current-ddl
+│   │   ├── functions
+│   │   └── tables
+│   └── preflow_40
+│       ├── backup
+│       │   ├── 1_12_2024
+│       │   │   └── procedures
+│       │   ├── 1_16_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 1_17_2025
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 1_20_2025
+│       │   │   └── procedures
+│       │   ├── 1_21_2025
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 1_22_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 1_24_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 1_29_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 2025_10_13
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_10_17
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_10_20
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_10_21
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_11_11
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_11_21
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_12_17
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_12_18
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_12_24
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_12_29
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_12_31
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_12_5
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_12_8
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_7_24
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_8_12
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_8_15
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_8_19
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_8_28
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_8_6
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_9_3
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2025_9_30
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2026_1_20
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2026_2_25
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2026_2_4
+│       │   │   ├── functions
+│       │   │   ├── procedures
+│       │   │   └── triggers
+│       │   ├── 2_18_2025
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 2_20_2025
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 2_22_2024
+│       │   │   └── procedures
+│       │   ├── 2_3_2024
+│       │   │   └── procedures
+│       │   ├── 3_14_2024
+│       │   │   └── procedures
+│       │   ├── 3_19_2024
+│       │   │   └── procedures
+│       │   ├── 3_1_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 3_25_2024
+│       │   │   └── procedures
+│       │   ├── 3_26_2024
+│       │   │   └── procedures
+│       │   ├── 3_4_2025
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 3_6_2024
+│       │   │   └── procedures
+│       │   ├── 4_10_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 4_12_2024
+│       │   │   └── procedures
+│       │   ├── 4_17_2024
+│       │   │   └── functions
+│       │   ├── 4_22_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 4_23_2024
+│       │   │   └── functions
+│       │   ├── 4_24_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 4_25_2024
+│       │   │   └── procedures
+│       │   ├── 4_29_2025
+│       │   │   └── procedures
+│       │   ├── 5_15_2024
+│       │   │   └── procedures
+│       │   ├── 5_17_2024
+│       │   │   └── functions
+│       │   ├── 5_19_2025
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 5_23_2024
+│       │   │   └── functions
+│       │   ├── 5_30_2024
+│       │   │   └── procedures
+│       │   ├── 5_6_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 5_7_2024
+│       │   │   └── functions
+│       │   ├── 5_9_2024
+│       │   │   └── procedures
+│       │   ├── 6_26_2024
+│       │   │   ├── functions
+│       │   │   └── procedures
+│       │   ├── 6_27_2024
+│       │   │   └── procedures
+│       │   ├── 6_6_2024
+│       │   │   └── procedures
+│       │   ├── 7_15_2025
+│       │   │   └── triggers
+│       │   ├── functions
+│       │   ├── procedures
+│       │   ├── tables
+│       │   └── triggers
+│       ├── current-ddl
+│       ├── functions
+│       ├── procedures
+│       ├── tables
+│       └── triggers
+└── UAT
+    ├── flo_helper
+    │   ├── backup
+    │   │   ├── 2026_2_5
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── 2026_3_10
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── functions
+    │   │   ├── procedures
+    │   │   ├── tables
+    │   │   └── triggers
+    │   ├── current-ddl
+    │   ├── functions
+    │   ├── procedures
+    │   ├── tables
+    │   └── triggers
+    ├── flo_subscription
+    │   ├── backup
+    │   │   ├── 2025_10_21
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── 2025_10_27
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── 2025_10_31
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── 2025_11_11
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── 2025_11_12
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── 2025_11_13
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── 2025_11_17
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── 2025_11_3
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── 2025_11_7
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── 2025_12_2
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── 2025_12_9
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── 2026_2_26
+    │   │   │   ├── functions
+    │   │   │   ├── procedures
+    │   │   │   └── triggers
+    │   │   ├── functions
+    │   │   ├── procedures
+    │   │   ├── tables
+    │   │   └── triggers
+    │   ├── current-ddl
+    │   ├── functions
+    │   ├── procedures
+    │   ├── tables
+    │   └── triggers
+    ├── mail_uat
+    │   ├── current-ddl
+    │   └── tables
+    ├── preflow_40
+    │   ├── current-ddl
+    │   ├── functions
+    │   ├── procedures
+    │   └── tables
+    └── preflow_41
+        ├── backup
+        │   ├── 1_10_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 1_13_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 1_14_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 1_17_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 1_20_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 1_21_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 1_23_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 1_2_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 1_3_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 1_6_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 1_7_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 1_8_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 1_9_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 2025_10_14
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_10_15
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_10_2
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_10_20
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_10_24
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_10_29
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_10_6
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_10_7
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_10_9
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_11_3
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_12_17
+        │   │   └── functions
+        │   ├── 2025_12_24
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_12_3
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_12_8
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_7_17
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_7_18
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_7_28
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_7_30
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_7_31
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_8_11
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_8_15
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_8_21
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 2025_8_22
+        │   │   └── triggers
+        │   ├── 2025_8_29
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_8_4
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_8_5
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_8_6
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_8_7
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2025_9_18
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2026_2_10
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2026_2_25
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2026_2_4
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2026_3_20
+        │   │   ├── functions
+        │   │   ├── procedures
+        │   │   └── triggers
+        │   ├── 2_10_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 2_11_2025
+        │   │   └── functions
+        │   ├── 2_17_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 2_20_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 2_21_2025
+        │   │   └── procedures
+        │   ├── 2_6_2025
+        │   │   └── functions
+        │   ├── 2_7_2025
+        │   │   └── procedures
+        │   ├── 3_10_2025
+        │   │   └── procedures
+        │   ├── 3_14_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 3_18_2025
+        │   │   └── procedures
+        │   ├── 3_4_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 3_5_2025
+        │   │   └── procedures
+        │   ├── 4_15_2025
+        │   │   └── procedures
+        │   ├── 4_17_2025
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 4_18_2025
+        │   │   └── functions
+        │   ├── 4_22_2025
+        │   │   └── procedures
+        │   ├── 5_12_2025
+        │   │   └── functions
+        │   ├── 5_13_2025
+        │   │   └── functions
+        │   ├── 5_21_2025
+        │   │   └── functions
+        │   ├── 5_6_2025
+        │   │   └── procedures
+        │   ├── 6_19_2024
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 6_26_2024
+        │   │   └── procedures
+        │   ├── 6_27_2024
+        │   │   └── procedures
+        │   ├── 6_3_2024
+        │   │   ├── functions
+        │   │   └── procedures
+        │   ├── 7_11_2025
+        │   │   └── procedures
+        │   ├── 7_15_2025
+        │   │   └── triggers
+        │   ├── functions
+        │   ├── procedures
+        │   ├── tables
+        │   └── triggers
+        ├── current-ddl
+        ├── functions
+        ├── procedures
+        ├── tables
+        └── triggers
+
+map-migrate
+├── DEV-to-UAT
+│   ├── flo_helper
+│   │   ├── tables
+│   │   │   └── alters
+│   │   │       ├── columns
+│   │   │       └── indexes
+│   │   └── triggers
+│   ├── flo_helper_local
+│   │   ├── tables
+│   │   │   └── alters
+│   │   │       ├── columns
+│   │   │       └── indexes
+│   │   └── triggers
+│   ├── flo_subscription
+│   │   ├── procedures
+│   │   ├── tables
+│   │   │   └── alters
+│   │   │       ├── columns
+│   │   │       └── indexes
+│   │   └── triggers
+│   ├── mail_dev
+│   │   ├── functions
+│   │   └── tables
+│   │       └── alters
+│   │           └── columns
+│   └── preflow_41
+│       ├── functions
+│       ├── procedures
+│       ├── tables
+│       │   └── alters
+│       │       ├── columns
+│       │       ├── indexes
+│       │       └── rmv-columns
+│       └── triggers
+├── LOCAL-to-DEV
+│   └── preflow_41
+│       ├── functions
+│       ├── procedures
+│       └── tables
+│           └── alters
+│               ├── columns
+│               ├── indexes
+│               └── rmv-columns
+├── STAGE-to-PROD
+│   └── preflow_40
+│       ├── functions
+│       ├── procedures
+│       ├── tables
+│       │   └── alters
+│       │       ├── columns
+│       │       ├── indexes
+│       │       └── rmv-columns
+│       └── triggers
+└── UAT-to-STAGE
+    ├── flo_helper
+    │   ├── tables
+    │   │   └── alters
+    │   │       └── indexes
+    │   └── triggers
+    ├── flo_subscription
+    │   ├── procedures
+    │   ├── tables
+    │   │   └── alters
+    │   │       ├── columns
+    │   │       └── indexes
+    │   └── triggers
+    ├── mail_uat
+    │   └── tables
+    └── preflow_41
+        ├── functions
+        ├── procedures
+        ├── tables
+        │   └── alters
+        │       ├── columns
+        │       ├── indexes
+        │       └── rmv-columns
+        └── triggers

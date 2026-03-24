@@ -1,4 +1,4 @@
-# 📌 The Andb - AI Context
+# 📌 TheAndb - AI Context
 
 > **Rules for AI:**
 >
@@ -12,9 +12,9 @@
 
 ## 🎯 Project Overview
 
-**The Andb** — Intelligent database orchestration ecosystem for schema comparison, synchronization, and DDL lifecycle management.
+**TheAndb** — Intelligent database orchestration ecosystem for schema comparison, synchronization, and DDL lifecycle management.
 
-**Mission:** Transform from personal tool into commercial-grade database management product.
+**Mission:** Build the definitive open-source native Database Orchestration ecosystem, bridging the gap between personal tooling and enterprise CI/CD safety rails.
 
 **Current Status:** Phase 3 (Expansion) — Stable Release v4.0.0 & Advanced Features
 
@@ -28,13 +28,13 @@
 
 ## 🏗️ Package Structure (Monorepo)
 
-| Package             | Role                           | Storage       |
-| ------------------- | ------------------------------ | ------------- |
-| `@the-andb/core`    | Pure business logic, stateless | Agnostic      |
-| `@the-andb/desktop` | Electron + Vue 3 desktop       | SQLiteStorage |
-| `@the-andb/cli`     | Terminal interface             | FileStorage   |
-| `@the-andb/mcp`     | MCP Protocol adapter           | —             |
-| `andb-www`          | Marketing/docs (Landing)       | —             |
+| Package             | Role                             | Storage       |
+| ------------------- | -------------------------------- | ------------- |
+| `@the-andb/core`    | Pure business logic, stateless   | Agnostic      |
+| `@the-andb/desktop` | Electron + Vue 3 desktop         | SQLiteStorage |
+| `@the-andb/cli`     | Terminal interface               | FileStorage   |
+| `@the-andb/mcp`     | MCP Protocol adapter             | —             |
+| `andb-www`          | Open Source Storytelling Landing | —             |
 
 **Core Principle:** All logic in `core`. UI/CLI are adapters only.
 

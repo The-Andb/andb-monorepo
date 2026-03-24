@@ -25,7 +25,7 @@ You are a **senior frontend engineer** specializing in marketing sites and devel
   - **USE concrete verbs**: "Orchestrate", "Compare", "Validate", "Safeguard".
   - Developers are skeptical of marketing fluff. Build trust by showing _how_ the tool solves the pain (e.g., deep comparison, dry runs), rather than promising the world. State facts cleanly and let the product logic speak for itself.
 - **Core Value Proposition (Do NOT deviate)**:
-  - **With The ANDB you can:**
+  - **With TheAndb you can:**
     - Export DDL (tables, procedures, functions, triggers) to local files.
     - Compare schemas across environments _offline_.
     - Automatically generate migration scripts.

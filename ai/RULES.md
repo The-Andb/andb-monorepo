@@ -53,6 +53,7 @@ MIGRATE → Live DB → Execute DDL        ✅ kết nối DB đích
 - **Desktop Priority**: Desktop là sản phẩm flagship. Core phục vụ Desktop trước, phục vụ community sau.
 - **Bundled Delivery**: App Desktop khi build phải chứa sẵn mọi công cụ (Core, CLI, MCP) bản mới nhất.
 - **Separation of Concerns**: Dù bundled, nhưng logic DB vẫn nằm ở Core, logic UI nằm ở Desktop.
+- **Web Presence Priority**: Trang web `andb-www` phải tuyệt đối trung thành với format "Technical Storytelling". KHÔNG nhét các bảng giá Pricing thương mại hay Marketing rác vào che lấp tính cách Open Source của Engine.
 - **System Design**: Xem chi tiết tại [ai/SYSTEM_DESIGN.md](file:///Volumes/FlexibleWorkplace/The-Andb/ai/SYSTEM_DESIGN.md).
 
 ---

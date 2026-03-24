@@ -1,4 +1,4 @@
-# 🎯 The Andb — Product Roadmap
+# 🎯 TheAndb — Product Roadmap
 
 **Mission:** A CLI-first MySQL schema diff engine that detects drift and generates deterministic migration scripts with preview and backup.
 
@@ -97,12 +97,12 @@
 
 ## 📦 Package Structure
 
-| Package          | Role                                 | Status    |
-| :--------------- | :----------------------------------- | :-------- |
+| Package          | Role                                    | Status    |
+| :--------------- | :-------------------------------------- | :-------- |
 | `@the-andb/core` | Pure business logic (Framework, mysql2) | ✅ Active |
-| `@the-andb/cli`  | Terminal interface (nest-commander)  | ✅ Active |
-| `@the-andb/test` | E2E + Sandbox test suite (Jest)      | ✅ Active |
-| `andb-desktop`   | Electron + Vue 3 desktop app         | ✅ Built  |
-| `andb-www`       | Landing page                         | ⏳ Next   |
+| `@the-andb/cli`  | Terminal interface (nest-commander)     | ✅ Active |
+| `@the-andb/test` | E2E + Sandbox test suite (Jest)         | ✅ Active |
+| `andb-desktop`   | Electron + Vue 3 desktop app            | ✅ Built  |
+| `andb-www`       | Landing page                            | ⏳ Next   |
 
 **Core Principle:** All logic in `core`. CLI/UI are adapters.

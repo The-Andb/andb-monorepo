@@ -1,6 +1,6 @@
-# Landing Page Master Plan: The Face of "The Andb"
+# Landing Page Master Plan: The Face of "TheAndb"
 
-This document outlines the strategy to transform the current basic landing page into a **stunning, high-conversion showcase** for The Andb.
+This document outlines the strategy to transform the current basic landing page into a **stunning, high-conversion showcase** for TheAndb.
 
 > **Goal**: Create a "Love at First Sight" experience. The landing page must reflect the premium, modern, and powerful nature of the application itself.
 
@@ -47,7 +47,7 @@ This document outlines the strategy to transform the current basic landing page 
 
 ### 4. Comparison / "Why Andb?"
 
-- A simple table or slider comparing "Traditional Clients" (DBeaver, Workbench) vs "The Andb" (Focus on UX, Intelligence, Safety).
+- A simple table or slider comparing "Traditional Clients" (DBeaver, Workbench) vs "TheAndb" (Focus on UX, Intelligence, Safety).
 
 ### 5. Download & OS Support
 

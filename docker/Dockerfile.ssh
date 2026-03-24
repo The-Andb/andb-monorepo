@@ -1,4 +1,4 @@
-# Custom SSH Server for The Andb Testing
+# Custom SSH Server for TheAndb Testing
 # Enables TCP forwarding for SSH tunnel tests
 
 FROM alpine:3.19

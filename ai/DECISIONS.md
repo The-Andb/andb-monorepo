@@ -1,4 +1,4 @@
-# 🏛️ The Andb - Architecture Decisions
+# 🏛️ TheAndb - Architecture Decisions
 
 > Important decisions and their rationale
 
@@ -296,7 +296,7 @@ Limit the Schema Explorer tree depth to **DDL Category level** (e.g., "Tables", 
 
 #### Context
 
-The Andb started as a "DB Compare Tool" — a utility for diffing and migrating MySQL schemas. While technically sound, this positioning limits market appeal and monetization potential. The core engine is already capable of detecting schema drift, classifying risk, and generating deterministic migration scripts.
+TheAndb started as a "DB Compare Tool" — a utility for diffing and migrating MySQL schemas. While technically sound, this positioning limits market appeal and monetization potential. The core engine is already capable of detecting schema drift, classifying risk, and generating deterministic migration scripts.
 
 #### Decision
 
@@ -319,7 +319,8 @@ Key pillars:
 - Phase 3 of the roadmap now includes Drift Detection Agent and Deployment Guard.
 - ICP shifts from solo developers to teams (5–30 engineers) with multiple environments.
 - Pricing model will follow Free → Team ($29–79/mo) → Growth ($149+/mo) tiers.
-### ADR-011: Stable Release v4.0.0 (The Andb)
+
+### ADR-011: Stable Release v4.0.0 (TheAndb)
 
 **Date:** 2026-03-11
 **Status:** Accepted
@@ -330,10 +331,10 @@ The project has reached a level of stability across the Core engine, CLI, and De
 
 #### Decision
 
-Launch **The Andb v4.0.0** (Stable).
+Launch **TheAndb v4.0.0** (Stable).
 
 - Bump versions: Core/CLI/MCP to `4.0.0`, Desktop to `3.1.0`, WWW to `1.1.0`.
-- Finalize the rebranding from "Andb" to "**The Andb**" with the tagline "**Simplest Database Migration Tool**".
+- Finalize the rebranding from "Andb" to "**TheAndb**" with the tagline "**Simplest Database Migration Tool**".
 - Standardize internal dependencies to explicit stable versions instead of `workspace:*` for final artifacts.
 
 #### Rationale
@@ -360,16 +361,54 @@ The project was initially launched under the MIT license. To ensure the project'
 #### Decision
 
 Adopt a **"Enterprise Bridge" Pattern**:
+
 1.  **Open Source Engine (GPLv3)**: `@the-andb/core` and `@the-andb/cli` remain the high-integrity, open-source foundation.
 2.  **Proprietary Bridge & UI**: The `andb-desktop` and any future `@the-andb/core-premium` components are **Proprietary**.
 3.  **Dual Licensing**: The project uses a dual-licensing model where the core engine is free for open-source use, but its proprietary brother (the Desktop App) utilizes it under a separate commercial grant to the author.
 
 #### Rationale
 
-- **Prevent Observability Gaps**: By keeping the "visualization orchestration" and "premium adapters" private, we ensure that the Desktop App remains the definitive way to experience The Andb.
+- **Prevent Observability Gaps**: By keeping the "visualization orchestration" and "premium adapters" private, we ensure that the Desktop App remains the definitive way to experience TheAndb.
 - **Shared Foundation, Unique Value**: The community benefits from the GPLv3 engine (CLI, CI/CD), while the proprietary app funds continued development.
 
 #### Consequences
 
 - `andb-core` will be audited to remove any "premium" logic that belongs in the private layer.
 - Branding clearly states: "Engineered with Open Core @the-andb/core (GPLv3)".
+
+### ADR-013: Web Presence Simplification (Open-Source Focus)
+
+**Date:** 2026-03-24
+**Status:** Accepted
+
+#### Context
+The `andb-www` site was previously cluttered with commercial fluff (pricing, setups) that blurred the message around our dual-licensed structure and the free CLI engine.
+
+#### Decision
+Strip all commercial components from the website. Refactor the layout into a 10-step, full-viewport "Scrolltelling" Feature Story displaying authentic 3D desktop application snapshots. Dynamically compile historical milestones and Mermaid SVGs into the "Evolution Story" via Vite raw markdown ingestion. 
+
+#### Rationale
+- Emphasizes the technical capability of the open-source engine.
+- Cinematic storytelling builds higher engineering trust than generic SaaS templates.
+
+#### Consequences
+- No manual HTML updates required for releases since it queries `../../../releases/*.md` natively.
+
+### ADR-014: Project Protection Mechanism
+
+**Date:** 2026-03-24
+**Status:** Accepted
+
+#### Context
+Before this, project deletion relied upon generic browser `confirm()` dialogue. This presented a massive risk of accidental data deletion.
+
+#### Decision
+Introduce an explicit `isProtected` boolean flag on the `Project` model.
+- A protected project completely blanks the "Delete" UI options.
+- If unprotected, deletion forces a dedicated custom modal requiring the exact Project Name to be manually typed.
+
+#### Rationale
+Data safety isn't just about database schemas; it applies to the user's workspace context and sensitive global variables saved within them.
+
+#### Consequences
+- Eliminated "fat-finger" workspace collapse incidents.

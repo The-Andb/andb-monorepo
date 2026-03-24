@@ -2,7 +2,7 @@
 
 ## 🎨 Inspiration & Analysis
 
-Based on the analysis of `andb-desktop/stitch/andb_comparison_dashboard_2/code.html`, we have identified a **Visual Schema Conflict Resolver** as a high-impact addition to the Andb ecosystem. This feature allows users to interactively resolve schema drifts between environments (e.g., Production vs. Staging) with a UI that rivals top-tier Git merge tools.
+Based on the analysis of `andb-desktop/stitch/andb_comparison_dashboard_2/code.html`, we have identified a **Visual Schema Conflict Resolver** as a high-impact addition to TheAndb ecosystem. This feature allows users to interactively resolve schema drifts between environments (e.g., Production vs. Staging) with a UI that rivals top-tier Git merge tools.
 
 **Why this is "Cool" & Essential:**
 
