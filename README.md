@@ -65,7 +65,7 @@ This repository acts as a specialized orchestrator for the Andb ecosystem. To ge
 npm install -g pnpm
 
 # 2. Clone this main repo
-git clone https://github.com/ph4n4n/the-andb.git && cd the-andb
+git clone https://github.com/The-Andb/andb-monorepo.git && cd the-andb
 
 # 3. Hydrate all sub-repositories (Core, CLI, Desktop, MCP, etc.)
 npm run repo:clone
