@@ -334,7 +334,7 @@ The project has reached a level of stability across the Core engine, CLI, and De
 Launch **TheAndb v4.0.0** (Stable).
 
 - Bump versions: Core/CLI/MCP to `4.0.0`, Desktop to `3.1.0`, WWW to `1.1.0`.
-- Finalize the rebranding from "Andb" to "**TheAndb**" with the tagline "**Simplest Database Migration Tool**".
+- Finalize the rebranding from "Andb" to "**TheAndb**" with the tagline "**Keep Going. Keep Syncing.**".
 - Standardize internal dependencies to explicit stable versions instead of `workspace:*` for final artifacts.
 
 #### Rationale
@@ -382,16 +382,20 @@ Adopt a **"Enterprise Bridge" Pattern**:
 **Status:** Accepted
 
 #### Context
+
 The `andb-www` site was previously cluttered with commercial fluff (pricing, setups) that blurred the message around our dual-licensed structure and the free CLI engine.
 
 #### Decision
-Strip all commercial components from the website. Refactor the layout into a 10-step, full-viewport "Scrolltelling" Feature Story displaying authentic 3D desktop application snapshots. Dynamically compile historical milestones and Mermaid SVGs into the "Evolution Story" via Vite raw markdown ingestion. 
+
+Strip all commercial components from the website. Refactor the layout into a 10-step, full-viewport "Scrolltelling" Feature Story displaying authentic 3D desktop application snapshots. Dynamically compile historical milestones and Mermaid SVGs into the "Evolution Story" via Vite raw markdown ingestion.
 
 #### Rationale
+
 - Emphasizes the technical capability of the open-source engine.
 - Cinematic storytelling builds higher engineering trust than generic SaaS templates.
 
 #### Consequences
+
 - No manual HTML updates required for releases since it queries `../../../releases/*.md` natively.
 
 ### ADR-014: Project Protection Mechanism
@@ -400,14 +404,18 @@ Strip all commercial components from the website. Refactor the layout into a 10-
 **Status:** Accepted
 
 #### Context
+
 Before this, project deletion relied upon generic browser `confirm()` dialogue. This presented a massive risk of accidental data deletion.
 
 #### Decision
+
 Introduce an explicit `isProtected` boolean flag on the `Project` model.
+
 - A protected project completely blanks the "Delete" UI options.
 - If unprotected, deletion forces a dedicated custom modal requiring the exact Project Name to be manually typed.
 
 #### Rationale
+
 Data safety isn't just about database schemas; it applies to the user's workspace context and sensitive global variables saved within them.
 
 #### Consequences
