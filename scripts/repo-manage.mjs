@@ -55,6 +55,11 @@ async function handleStatus() {
   }
 }
 
+async function handleFixPerms() {
+  console.log('\x1b[32m[FIXING] Adding all subdirectories to git safe.directory...\x1b[0m');
+  run('git', ['config', '--global', '--add', 'safe.directory', '*']);
+}
+
 switch (command) {
   case 'clone':
     handleClone();
@@ -65,7 +70,10 @@ switch (command) {
   case 'status':
     handleStatus();
     break;
+  case 'fix-perms':
+    handleFixPerms();
+    break;
   default:
-    console.error('Usage: node scripts/repo-manage.mjs [clone|pull|status]');
+    console.error('Usage: node scripts/repo-manage.mjs [clone|pull|status|fix-perms]');
     process.exit(1);
 }
