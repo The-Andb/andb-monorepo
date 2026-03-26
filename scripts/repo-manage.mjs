@@ -14,7 +14,7 @@ const command = process.argv[2];
 
 function run(cmd, args, cwd = process.cwd()) {
   console.log(`\n\x1b[1m> ${cmd} ${args.join(' ')} (in ${cwd})\x1b[0m`);
-  const result = spawnSync(cmd, args, { cwd, stdio: 'inherit', shell: true });
+  const result = spawnSync(cmd, args, { cwd, stdio: 'inherit', shell: false });
   if (result.status !== 0) {
     console.error(`\x1b[31mCommand failed with exit code ${result.status}\x1b[0m`);
     return false;
@@ -57,7 +57,7 @@ async function handleStatus() {
 
 async function handleFixPerms() {
   console.log('\x1b[32m[FIXING] Adding all subdirectories to git safe.directory...\x1b[0m');
-  run('git', ['config', '--global', '--add', 'safe.directory', "'*'"]);
+  run('git', ['config', '--global', '--add', 'safe.directory', '*']);
 }
 
 switch (command) {
