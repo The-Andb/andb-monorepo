@@ -20,8 +20,8 @@
 
 ### Licensing
 
-- **Open Core Engine**: `@the-andb/core` & `@the-andb/cli` are licensed under **GPLv3**.
-- **Desktop UI**: `andb-desktop` is **Proprietary** (Premium UI).
+- **Open Core Engine**: `@the-andb/core`, `@the-andb/cli`, and `@the-andb/mcp` are licensed under **AGPL-3.0**.
+- **Desktop UI**: `andb-desktop` is **Proprietary** (Closed Source).
 - **Privacy Focus**: Zero-Cloud, local-first commitment across all tiers.
 
 ---

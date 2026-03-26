@@ -1,15 +1,15 @@
 # 🏗️ System Design — TheAndb Ecosystem
 
-Đây là thiết kế hệ thống cốt lõi để duy trì mô hình **Open Core**. Bất kỳ thay đổi kiến trúc nào cũng phải tuân thủ ranh giới giữa **Bones** (GPLv3) và **Meat** (Proprietary).
+Đây là thiết kế hệ thống cốt lõi để duy trì mô hình **Open Core**. Bất kỳ thay đổi kiến trúc nào cũng phải tuân thủ ranh giới giữa **Open Source** (AGPL-3.0) và **Proprietary** (Closed source).
 
 ```mermaid
 graph TD
-    subgraph "DESKTOP BUNDLE (Public Source / Restricted)"
+    subgraph "DESKTOP BUNDLE (Proprietary / Closed Source)"
         UI["@the-andb/desktop (Vue 3)"]
-        subgraph "Embedded Tools (MIT)"
-            CORE["@the-andb/core (MIT)"]
-            CLI["andb-cli (MIT)"]
-            MCP["MCP Server (MIT)"]
+        subgraph "Embedded Tools (AGPL-3.0)"
+            CORE["@the-andb/core (AGPL)"]
+            CLI["andb-cli (AGPL)"]
+            MCP["MCP Server (AGPL)"]
         end
         BRIDGE["Internal Bridge (Fast Call)"]
     end

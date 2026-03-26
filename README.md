@@ -1,13 +1,14 @@
 # TheAndb 🛸
 
-**Professional Database Schema Reliability Engine.**  
+**Professional Database Schema Reliability Engine.**
 AST-powered Safety, Semantic Diffing, and Multi-Environment Orchestration for High-Stakes Production.
 
 ---
 
 [![Fast: 5-Min Setup](https://img.shields.io/badge/Setup-5--Minute-blueviolet?style=for-the-badge&logo=rocket)](#-quickstart)
 [![Safety: AST-Analyzed](https://img.shields.io/badge/Safety-AST--Analyzed-green?style=for-the-badge&logo=shield)](https://github.com/ph4n4n/the-andb-core)
-[![License: Source-Available](https://img.shields.io/badge/License-Source--Available-orange?style=for-the-badge)](./LICENSE)
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue?style=for-the-badge&logo=gnu)](./LICENSE)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-orange?style=for-the-badge)](./LICENSE)
 
 TheAndb is a developer-first tool built to eliminate the common pain points of database migrations: accidental data loss, schema drift, and complex manual SQL generation. It understands your database structure not just as text, but as a semantic model.
 
@@ -55,6 +56,29 @@ andb compare dev prod
 
 ---
 
+## 🛠️ How to Checkout
+
+This repository acts as a specialized orchestrator for the Andb ecosystem. To get the full source for all components:
+
+```bash
+# 1. Install pnpm (if not already present)
+npm install -g pnpm
+
+# 2. Clone this main repo
+git clone https://github.com/ph4n4n/the-andb.git && cd the-andb
+
+# 3. Hydrate all sub-repositories (Core, CLI, Desktop, MCP, etc.)
+npm run repo:clone
+
+# 4. Pull updates for all sub-repos simultaneously
+npm run repo:pull
+
+# 5. Install all dependencies (Workspace-aware)
+npm run repo:install
+```
+
+---
+
 ## 📂 Repository Tour
 
 | Module                                                                        | Role                                                                        |
@@ -68,9 +92,12 @@ andb compare dev prod
 
 ## ⚖️ License
 
-**TheAndb Public License (APL-1.0)**  
-Free for evaluation, education, and local testing. Commercial use requires a license.  
-See [LICENSE](./LICENSE) and [COMMERCIAL.md](./COMMERCIAL.md).
+TheAndb follows a **Dual-Track** licensing model:
+
+- **Open Core (AGPL-3.0)**: Our engine (`andb-core`), CLI (`andb-cli`), MCP Server (`andb-mcp`), and Landing Page (`andb-www`) are fully open source.
+- **Desktop App (Proprietary)**: Our premium GUI is closed source but free for individual use.
+
+See [LICENSE](./LICENSE) for the full AGPL-3.0 text and [ai/RULES.md](./ai/RULES.md) for architectural boundaries.
 
 ---
 

@@ -43,14 +43,13 @@ MIGRATE → Live DB → Execute DDL        ✅ kết nối DB đích
 
 ---
 
-## 4. Open Ecosystem & KISS
+## 4. Open Core & Hybrid Licensing
 
 ```
-[MIT] @the-andb/core (andb-core)   ↔   [Public Source] @the-andb/desktop (andb-desktop)
+[AGPL-3.0] @the-andb/core (andb-core)   ↔   [Proprietary] @the-andb/desktop (andb-desktop)
 ```
-- **License Hybrid**: Core là MIT (Tự do). Desktop là **Public Source** (Mở mã nguồn để xem but Restricted sử dụng).
- -> Gộp lại.
-- **Desktop Priority**: Desktop là sản phẩm flagship. Core phục vụ Desktop trước, phục vụ community sau.
+- **License Hybrid**: Core engine, CLI, and MCP layer are **AGPL-3.0** (Open Source). Desktop is **Proprietary** (Closed source, free for individual follow-up).
+- **Desktop Priority**: Desktop is the flagship product, protected to ensure project sustainability.
 - **Bundled Delivery**: App Desktop khi build phải chứa sẵn mọi công cụ (Core, CLI, MCP) bản mới nhất.
 - **Separation of Concerns**: Dù bundled, nhưng logic DB vẫn nằm ở Core, logic UI nằm ở Desktop.
 - **Web Presence Priority**: Trang web `andb-www` phải tuyệt đối trung thành với format "Technical Storytelling". KHÔNG nhét các bảng giá Pricing thương mại hay Marketing rác vào che lấp tính cách Open Source của Engine.

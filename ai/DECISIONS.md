@@ -411,4 +411,34 @@ Introduce an explicit `isProtected` boolean flag on the `Project` model.
 Data safety isn't just about database schemas; it applies to the user's workspace context and sensitive global variables saved within them.
 
 #### Consequences
+
 - Eliminated "fat-finger" workspace collapse incidents.
+
+---
+
+### ADR-015: Final Licensing Strategy (AGPL & Proprietary)
+
+**Date:** 2026-03-26
+**Status:** Accepted
+
+#### Context
+
+To maximize community contribution for the core engine while ensuring the long-term sustainability of the flagship product, we need a refined licensing model that separates the "Open Infrastructure" from the "Premium Experience".
+
+#### Decision
+
+Adopt a **"Dual-Track"** licensing model:
+
+1.  **Open Source (AGPL-3.0)**: `@the-andb/core`, `@the-andb/cli`, and `@the-andb/mcp` (including the API layer). This ensures that any improvements to the core orchestration engine remain open and contribute back to the ecosystem.
+2.  **Closed Source (Proprietary)**: `andb-desktop` (the Electron application). While the source remains available for inspection (Public Source), it is restricted for commercial use without a dedicated license. It is currently free for individual use.
+
+#### Rationale
+
+- **AGPL-3.0**: Prevents "SaaS-ification" of the core engine without giving back. If someone uses TheAndb core to provide a service, they must contribute their changes.
+- **Proprietary Desktop**: Protects the unique UI/UX investment and visualization logic that makes TheAndb the premium choice for engineers.
+
+#### Consequences
+
+- High-integrity open source core for developers and CI/CD.
+- Sustainable business model powered by the flagship desktop app.
+- Clear legal boundaries between the engine and the UI.
