@@ -57,7 +57,7 @@ async function handleStatus() {
 
 async function handleFixPerms() {
   console.log('\x1b[32m[FIXING] Adding all subdirectories to git safe.directory...\x1b[0m');
-  run('git', ['config', '--global', '--add', 'safe.directory', '*']);
+  run('git', ['config', '--global', '--add', 'safe.directory', "'*'"]);
 }
 
 switch (command) {
