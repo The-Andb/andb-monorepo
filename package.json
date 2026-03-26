@@ -22,11 +22,11 @@
     "report:dashboard": "pnpm --filter @the-andb/test report:dashboard",
     "docker:up": "cd docker && docker-compose up -d",
     "docker:down": "cd docker && docker-compose down",
-    "repo:clone": "node scripts/repo-manage.mjs clone",
-    "repo:pull": "node scripts/repo-manage.mjs pull",
-    "repo:status": "node scripts/repo-manage.mjs status",
+    "repo:clone": "node scripts/repo-manage.js clone",
+    "repo:pull": "node scripts/repo-manage.js pull",
+    "repo:status": "node scripts/repo-manage.js status",
     "repo:install": "pnpm install",
-    "repo:fix-perms": "node scripts/repo-manage.mjs fix-perms"
+    "repo:fix-perms": "node scripts/repo-manage.js fix-perms"
   },
   "devDependencies": {
     "electron": "^34.0.0"
