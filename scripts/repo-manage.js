@@ -76,6 +76,6 @@ switch (command) {
     handleFixPerms();
     break;
   default:
-    console.error('Usage: node scripts/repo-manage.js [clone|pull|status|fix-perms]');
+    console.error('Usage: node scripts/repo-manage.mjs [clone|pull|status|fix-perms]');
     process.exit(1);
 }
