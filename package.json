@@ -21,9 +21,9 @@
     "report:dashboard": "pnpm --filter @the-andb/test report:dashboard",
     "docker:up": "cd docker && docker-compose up -d",
     "docker:down": "cd docker && docker-compose down",
-    "repo:clone": "[ -d andb-core ] || git clone https://github.com/The-Andb/andb-core.git && [ -d andb-cli ] || git clone https://github.com/The-Andb/andb-cli.git && [ -d andb-desktop ] || git clone https://github.com/The-Andb/andb-desktop.git && [ -d andb-mcp ] || git clone https://github.com/The-Andb/andb-mcp.git && [ -d andb-www ] || git clone https://github.com/The-Andb/andb-www.git",
-    "repo:pull": "for dir in andb-core andb-cli andb-desktop andb-mcp andb-www; do echo \"\\033[0;32mUpdating $dir...\\033[0m\"; (cd $dir && git pull); done",
-    "repo:status": "for dir in andb-core andb-cli andb-desktop andb-mcp andb-www; do echo \"\\033[0;34mStatus for $dir:\\033[0m\"; (cd $dir && git status -s); done",
+    "repo:clone": "node scripts/repo-manage.mjs clone",
+    "repo:pull": "node scripts/repo-manage.mjs pull",
+    "repo:status": "node scripts/repo-manage.mjs status",
     "repo:install": "pnpm install"
   },
   "devDependencies": {
