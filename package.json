@@ -25,7 +25,8 @@
     "repo:clone": "node scripts/repo-manage.mjs clone",
     "repo:pull": "node scripts/repo-manage.mjs pull",
     "repo:status": "node scripts/repo-manage.mjs status",
-    "repo:install": "pnpm install"
+    "repo:install": "pnpm install",
+    "repo:fix-perms": "node scripts/repo-manage.mjs fix-perms"
   },
   "devDependencies": {
     "electron": "^34.0.0"
