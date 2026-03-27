@@ -35,6 +35,7 @@
 7. **Create release file per module as well:**
    - Create a file in the `releases` folder for each module.
    - The file should be named `[module-name]-[version].md`.
+   - ALWAYS create a unified release note in `andb-www/releases` (e.g., `v3.3.2.md`).
    - Update :www about new changes.
 
 ---
