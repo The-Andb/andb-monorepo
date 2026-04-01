@@ -75,5 +75,6 @@
 
 - NEVER publish if tests fail or beta features are unintentionally exposed.
 - ALWAYS double-check the feature flag configuration file/strategy before bumping versions.
+- ALWAYS keep release notes short and concise (bullet points only, no long explanations).
 - DO NOT overwrite local workspace configurations permanently; ensure the repository remains in a functional development state after publish using git or scripts.
 - Log every publish step rigorously.
