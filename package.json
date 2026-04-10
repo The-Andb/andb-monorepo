@@ -24,9 +24,11 @@
     "docker:down": "cd docker && docker-compose down",
     "repo:clone": "node scripts/repo-manage.js clone",
     "repo:pull": "node scripts/repo-manage.js pull",
+    "repo:push": "node scripts/repo-manage.js push",
     "repo:status": "node scripts/repo-manage.js status",
     "repo:install": "pnpm install",
-    "repo:fix-perms": "node scripts/repo-manage.js fix-perms"
+    "repo:fix-perms": "node scripts/repo-manage.js fix-perms",
+    "repo:checkout": "node scripts/repo-manage.js checkout"
   },
   "devDependencies": {
     "electron": "^34.0.0"
