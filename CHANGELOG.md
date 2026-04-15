@@ -2,7 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
-## [2026-03-11] Stable Release
+## [2026-04-14] v3.3.7
+### Added
+- **AI Integration**: Initial integration of AI agents and support infrastructure.
+- **UI Regression Testing**: Automated visual testing suite for all 13 themes.
+- **Monorepo Synchronization**: Improved branch switching and workspace management scripts.
+
+### Changed
+- **Settings Modernization**: UI refinements for project settings and picker.
+
+## [2026-03-11] Stable Release v3.3.6
 - **andb-core/cli**: 4.0.0
 - **andb-desktop**: 3.1.0
 - **andb-www**: 1.1.0

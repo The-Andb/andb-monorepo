@@ -1,6 +1,6 @@
 {
   "name": "the-andb",
-  "version": "3.3.6",
+  "version": "3.3.7",
   "private": true,
   "scripts": {
     "dev:desktop": "pnpm --filter @the-andb/desktop electron:dev",
