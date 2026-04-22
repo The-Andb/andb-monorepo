@@ -15,7 +15,8 @@
 | Phase       | Name                  | Goal                                            | Status     |
 | :---------- | :-------------------- | :---------------------------------------------- | :--------- |
 | **Phase 1** | **Provable Engine**   | 1 external dev runs `andb compare` successfully | ✅ Done    |
-| **Phase 2** | **Trustable Product** | 1 team uses on staging for 2 weeks, 0 incidents | 🚧 Active  |
+| **Phase 2** | **Trustable Product** | 1 team uses on staging for 2 weeks, 0 incidents | ✅ Done    |
+| **Phase 3** | **Revenue Ready & AI**| 1 paying customer + Stable AI DBA workflows     | 🚧 Active  |
 | **Phase 3** | **Revenue Ready**     | 1 paying customer                               | ⏳ Planned |
 
 ---
@@ -58,13 +59,22 @@
 - ✅ Structured Dry-run — full preview without DB writes
 - ✅ Pure Dispatcher — `OrchestrationService` refactored, `testConnection` relocated
 - ✅ **Go to Definition** — Cmd/Ctrl+Click navigation with optimized Regex caching
-- Auto backup before apply (`mysqldump` snapshot)
-- `⚠️ Destructive change detected` warnings in UI
-- DB ↔ SQL file comparison
-- Clean structured CLI output (no Framework debug noise)
-- MySQL 5.7 compatibility testing
-- Performance benchmark (300 tables, 1000 indexes, 200 FKs)
-- Migration failure recovery documentation
+- ✅ Auto backup before apply (`mysqldump` snapshot)
+- ✅ `⚠️ Destructive change detected` warnings in UI
+- ✅ DB ↔ SQL file comparison
+- ✅ Clean structured CLI output (no Framework debug noise)
+- ✅ MySQL 5.7 compatibility testing
+- ✅ Internal Schema Orchestrator (Dogfooding) stabilized
+
+---
+
+## 🤖 Phase 2.5: AI Integration (v4.0.0)
+
+- ✅ Monorepo version bumped to v4.0.0
+- ✅ AI DBA Assistant Panel integration
+- ✅ Context-aware Schema/Code Ask AI
+- ✅ SQLite Chat History Persistence
+- ✅ Global UI/UX Stabilization (Sidebar scaling, Layout skew fixed)
 
 ---
 

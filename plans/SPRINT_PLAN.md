@@ -95,6 +95,8 @@
 
 | Date   | Event                                                    |
 | :----- | :------------------------------------------------------- |
+| Apr 22 | Monorepo bumped to v4.0.0. AI DBA Assistant integrated.  |
+| Apr 22 | Desktop UI stabilized, IPC Deadlocks & Dogfooding fixed. |
 | Mar 04 | Core Safety & Orchestration refactor complete. 17 tests. |
 | Mar 04 | Guard Plan (ADR-010) integrated into roadmap.            |
 | Feb 24 | Sprint defined. 53 E2E+sandbox tests green.              |
