@@ -38,7 +38,7 @@ Tận dụng kết quả của Lớp 2.2, file App (`app.asar`) cuối cùng kh�
 
 ### 2.4. Cấu trúc thư mục sau khi đóng gói (Post-Build Structure)
 
-Người dùng sẽ nhận được file `The-Andb.app` (trên máy Mac) với cấu trúc ruột hoàn toàn tinh gọn, **không có bóng dáng của `node_modules`**:
+Người dùng sẽ nhận được file `TheAndb.app` (trên máy Mac) với cấu trúc ruột hoàn toàn tinh gọn, **không có bóng dáng của `node_modules`**:
 
 ```text
 TheAndb.app/Contents/Resources/

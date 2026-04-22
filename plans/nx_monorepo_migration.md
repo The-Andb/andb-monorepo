@@ -1,4 +1,4 @@
-# Kế hoạch Migrate The-Andb lên Nx Monorepo 🚀
+# Kế hoạch Migrate TheAndb lên Nx Monorepo 🚀
 
 **Mục đích:** Tích hợp `andb-core`, `andb-cli`, `andb-desktop`, `andb-mcp` và `andb-www` vào một Monorepo chuyên nghiệp (Nx) để:
 1. Share code (`andb-core`) mượt mà giữa các app không cần build đi build lại hay tạo symlink bằng cơm.

@@ -58,7 +58,7 @@ andb compare dev prod
 
 ## 🛠️ How to Checkout
 
-This repository acts as a specialized orchestrator for the Andb ecosystem. To get the full source for all components (Cross-platform support for macOS/Windows/Linux):
+This repository acts as a specialized orchestrator for TheAndb ecosystem. To get the full source for all components (Cross-platform support for macOS/Windows/Linux):
 
 ```bash
 # 1. Install pnpm (if not already present)
