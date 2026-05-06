@@ -5,3 +5,4 @@ packages:
   - 'andb-mcp'
   - 'andb-www'
   - 'andb-test'
+  - 'andb-secrets'

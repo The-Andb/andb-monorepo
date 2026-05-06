@@ -39,5 +39,7 @@ This project is indexed by GitNexus as **TheAndb** (945 symbols, 923 relationshi
 | Rename / extract / split / refactor | `.claude/skills/gitnexus/gitnexus-refactoring/SKILL.md` |
 | Tools, resources, schema reference | `.claude/skills/gitnexus/gitnexus-guide/SKILL.md` |
 | Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
+| Develop Core Engine & DBA Safety | `.claude/skills/the-andb-core/SKILL.md` |
+| Develop Electron UI & Desktop App | `.claude/skills/the-andb-desktop/SKILL.md` |
 
 <!-- gitnexus:end -->
