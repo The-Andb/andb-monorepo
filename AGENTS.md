@@ -1,7 +1,7 @@
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **TheAndb** (945 symbols, 923 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **andb-monorepo** (1054 symbols, 1026 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 
@@ -24,10 +24,10 @@ This project is indexed by GitNexus as **TheAndb** (945 symbols, 923 relationshi
 
 | Resource | Use for |
 |----------|---------|
-| `gitnexus://repo/The-Andb/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/The-Andb/clusters` | All functional areas |
-| `gitnexus://repo/The-Andb/processes` | All execution flows |
-| `gitnexus://repo/The-Andb/process/{name}` | Step-by-step execution trace |
+| `gitnexus://repo/andb-monorepo/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/andb-monorepo/clusters` | All functional areas |
+| `gitnexus://repo/andb-monorepo/processes` | All execution flows |
+| `gitnexus://repo/andb-monorepo/process/{name}` | Step-by-step execution trace |
 
 ## CLI
 
@@ -39,7 +39,5 @@ This project is indexed by GitNexus as **TheAndb** (945 symbols, 923 relationshi
 | Rename / extract / split / refactor | `.claude/skills/gitnexus/gitnexus-refactoring/SKILL.md` |
 | Tools, resources, schema reference | `.claude/skills/gitnexus/gitnexus-guide/SKILL.md` |
 | Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
-| Develop Core Engine & DBA Safety | `.claude/skills/the-andb-core/SKILL.md` |
-| Develop Electron UI & Desktop App | `.claude/skills/the-andb-desktop/SKILL.md` |
 
 <!-- gitnexus:end -->
