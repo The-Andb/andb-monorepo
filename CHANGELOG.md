@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-06-11] v4.0.1
+- **andb-core/cli**: 4.0.1
+- **andb-desktop**: 4.0.1
+
+### Added
+- **Hybrid Comparison Engine**: Added aggressive routine normalization (`normalizeRoutineDDL`) in `ParserService` to ignore whitespace, comments, backticks, and formatting for procedures, functions, triggers, and views.
+- **Metadata Synchronization**: Integrated schema/DDL character set and collation extraction and tracking (saved to SQLite `ddl_exports` and matched in `compareFromStorage`).
+- **Seamless AI Diagnosis**: AI Diagnose button in Database Pulse Monitor now opens and streams findings directly in the main AI Assistant Panel conversation.
+
+### Fixed
+- **MySQL Routine Syntax Errors**: Corrected `cleanDefiner` to normalize spaces using `/[ \t]{2,}/g` instead of `/\s{2,}/g`, preserving newlines so that trailing parameter comments do not comment out `BEGIN` and subsequent declarations.
+- **Git-Sync Path Error**: Added options fallback for target database names to resolve `TypeError: path must be a string` in `SchemaMirrorService` when source connection details are empty.
+- **Batch Migrate UI Refresh**: Solved case-sensitivity mismatch (`PROCEDURES` vs `procedures`) to ensure the results map updates correctly and removes completed items from the diff list.
+
 ## [2026-04-14] v3.3.7
 ### Added
 - **AI Integration**: Initial integration of AI agents and support infrastructure.
