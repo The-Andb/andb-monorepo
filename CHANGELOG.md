@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-06-11] v4.0.2
+- **andb-core/cli**: 4.0.2
+- **andb-desktop**: 4.0.2
+
+### Fixed
+- **Dialect-Specific Index Parsing**: Fixed a syntax bug where SQLite standalone index creation (`CREATE INDEX ON`) was generated for MySQL tables during parsing fallback. The parser now preserves standard MySQL inline-key definitions (`KEY` and `UNIQUE KEY`) for MySQL, ensuring valid SQL is generated during ALTER migrations.
+- **Migration Commas & White Space**: Fixed trailing comma generation issues when sorting indexes under specific carriage return formats (`\r\n`).
+- **Orchestrator Execution Status**: Corrected migration dry-runs and execution to return a proper status rather than falsely reporting success when individual statements fail.
+
 ## [2026-06-11] v4.0.1
 - **andb-core/cli**: 4.0.1
 - **andb-desktop**: 4.0.1
