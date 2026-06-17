@@ -18,6 +18,7 @@ Rules:
 - Do NOT change architecture without updating DECISIONS.md
 - Prefer small, reviewable changes
 - MANDATORY: End each session by updating /ai/MEMORY.md (or other relevant /ai files) for EVERY change made.
+- MANDATORY: Always update Q&A/FAQ documentation when adding/modifying logical engine behaviors (like export/sync/clean caches).
 
 If instructions in chat conflict with /ai files:
 

@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-06-17] v4.0.3
+- **andb-core/cli**: 4.0.3
+- **andb-desktop**: 4.0.3
+
+### Added
+- **Backwards (Reversed) Migration**: Added support for one-way backwards migrations ("Alter Source"), allowing users to apply changes directly to the source database rather than the target connection to quickly resolve minor mistakes.
+- **Interactive Database Selection**: Replaced manual text inputs with an interactive dropdown selection for database pickers in both global connections and project connection settings.
+
+### Fixed & Changed
+- **DDL Name Display**: Removed text truncation (ellipsis) on the DDL name in the comparison view header to ensure the full name is always visible.
+- **Cleaned Up Results List Header**: Removed the redundant "Back to Categories" button from the database overview results header.
+
 ## [2026-06-11] v4.0.2
 - **andb-core/cli**: 4.0.2
 - **andb-desktop**: 4.0.2

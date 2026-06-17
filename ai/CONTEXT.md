@@ -175,3 +175,4 @@
 - `plans/MAIN_PLAN.md` — Executive roadmap
 - `plans/QUALITY_CONTROL_PLAN.md` — Testing strategy
 - `plans/core/CORE_IMPROVEMENT_PLAN.md` — Core engine roadmap
+- `ai/FAQ.md` — FAQ & Logical Behaviors (symlinked to andb-www docs)

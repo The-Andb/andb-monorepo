@@ -1,232 +1,693 @@
-2026-05-21T07:09:36.355Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
-2026-05-21T07:09:36.651Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-21T07:09:36.652Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
-2026-05-21T07:09:36.652Z [Diagnostic] envData found: STAGE
-2026-05-21T07:09:36.652Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
-2026-05-21T07:16:01.327Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-21T07:16:01.723Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-21T07:16:01.723Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-21T07:16:01.723Z [Diagnostic] envData found: DEV
-2026-05-21T07:16:01.723Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-21T07:17:07.106Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
-2026-05-21T07:17:07.607Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-21T07:17:07.608Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
-2026-05-21T07:17:07.608Z [Diagnostic] envData found: UAT
-2026-05-21T07:17:07.608Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":214}
-2026-05-21T07:17:28.611Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-21T07:17:29.175Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-21T07:17:29.175Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-21T07:17:29.175Z [Diagnostic] envData found: DEV
-2026-05-21T07:17:29.175Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-21T07:21:42.772Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-21T07:21:43.298Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-21T07:21:43.298Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-21T07:21:43.299Z [Diagnostic] envData found: DEV
-2026-05-21T07:21:43.299Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-21T07:21:45.978Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-21T07:21:46.377Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-21T07:21:46.377Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-21T07:21:46.378Z [Diagnostic] envData found: DEV
-2026-05-21T07:21:46.378Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-21T07:31:05.076Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-21T07:31:06.727Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-21T07:31:06.727Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-21T07:31:06.728Z [Diagnostic] envData found: DEV
-2026-05-21T07:31:06.728Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-21T07:33:00.356Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-21T07:33:00.881Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-21T07:33:00.881Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-21T07:33:00.881Z [Diagnostic] envData found: DEV
-2026-05-21T07:33:00.881Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-21T07:46:41.548Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-21T07:46:42.352Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-21T07:46:42.352Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-21T07:46:42.352Z [Diagnostic] envData found: DEV
-2026-05-21T07:46:42.352Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-21T07:47:55.862Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-21T07:47:56.428Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-21T07:47:56.428Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-21T07:47:56.428Z [Diagnostic] envData found: DEV
-2026-05-21T07:47:56.428Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-21T07:48:41.045Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-21T07:48:42.586Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-21T07:48:42.586Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-21T07:48:42.586Z [Diagnostic] envData found: DEV
-2026-05-21T07:48:42.587Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-21T08:28:07.388Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
-2026-05-21T08:28:07.463Z [Diagnostic] refreshKey changed, reloading schema
-2026-05-21T08:28:07.463Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
-2026-05-21T08:28:08.164Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-21T08:28:08.164Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
-2026-05-21T08:28:08.164Z [Diagnostic] envData found: STAGE
-2026-05-21T08:28:08.164Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
-2026-05-21T08:28:08.509Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-21T08:28:08.509Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
-2026-05-21T08:28:08.510Z [Diagnostic] envData found: STAGE
-2026-05-21T08:28:08.510Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
-2026-05-22T02:23:01.749Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T02:23:02.509Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T02:23:02.509Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T02:23:02.509Z [Diagnostic] envData found: DEV
-2026-05-22T02:23:02.509Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T02:23:32.435Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T02:23:32.742Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T02:23:32.743Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T02:23:32.743Z [Diagnostic] envData found: DEV
-2026-05-22T02:23:32.743Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T02:25:54.232Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T02:25:54.564Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T02:25:54.564Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T02:25:54.564Z [Diagnostic] envData found: DEV
-2026-05-22T02:25:54.564Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T02:26:22.366Z [Diagnostic] loadSchema called. selectedConnectionId: 0b410884-4f02-44b1-9b42-db6a3b4a2d61
-2026-05-22T02:26:22.410Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"flo_helper","connectionId":"0b410884-4f02-44b1-9b42-db6a3b4a2d61","tables":14}]},{"name":"DEV","databases":[{"name":"flo_helper_local","connectionId":"3ccec6ff-d42c-4025-b1ca-d9f0dc7f665b","tables":17}]},{"name":"UAT","databases":[{"name":"flo_helper","connectionId":"7d059d4e-f309-405f-a4fe-8bcb86d937be","tables":15}]}]
-2026-05-22T02:26:22.410Z [Diagnostic] conn found: {"id":"0b410884-4f02-44b1-9b42-db6a3b4a2d61","name":"Flo Stage","environment":"STAGE","database":"flo_helper"}
-2026-05-22T02:26:22.411Z [Diagnostic] envData found: STAGE
-2026-05-22T02:26:22.411Z [Diagnostic] dbData found: {"name":"flo_helper","connectionId":"0b410884-4f02-44b1-9b42-db6a3b4a2d61","tablesCount":14}
-2026-05-22T02:26:23.532Z [Diagnostic] loadSchema called. selectedConnectionId: 3ccec6ff-d42c-4025-b1ca-d9f0dc7f665b
-2026-05-22T02:26:23.590Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"flo_helper","connectionId":"0b410884-4f02-44b1-9b42-db6a3b4a2d61","tables":14}]},{"name":"DEV","databases":[{"name":"flo_helper_local","connectionId":"3ccec6ff-d42c-4025-b1ca-d9f0dc7f665b","tables":17}]},{"name":"UAT","databases":[{"name":"flo_helper","connectionId":"7d059d4e-f309-405f-a4fe-8bcb86d937be","tables":15}]}]
-2026-05-22T02:26:23.590Z [Diagnostic] conn found: {"id":"3ccec6ff-d42c-4025-b1ca-d9f0dc7f665b","name":"FloDEV","environment":"DEV","database":"flo_helper_local"}
-2026-05-22T02:26:23.590Z [Diagnostic] envData found: DEV
-2026-05-22T02:26:23.590Z [Diagnostic] dbData found: {"name":"flo_helper_local","connectionId":"3ccec6ff-d42c-4025-b1ca-d9f0dc7f665b","tablesCount":17}
-2026-05-22T02:35:49.544Z [Diagnostic] loadSchema called. selectedConnectionId: 7d059d4e-f309-405f-a4fe-8bcb86d937be
-2026-05-22T02:35:49.565Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"flo_helper","connectionId":"0b410884-4f02-44b1-9b42-db6a3b4a2d61","tables":14}]},{"name":"DEV","databases":[{"name":"flo_helper_local","connectionId":"3ccec6ff-d42c-4025-b1ca-d9f0dc7f665b","tables":19}]},{"name":"UAT","databases":[{"name":"flo_helper","connectionId":"7d059d4e-f309-405f-a4fe-8bcb86d937be","tables":17}]}]
-2026-05-22T02:35:49.565Z [Diagnostic] conn found: {"id":"7d059d4e-f309-405f-a4fe-8bcb86d937be","name":"FloUAT","environment":"UAT","database":"flo_helper"}
-2026-05-22T02:35:49.566Z [Diagnostic] envData found: UAT
-2026-05-22T02:35:49.566Z [Diagnostic] dbData found: {"name":"flo_helper","connectionId":"7d059d4e-f309-405f-a4fe-8bcb86d937be","tablesCount":17}
-2026-05-22T04:19:52.353Z [Diagnostic] loadSchema called. selectedConnectionId: 7d059d4e-f309-405f-a4fe-8bcb86d937be
-2026-05-22T04:19:52.354Z [Diagnostic] loadSchema called. selectedConnectionId: 7d059d4e-f309-405f-a4fe-8bcb86d937be
-2026-05-22T04:19:52.444Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"flo_helper","connectionId":"0b410884-4f02-44b1-9b42-db6a3b4a2d61","tables":15}]},{"name":"DEV","databases":[{"name":"flo_helper_local","connectionId":"3ccec6ff-d42c-4025-b1ca-d9f0dc7f665b","tables":19}]},{"name":"UAT","databases":[{"name":"flo_helper","connectionId":"7d059d4e-f309-405f-a4fe-8bcb86d937be","tables":17}]}]
-2026-05-22T04:19:52.444Z [Diagnostic] conn found: {"id":"7d059d4e-f309-405f-a4fe-8bcb86d937be","name":"FloUAT","environment":"UAT","database":"flo_helper"}
-2026-05-22T04:19:52.444Z [Diagnostic] envData found: UAT
-2026-05-22T04:19:52.444Z [Diagnostic] dbData found: {"name":"flo_helper","connectionId":"7d059d4e-f309-405f-a4fe-8bcb86d937be","tablesCount":17}
-2026-05-22T04:19:52.471Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"flo_helper","connectionId":"0b410884-4f02-44b1-9b42-db6a3b4a2d61","tables":15}]},{"name":"DEV","databases":[{"name":"flo_helper_local","connectionId":"3ccec6ff-d42c-4025-b1ca-d9f0dc7f665b","tables":19}]},{"name":"UAT","databases":[{"name":"flo_helper","connectionId":"7d059d4e-f309-405f-a4fe-8bcb86d937be","tables":17}]}]
-2026-05-22T04:19:52.471Z [Diagnostic] conn found: {"id":"7d059d4e-f309-405f-a4fe-8bcb86d937be","name":"FloUAT","environment":"UAT","database":"flo_helper"}
-2026-05-22T04:19:52.471Z [Diagnostic] envData found: UAT
-2026-05-22T04:19:52.472Z [Diagnostic] dbData found: {"name":"flo_helper","connectionId":"7d059d4e-f309-405f-a4fe-8bcb86d937be","tablesCount":17}
-2026-05-22T04:20:22.665Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
-2026-05-22T04:20:23.621Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T04:20:23.622Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
-2026-05-22T04:20:23.622Z [Diagnostic] envData found: STAGE
-2026-05-22T04:20:23.622Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
-2026-05-22T04:21:07.691Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T04:21:08.266Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T04:21:08.267Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T04:21:08.267Z [Diagnostic] envData found: DEV
-2026-05-22T04:21:08.267Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T05:05:49.244Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T05:05:50.376Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T05:05:50.377Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T05:05:50.377Z [Diagnostic] envData found: DEV
-2026-05-22T05:05:50.377Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T05:07:05.544Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T05:07:06.148Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T05:07:06.148Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T05:07:06.148Z [Diagnostic] envData found: DEV
-2026-05-22T05:07:06.148Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T05:07:45.460Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T05:07:45.696Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T05:07:45.697Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T05:07:45.697Z [Diagnostic] envData found: DEV
-2026-05-22T05:07:45.697Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:12:10.142Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:12:11.154Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:12:11.154Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:12:11.155Z [Diagnostic] envData found: DEV
-2026-05-22T07:12:11.155Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:12:23.842Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:12:24.563Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:12:24.563Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:12:24.564Z [Diagnostic] envData found: DEV
-2026-05-22T07:12:24.564Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:12:57.557Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:12:58.283Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:12:58.284Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:12:58.284Z [Diagnostic] envData found: DEV
-2026-05-22T07:12:58.284Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:13:16.636Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
-2026-05-22T07:13:17.197Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:13:17.197Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
-2026-05-22T07:13:17.197Z [Diagnostic] envData found: UAT
-2026-05-22T07:13:17.197Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":214}
-2026-05-22T07:13:22.219Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
-2026-05-22T07:13:22.655Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:13:22.656Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
-2026-05-22T07:13:22.656Z [Diagnostic] envData found: STAGE
-2026-05-22T07:13:22.656Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
-2026-05-22T07:13:36.435Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
-2026-05-22T07:13:36.945Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:13:36.946Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
-2026-05-22T07:13:36.946Z [Diagnostic] envData found: UAT
-2026-05-22T07:13:36.946Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":214}
-2026-05-22T07:15:18.498Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:15:19.253Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:15:19.254Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:15:19.254Z [Diagnostic] envData found: DEV
-2026-05-22T07:15:19.254Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:16:23.598Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:16:24.218Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:16:24.218Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:16:24.218Z [Diagnostic] envData found: DEV
-2026-05-22T07:16:24.218Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:16:29.028Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:16:29.329Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:16:29.330Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:16:29.330Z [Diagnostic] envData found: DEV
-2026-05-22T07:16:29.330Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:18:49.900Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:18:51.606Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:18:51.606Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:18:51.607Z [Diagnostic] envData found: DEV
-2026-05-22T07:18:51.607Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:19:00.640Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:19:01.515Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:19:01.515Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:19:01.515Z [Diagnostic] envData found: DEV
-2026-05-22T07:19:01.516Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:21:34.773Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:21:35.915Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:21:35.916Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:21:35.916Z [Diagnostic] envData found: DEV
-2026-05-22T07:21:35.916Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:40:00.848Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:40:02.064Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:40:02.065Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:40:02.065Z [Diagnostic] envData found: DEV
-2026-05-22T07:40:02.065Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:40:36.940Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:40:38.368Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:40:38.368Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:40:38.368Z [Diagnostic] envData found: DEV
-2026-05-22T07:40:38.368Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:42:50.639Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
-2026-05-22T07:42:51.243Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:42:51.244Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
-2026-05-22T07:42:51.244Z [Diagnostic] envData found: STAGE
-2026-05-22T07:42:51.244Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
-2026-05-22T07:44:29.359Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
-2026-05-22T07:44:32.027Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:44:32.027Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
-2026-05-22T07:44:32.027Z [Diagnostic] envData found: STAGE
-2026-05-22T07:44:32.027Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
-2026-05-22T07:45:03.743Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:45:05.724Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
-2026-05-22T07:45:08.960Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:45:08.961Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
-2026-05-22T07:45:08.962Z [Diagnostic] envData found: STAGE
-2026-05-22T07:45:08.962Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
-2026-05-22T07:45:18.047Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:45:19.845Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:45:19.846Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:45:19.846Z [Diagnostic] envData found: DEV
-2026-05-22T07:45:19.846Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:51:03.268Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:51:04.289Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:51:04.289Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:51:04.289Z [Diagnostic] envData found: DEV
-2026-05-22T07:51:04.289Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
-2026-05-22T07:58:04.809Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
-2026-05-22T07:58:06.036Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":213}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":214}]}]
-2026-05-22T07:58:06.036Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
-2026-05-22T07:58:06.037Z [Diagnostic] envData found: DEV
-2026-05-22T07:58:06.037Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":213}
+2026-06-02T03:50:17.038Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-02T03:50:17.866Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T03:50:17.866Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-02T03:50:17.866Z [Diagnostic] envData found: STAGE
+2026-06-02T03:50:17.867Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-02T03:50:30.046Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T03:50:30.921Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T03:50:30.921Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T03:50:30.921Z [Diagnostic] envData found: DEV
+2026-06-02T03:50:30.921Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T03:53:50.073Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T03:53:50.845Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T03:53:50.846Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T03:53:50.846Z [Diagnostic] envData found: DEV
+2026-06-02T03:53:50.846Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T04:17:13.941Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T04:17:13.942Z [Diagnostic] refreshKey changed, reloading schema
+2026-06-02T04:17:13.943Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T04:17:15.808Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T04:17:15.808Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T04:17:15.809Z [Diagnostic] envData found: DEV
+2026-06-02T04:17:15.809Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T04:17:16.263Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T04:17:16.263Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T04:17:16.264Z [Diagnostic] envData found: DEV
+2026-06-02T04:17:16.264Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T04:17:27.186Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T04:17:27.186Z [Diagnostic] refreshKey changed, reloading schema
+2026-06-02T04:17:27.186Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T04:17:27.865Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T04:17:27.866Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T04:17:27.866Z [Diagnostic] envData found: DEV
+2026-06-02T04:17:27.866Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T04:17:27.990Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T04:17:27.990Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T04:17:27.990Z [Diagnostic] envData found: DEV
+2026-06-02T04:17:27.991Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T04:17:56.155Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T04:17:56.156Z [Diagnostic] refreshKey changed, reloading schema
+2026-06-02T04:17:56.156Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T04:17:57.265Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T04:17:57.265Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T04:17:57.265Z [Diagnostic] envData found: DEV
+2026-06-02T04:17:57.265Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T04:17:57.421Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T04:17:57.421Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T04:17:57.422Z [Diagnostic] envData found: DEV
+2026-06-02T04:17:57.422Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T04:31:15.487Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T04:31:15.937Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T04:31:15.938Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T04:31:15.938Z [Diagnostic] envData found: DEV
+2026-06-02T04:31:15.938Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T04:31:18.155Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T04:31:18.156Z [Diagnostic] refreshKey changed, reloading schema
+2026-06-02T04:31:18.156Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T04:31:18.526Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T04:31:18.526Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T04:31:18.527Z [Diagnostic] envData found: DEV
+2026-06-02T04:31:18.527Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T04:31:18.637Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T04:31:18.637Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T04:31:18.637Z [Diagnostic] envData found: DEV
+2026-06-02T04:31:18.637Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T04:31:28.751Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T04:31:28.752Z [Diagnostic] refreshKey changed, reloading schema
+2026-06-02T04:31:28.752Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T04:31:29.382Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T04:31:29.383Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T04:31:29.383Z [Diagnostic] envData found: DEV
+2026-06-02T04:31:29.383Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T04:31:29.497Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T04:31:29.497Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T04:31:29.497Z [Diagnostic] envData found: DEV
+2026-06-02T04:31:29.497Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T08:40:55.130Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
+2026-06-02T08:40:55.929Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T08:40:55.929Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-02T08:40:55.929Z [Diagnostic] envData found: UAT
+2026-06-02T08:40:55.930Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":220}
+2026-06-02T08:41:00.695Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T08:41:00.923Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T08:41:00.924Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T08:41:00.924Z [Diagnostic] envData found: DEV
+2026-06-02T08:41:00.924Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T09:20:58.014Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-02T09:20:58.944Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T09:20:58.945Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-02T09:20:58.945Z [Diagnostic] envData found: DEV
+2026-06-02T09:20:58.945Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-02T09:24:34.468Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
+2026-06-02T09:24:35.139Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T09:24:35.140Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-02T09:24:35.140Z [Diagnostic] envData found: UAT
+2026-06-02T09:24:35.140Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":220}
+2026-06-02T09:27:41.587Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
+2026-06-02T09:27:42.424Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-02T09:27:42.425Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-02T09:27:42.425Z [Diagnostic] envData found: UAT
+2026-06-02T09:27:42.425Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":220}
+2026-06-03T03:03:27.597Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:03:27.960Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:03:27.961Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:03:27.961Z [Diagnostic] envData found: DEV
+2026-06-03T03:03:27.961Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:06:25.702Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:06:26.662Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:06:26.663Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:06:26.663Z [Diagnostic] envData found: DEV
+2026-06-03T03:06:26.663Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:13:48.944Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:13:50.514Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:13:50.515Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:13:50.515Z [Diagnostic] envData found: DEV
+2026-06-03T03:13:50.515Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:14:06.302Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:14:06.917Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:14:06.918Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:14:06.918Z [Diagnostic] envData found: DEV
+2026-06-03T03:14:06.918Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:15:28.809Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:15:29.256Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:15:29.257Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:15:29.257Z [Diagnostic] envData found: DEV
+2026-06-03T03:15:29.257Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:16:49.983Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:16:51.214Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:16:51.214Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:16:51.215Z [Diagnostic] envData found: DEV
+2026-06-03T03:16:51.215Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:19:28.555Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:19:29.487Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:19:29.487Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:19:29.487Z [Diagnostic] envData found: DEV
+2026-06-03T03:19:29.487Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:22:04.127Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:22:04.722Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:22:04.722Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:22:04.726Z [Diagnostic] envData found: DEV
+2026-06-03T03:22:04.726Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:22:14.445Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
+2026-06-03T03:22:14.992Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:22:14.993Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-03T03:22:14.993Z [Diagnostic] envData found: UAT
+2026-06-03T03:22:14.993Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":220}
+2026-06-03T03:24:08.486Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:24:09.187Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:24:09.187Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:24:09.188Z [Diagnostic] envData found: DEV
+2026-06-03T03:24:09.188Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:24:10.138Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:24:10.396Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:24:10.396Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:24:10.397Z [Diagnostic] envData found: DEV
+2026-06-03T03:24:10.397Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:24:18.510Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-03T03:24:18.739Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:24:18.739Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-03T03:24:18.739Z [Diagnostic] envData found: STAGE
+2026-06-03T03:24:18.739Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-03T03:24:20.271Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:24:20.420Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:24:20.420Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:24:20.421Z [Diagnostic] envData found: DEV
+2026-06-03T03:24:20.421Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:24:56.105Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:24:56.330Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:24:56.330Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:24:56.330Z [Diagnostic] envData found: DEV
+2026-06-03T03:24:56.330Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:27:07.375Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:27:07.890Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:27:07.891Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:27:07.891Z [Diagnostic] envData found: DEV
+2026-06-03T03:27:07.891Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:33:32.339Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-03T03:33:32.617Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:33:32.618Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-03T03:33:32.619Z [Diagnostic] envData found: STAGE
+2026-06-03T03:33:32.619Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-03T03:34:19.065Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-03T03:34:19.316Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:34:19.317Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-03T03:34:19.317Z [Diagnostic] envData found: STAGE
+2026-06-03T03:34:19.317Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-03T03:34:29.653Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-03T03:34:30.073Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:34:30.074Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-03T03:34:30.074Z [Diagnostic] envData found: STAGE
+2026-06-03T03:34:30.074Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-03T03:34:46.883Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-03T03:34:47.382Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:34:47.382Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-03T03:34:47.382Z [Diagnostic] envData found: STAGE
+2026-06-03T03:34:47.382Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-03T03:36:01.215Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-03T03:36:01.835Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:36:01.835Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-03T03:36:01.835Z [Diagnostic] envData found: STAGE
+2026-06-03T03:36:01.836Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-03T03:36:04.941Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-03T03:36:05.176Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:36:05.176Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-03T03:36:05.177Z [Diagnostic] envData found: STAGE
+2026-06-03T03:36:05.177Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-03T03:36:06.681Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-03T03:36:06.946Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:36:06.946Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-03T03:36:06.946Z [Diagnostic] envData found: STAGE
+2026-06-03T03:36:06.946Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-03T03:36:08.400Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:36:08.585Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:36:08.585Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:36:08.585Z [Diagnostic] envData found: DEV
+2026-06-03T03:36:08.585Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:36:25.386Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:36:28.178Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:36:28.179Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:36:28.179Z [Diagnostic] envData found: DEV
+2026-06-03T03:36:28.179Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:37:26.472Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:37:27.162Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:37:27.162Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:37:27.162Z [Diagnostic] envData found: DEV
+2026-06-03T03:37:27.162Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:38:57.884Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:38:58.268Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:38:58.269Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:38:58.269Z [Diagnostic] envData found: DEV
+2026-06-03T03:38:58.269Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:39:14.208Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:39:14.674Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:39:14.674Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:39:14.674Z [Diagnostic] envData found: DEV
+2026-06-03T03:39:14.675Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T03:43:03.915Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
+2026-06-03T03:43:04.454Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:43:04.455Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-03T03:43:04.455Z [Diagnostic] envData found: UAT
+2026-06-03T03:43:04.455Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":220}
+2026-06-03T03:49:48.664Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T03:49:49.145Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T03:49:49.146Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T03:49:49.146Z [Diagnostic] envData found: DEV
+2026-06-03T03:49:49.146Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T04:02:33.395Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T04:02:33.775Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T04:02:33.775Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T04:02:33.775Z [Diagnostic] envData found: DEV
+2026-06-03T04:02:33.775Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T04:22:36.860Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T04:22:36.862Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T04:22:37.380Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T04:22:37.380Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T04:22:37.381Z [Diagnostic] envData found: DEV
+2026-06-03T04:22:37.381Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T04:22:37.535Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T04:22:37.536Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T04:22:37.536Z [Diagnostic] envData found: DEV
+2026-06-03T04:22:37.536Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T04:49:28.158Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-03T04:49:28.616Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T04:49:28.617Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-03T04:49:28.617Z [Diagnostic] envData found: STAGE
+2026-06-03T04:49:28.617Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-03T04:49:28.950Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
+2026-06-03T04:49:29.074Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T04:49:29.075Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-03T04:49:29.075Z [Diagnostic] envData found: UAT
+2026-06-03T04:49:29.075Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":220}
+2026-06-03T04:49:30.111Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T04:49:30.243Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T04:49:30.243Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T04:49:30.243Z [Diagnostic] envData found: DEV
+2026-06-03T04:49:30.244Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T04:49:35.009Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-03T04:49:35.159Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T04:49:35.160Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-03T04:49:35.160Z [Diagnostic] envData found: STAGE
+2026-06-03T04:49:35.160Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-03T04:50:38.516Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-03T04:50:38.661Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T04:50:38.662Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-03T04:50:38.662Z [Diagnostic] envData found: STAGE
+2026-06-03T04:50:38.662Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-03T04:54:23.621Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T04:54:23.622Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T04:54:23.990Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T04:54:23.990Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T04:54:23.990Z [Diagnostic] envData found: DEV
+2026-06-03T04:54:23.991Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T04:54:24.029Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T04:54:24.030Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T04:54:24.030Z [Diagnostic] envData found: DEV
+2026-06-03T04:54:24.030Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T04:54:28.303Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T04:54:28.460Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T04:54:28.461Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T04:54:28.461Z [Diagnostic] envData found: DEV
+2026-06-03T04:54:28.461Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T06:19:41.896Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T06:19:42.321Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T06:19:42.322Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T06:19:42.322Z [Diagnostic] envData found: DEV
+2026-06-03T06:19:42.322Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T06:20:08.777Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T06:20:08.974Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T06:20:08.975Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T06:20:08.975Z [Diagnostic] envData found: DEV
+2026-06-03T06:20:08.975Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T06:20:36.987Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T06:20:37.233Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T06:20:37.233Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T06:20:37.233Z [Diagnostic] envData found: DEV
+2026-06-03T06:20:37.233Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T06:28:03.094Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T06:28:03.352Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T06:28:03.352Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T06:28:03.352Z [Diagnostic] envData found: DEV
+2026-06-03T06:28:03.352Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T06:34:10.582Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T06:34:10.721Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T06:34:10.722Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T06:34:10.722Z [Diagnostic] envData found: DEV
+2026-06-03T06:34:10.722Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T08:38:23.608Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T08:38:23.610Z [Diagnostic] refreshKey changed, reloading schema
+2026-06-03T08:38:23.611Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T08:38:24.225Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T08:38:24.226Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T08:38:24.226Z [Diagnostic] envData found: DEV
+2026-06-03T08:38:24.227Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T08:38:24.377Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T08:38:24.377Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T08:38:24.378Z [Diagnostic] envData found: DEV
+2026-06-03T08:38:24.378Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T08:38:40.556Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T08:38:40.766Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T08:38:40.766Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T08:38:40.766Z [Diagnostic] envData found: DEV
+2026-06-03T08:38:40.766Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T08:39:53.829Z [Diagnostic] loadSchema called. selectedConnectionId: 83d8b728-d01f-4d36-a003-d525e5ba5fd7
+2026-06-03T08:39:53.846Z [Diagnostic] getSchemas returned environments: [{"name":"UAT","databases":[{"name":"mail_uat","connectionId":"83d8b728-d01f-4d36-a003-d525e5ba5fd7","tables":9}]},{"name":"DEV","databases":[{"name":"mail_dev","connectionId":"d431c489-fa77-42aa-b471-d21a3359c880","tables":12}]},{"name":"STAGE","databases":[{"name":"mail","connectionId":"c81d4b63-b16b-406c-910d-650fa361b35f","tables":9}]}]
+2026-06-03T08:39:53.846Z [Diagnostic] conn found: {"id":"83d8b728-d01f-4d36-a003-d525e5ba5fd7","name":"FloUAT Mail","environment":"UAT","database":"mail_uat"}
+2026-06-03T08:39:53.846Z [Diagnostic] envData found: UAT
+2026-06-03T08:39:53.846Z [Diagnostic] dbData found: {"name":"mail_uat","connectionId":"83d8b728-d01f-4d36-a003-d525e5ba5fd7","tablesCount":9}
+2026-06-03T09:13:44.920Z [Diagnostic] loadSchema called. selectedConnectionId: d431c489-fa77-42aa-b471-d21a3359c880
+2026-06-03T09:13:44.943Z [Diagnostic] getSchemas returned environments: [{"name":"UAT","databases":[{"name":"mail_uat","connectionId":"83d8b728-d01f-4d36-a003-d525e5ba5fd7","tables":10}]},{"name":"DEV","databases":[{"name":"mail_dev","connectionId":"d431c489-fa77-42aa-b471-d21a3359c880","tables":12}]},{"name":"STAGE","databases":[{"name":"mail","connectionId":"c81d4b63-b16b-406c-910d-650fa361b35f","tables":9}]}]
+2026-06-03T09:13:44.944Z [Diagnostic] conn found: {"id":"d431c489-fa77-42aa-b471-d21a3359c880","name":"FloDEV Mail","environment":"DEV","database":"mail_dev"}
+2026-06-03T09:13:44.944Z [Diagnostic] envData found: DEV
+2026-06-03T09:13:44.944Z [Diagnostic] dbData found: {"name":"mail_dev","connectionId":"d431c489-fa77-42aa-b471-d21a3359c880","tablesCount":12}
+2026-06-03T09:13:46.689Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-03T09:13:47.129Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T09:13:47.129Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-03T09:13:47.130Z [Diagnostic] envData found: STAGE
+2026-06-03T09:13:47.130Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-03T09:31:14.667Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T09:31:16.529Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T09:31:16.529Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T09:31:16.529Z [Diagnostic] envData found: DEV
+2026-06-03T09:31:16.529Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T09:41:31.074Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T09:41:31.658Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T09:41:31.658Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T09:41:31.659Z [Diagnostic] envData found: DEV
+2026-06-03T09:41:31.659Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T09:54:09.582Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T09:54:09.783Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T09:54:09.783Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T09:54:09.784Z [Diagnostic] envData found: DEV
+2026-06-03T09:54:09.784Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T09:59:15.467Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T09:59:16.087Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T09:59:16.087Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T09:59:16.087Z [Diagnostic] envData found: DEV
+2026-06-03T09:59:16.087Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-03T10:06:09.294Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-03T10:06:09.480Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-03T10:06:09.480Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-03T10:06:09.480Z [Diagnostic] envData found: DEV
+2026-06-03T10:06:09.481Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T01:44:17.996Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T01:44:18.351Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T01:44:18.352Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T01:44:18.352Z [Diagnostic] envData found: DEV
+2026-06-05T01:44:18.352Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T03:11:36.737Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T03:11:37.093Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T03:11:37.093Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T03:11:37.093Z [Diagnostic] envData found: DEV
+2026-06-05T03:11:37.094Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T03:37:14.591Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
+2026-06-05T03:37:15.190Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T03:37:15.191Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-05T03:37:15.191Z [Diagnostic] envData found: UAT
+2026-06-05T03:37:15.191Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":220}
+2026-06-05T04:12:07.368Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
+2026-06-05T04:12:08.439Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T04:12:08.439Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-05T04:12:08.439Z [Diagnostic] envData found: UAT
+2026-06-05T04:12:08.439Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":220}
+2026-06-05T04:20:14.439Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T04:20:14.612Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T04:20:14.612Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T04:20:14.613Z [Diagnostic] envData found: DEV
+2026-06-05T04:20:14.613Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T07:38:55.612Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T07:38:55.824Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T07:38:55.824Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T07:38:55.824Z [Diagnostic] envData found: DEV
+2026-06-05T07:38:55.824Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T09:07:14.158Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-05T09:07:14.296Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T09:07:14.297Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-05T09:07:14.297Z [Diagnostic] envData found: STAGE
+2026-06-05T09:07:14.297Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":214}
+2026-06-05T09:07:15.894Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
+2026-06-05T09:07:16.029Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T09:07:16.029Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-05T09:07:16.029Z [Diagnostic] envData found: UAT
+2026-06-05T09:07:16.029Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":220}
+2026-06-05T09:07:17.774Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T09:07:17.910Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T09:07:17.911Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T09:07:17.911Z [Diagnostic] envData found: DEV
+2026-06-05T09:07:17.911Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T09:11:28.401Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T09:11:28.941Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T09:11:28.941Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T09:11:28.941Z [Diagnostic] envData found: DEV
+2026-06-05T09:11:28.941Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T09:21:06.983Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T09:21:07.181Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T09:21:07.181Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T09:21:07.181Z [Diagnostic] envData found: DEV
+2026-06-05T09:21:07.182Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T09:42:47.546Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
+2026-06-05T09:42:47.831Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T09:42:47.832Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-05T09:42:47.832Z [Diagnostic] envData found: UAT
+2026-06-05T09:42:47.832Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":220}
+2026-06-05T09:44:07.751Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T09:44:08.226Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T09:44:08.226Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T09:44:08.226Z [Diagnostic] envData found: DEV
+2026-06-05T09:44:08.227Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T09:44:22.691Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T09:44:23.073Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T09:44:23.074Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T09:44:23.074Z [Diagnostic] envData found: DEV
+2026-06-05T09:44:23.074Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T09:44:26.013Z [Diagnostic] refreshKey changed, reloading schema
+2026-06-05T09:44:26.013Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T09:44:26.210Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T09:44:26.210Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T09:44:26.210Z [Diagnostic] envData found: DEV
+2026-06-05T09:44:26.210Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T09:46:47.434Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T09:46:48.153Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T09:46:48.153Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T09:46:48.153Z [Diagnostic] envData found: DEV
+2026-06-05T09:46:48.153Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T09:47:07.117Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
+2026-06-05T09:47:07.562Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T09:47:07.562Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-05T09:47:07.563Z [Diagnostic] envData found: UAT
+2026-06-05T09:47:07.563Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":220}
+2026-06-05T09:47:15.174Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T09:47:15.595Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T09:47:15.596Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T09:47:15.596Z [Diagnostic] envData found: DEV
+2026-06-05T09:47:15.596Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T15:21:40.669Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T15:21:41.169Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T15:21:41.169Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T15:21:41.171Z [Diagnostic] envData found: DEV
+2026-06-05T15:21:41.171Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-05T15:22:37.037Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-05T15:22:37.283Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-05T15:22:37.284Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-05T15:22:37.285Z [Diagnostic] envData found: DEV
+2026-06-05T15:22:37.285Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-08T02:40:41.821Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-08T02:40:42.728Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-08T02:40:42.728Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-08T02:40:42.728Z [Diagnostic] envData found: DEV
+2026-06-08T02:40:42.728Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-08T02:41:07.549Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
+2026-06-08T02:41:07.858Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-08T02:41:07.858Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-08T02:41:07.859Z [Diagnostic] envData found: UAT
+2026-06-08T02:41:07.859Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":220}
+2026-06-08T02:46:36.790Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-08T02:46:37.129Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-08T02:46:37.129Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-08T02:46:37.129Z [Diagnostic] envData found: DEV
+2026-06-08T02:46:37.129Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-08T02:46:57.813Z [Diagnostic] loadSchema called. selectedConnectionId: 725f9c64-85c6-4fd2-b92f-ae49ae6bd68e
+2026-06-08T02:46:58.148Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-08T02:46:58.148Z [Diagnostic] conn found: {"id":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-08T02:46:58.148Z [Diagnostic] envData found: UAT
+2026-06-08T02:46:58.148Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tablesCount":220}
+2026-06-08T02:50:02.266Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-08T02:50:02.643Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-08T02:50:02.643Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-08T02:50:02.644Z [Diagnostic] envData found: DEV
+2026-06-08T02:50:02.644Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-08T03:38:59.508Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-08T03:38:59.863Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":214}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-08T03:38:59.864Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-08T03:38:59.864Z [Diagnostic] envData found: DEV
+2026-06-08T03:38:59.864Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":214}
+2026-06-08T05:46:52.460Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-08T05:48:32.408Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-08T09:51:32.459Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-08T09:51:32.884Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":215}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-08T09:51:32.884Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-08T09:51:32.885Z [Diagnostic] envData found: DEV
+2026-06-08T09:51:32.886Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":215}
+2026-06-09T08:28:43.293Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-10T01:51:38.713Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-10T03:27:51.650Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-10T04:20:06.569Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-10T04:21:13.525Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-10T04:23:11.816Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-10T06:24:53.570Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-10T06:24:54.928Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-10T06:24:54.929Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-10T06:24:54.929Z [Diagnostic] envData found: DEV
+2026-06-10T06:24:54.929Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":215}
+2026-06-10T09:40:01.743Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-10T09:40:01.746Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-10T09:40:02.230Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-10T09:40:02.231Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-10T09:40:02.231Z [Diagnostic] envData found: DEV
+2026-06-10T09:40:02.231Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":215}
+2026-06-10T09:40:02.532Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":220}]}]
+2026-06-10T09:40:02.533Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-10T09:40:02.533Z [Diagnostic] envData found: DEV
+2026-06-10T09:40:02.533Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":215}
+2026-06-11T04:20:36.046Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-11T04:20:36.051Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-11T04:20:37.078Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":221}]}]
+2026-06-11T04:20:37.079Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-11T04:20:37.079Z [Diagnostic] envData found: DEV
+2026-06-11T04:20:37.079Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":215}
+2026-06-11T04:20:37.220Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":221}]}]
+2026-06-11T04:20:37.221Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-11T04:20:37.221Z [Diagnostic] envData found: DEV
+2026-06-11T04:20:37.221Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":215}
+2026-06-11T04:20:42.655Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-11T04:20:42.851Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":221}]}]
+2026-06-11T04:20:42.851Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-11T04:20:42.851Z [Diagnostic] envData found: STAGE
+2026-06-11T04:20:42.851Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":216}
+2026-06-11T04:25:14.248Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-11T04:25:14.444Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":221}]}]
+2026-06-11T04:25:14.444Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-11T04:25:14.444Z [Diagnostic] envData found: STAGE
+2026-06-11T04:25:14.444Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":216}
+2026-06-11T04:25:18.557Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-11T04:25:19.017Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":221}]}]
+2026-06-11T04:25:19.018Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-11T04:25:19.018Z [Diagnostic] envData found: STAGE
+2026-06-11T04:25:19.018Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":216}
+2026-06-11T04:32:31.239Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-11T04:32:32.089Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":221}]}]
+2026-06-11T04:32:32.089Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-11T04:32:32.089Z [Diagnostic] envData found: STAGE
+2026-06-11T04:32:32.089Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":216}
+2026-06-11T04:32:56.723Z [Diagnostic] refreshKey changed, reloading schema
+2026-06-11T04:32:56.723Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-11T04:32:57.081Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":221}]}]
+2026-06-11T04:32:57.082Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-11T04:32:57.082Z [Diagnostic] envData found: STAGE
+2026-06-11T04:32:57.082Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":216}
+2026-06-11T04:42:53.134Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-11T04:42:53.138Z [Diagnostic] refreshKey changed, reloading schema
+2026-06-11T04:42:53.138Z [Diagnostic] loadSchema called. selectedConnectionId: 9ecf957a-a26e-4668-a01d-824ecc3c2d86
+2026-06-11T04:42:54.287Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":221}]}]
+2026-06-11T04:42:54.288Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-11T04:42:54.288Z [Diagnostic] envData found: STAGE
+2026-06-11T04:42:54.288Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":216}
+2026-06-11T04:42:54.779Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":221}]}]
+2026-06-11T04:42:54.779Z [Diagnostic] conn found: {"id":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","name":"Flo Stage","environment":"STAGE","database":"preflow_40"}
+2026-06-11T04:42:54.784Z [Diagnostic] envData found: STAGE
+2026-06-11T04:42:54.784Z [Diagnostic] dbData found: {"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tablesCount":216}
+2026-06-11T04:42:57.061Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-11T04:42:57.222Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":221}]}]
+2026-06-11T04:42:57.222Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-11T04:42:57.222Z [Diagnostic] envData found: DEV
+2026-06-11T04:42:57.223Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":215}
+2026-06-11T06:43:03.241Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-11T06:43:03.893Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":221}]}]
+2026-06-11T06:43:03.894Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-11T06:43:03.894Z [Diagnostic] envData found: DEV
+2026-06-11T06:43:03.894Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":215}
+2026-06-11T08:07:04.901Z [Diagnostic] loadSchema called. selectedConnectionId: 4e88aade-757b-404c-95dc-77ce0cf94834
+2026-06-11T08:07:05.360Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"9ecf957a-a26e-4668-a01d-824ecc3c2d86","tables":216}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"725f9c64-85c6-4fd2-b92f-ae49ae6bd68e","tables":221}]}]
+2026-06-11T08:07:05.360Z [Diagnostic] conn found: {"id":"4e88aade-757b-404c-95dc-77ce0cf94834","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-11T08:07:05.360Z [Diagnostic] envData found: DEV
+2026-06-11T08:07:05.361Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"4e88aade-757b-404c-95dc-77ce0cf94834","tablesCount":215}
+2026-06-11T08:08:40.008Z [Diagnostic] loadSchema called. selectedConnectionId: 205c9167-99a6-4465-bf73-4c27cd680773
+2026-06-11T08:08:40.019Z [Diagnostic] getSchemas returned environments: [{"name":"DEV","databases":[{"name":"dev_database","connectionId":"1","tables":0},{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":0}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]},{"name":"STAGE","databases":[{"name":"stage_database","connectionId":"2","tables":0},{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":0}]},{"name":"UAT","databases":[{"name":"uat_database","connectionId":"3","tables":0},{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":0}]}]
+2026-06-11T08:08:40.019Z [Diagnostic] conn found: {"id":"205c9167-99a6-4465-bf73-4c27cd680773","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-11T08:08:40.019Z [Diagnostic] envData found: DEV
+2026-06-11T08:08:40.019Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tablesCount":0}
+2026-06-11T10:01:54.473Z [Diagnostic] loadSchema called. selectedConnectionId: 205c9167-99a6-4465-bf73-4c27cd680773
+2026-06-11T10:01:54.482Z [Diagnostic] getSchemas returned environments: [{"name":"DEV","databases":[{"name":"dev_database","connectionId":"1","tables":0},{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":0}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]},{"name":"STAGE","databases":[{"name":"stage_database","connectionId":"2","tables":0},{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":0}]},{"name":"UAT","databases":[{"name":"uat_database","connectionId":"3","tables":0},{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":0}]}]
+2026-06-11T10:01:54.482Z [Diagnostic] conn found: {"id":"205c9167-99a6-4465-bf73-4c27cd680773","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-11T10:01:54.482Z [Diagnostic] envData found: DEV
+2026-06-11T10:01:54.482Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tablesCount":0}
+2026-06-11T10:02:09.394Z [Diagnostic] loadSchema called. selectedConnectionId: 205c9167-99a6-4465-bf73-4c27cd680773
+2026-06-11T10:02:09.432Z [Diagnostic] getSchemas returned environments: [{"name":"DEV","databases":[{"name":"dev_database","connectionId":"1","tables":0},{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":165}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]},{"name":"STAGE","databases":[{"name":"stage_database","connectionId":"2","tables":0},{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":5}]},{"name":"UAT","databases":[{"name":"uat_database","connectionId":"3","tables":0},{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":103}]}]
+2026-06-11T10:02:09.432Z [Diagnostic] conn found: {"id":"205c9167-99a6-4465-bf73-4c27cd680773","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-11T10:02:09.432Z [Diagnostic] envData found: DEV
+2026-06-11T10:02:09.433Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tablesCount":165}
+2026-06-11T10:02:15.079Z [Diagnostic] loadSchema called. selectedConnectionId: 2
+2026-06-11T10:02:15.144Z [Diagnostic] getSchemas returned environments: [{"name":"DEV","databases":[{"name":"dev_database","connectionId":"1","tables":0},{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":214}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]},{"name":"STAGE","databases":[{"name":"stage_database","connectionId":"2","tables":0},{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":25}]},{"name":"UAT","databases":[{"name":"uat_database","connectionId":"3","tables":0},{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":211}]}]
+2026-06-11T10:02:15.144Z [Diagnostic] conn found: {"id":"2","name":"STAGE","environment":"STAGE","database":"stage_database"}
+2026-06-11T10:02:15.144Z [Diagnostic] envData found: STAGE
+2026-06-11T10:02:15.144Z [Diagnostic] dbData found: {"name":"stage_database","connectionId":"2","tablesCount":0}
+2026-06-11T10:02:15.728Z [Diagnostic] refreshKey changed, reloading schema
+2026-06-11T10:02:15.728Z [Diagnostic] loadSchema called. selectedConnectionId: 2
+2026-06-11T10:02:15.791Z [Diagnostic] getSchemas returned environments: [{"name":"DEV","databases":[{"name":"dev_database","connectionId":"1","tables":0},{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":214}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]},{"name":"STAGE","databases":[{"name":"stage_database","connectionId":"2","tables":0},{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":28}]},{"name":"UAT","databases":[{"name":"uat_database","connectionId":"3","tables":0},{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":218}]}]
+2026-06-11T10:02:15.792Z [Diagnostic] conn found: {"id":"2","name":"STAGE","environment":"STAGE","database":"stage_database"}
+2026-06-11T10:02:15.792Z [Diagnostic] envData found: STAGE
+2026-06-11T10:02:15.792Z [Diagnostic] dbData found: {"name":"stage_database","connectionId":"2","tablesCount":0}
+2026-06-11T10:02:19.092Z [Diagnostic] loadSchema called. selectedConnectionId: 3
+2026-06-11T10:02:19.149Z [Diagnostic] getSchemas returned environments: [{"name":"DEV","databases":[{"name":"dev_database","connectionId":"1","tables":0},{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":214}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]},{"name":"STAGE","databases":[{"name":"stage_database","connectionId":"2","tables":0},{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":40}]},{"name":"UAT","databases":[{"name":"uat_database","connectionId":"3","tables":0},{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":218}]}]
+2026-06-11T10:02:19.149Z [Diagnostic] conn found: {"id":"3","name":"UAT","environment":"UAT","database":"uat_database"}
+2026-06-11T10:02:19.149Z [Diagnostic] envData found: UAT
+2026-06-11T10:02:19.149Z [Diagnostic] dbData found: {"name":"uat_database","connectionId":"3","tablesCount":0}
+2026-06-11T10:09:40.120Z [Diagnostic] loadSchema called. selectedConnectionId: 205c9167-99a6-4465-bf73-4c27cd680773
+2026-06-11T10:09:40.866Z [Diagnostic] getSchemas returned environments: [{"name":"DEV","databases":[{"name":"dev_database","connectionId":"1","tables":0},{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":214}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]},{"name":"STAGE","databases":[{"name":"stage_database","connectionId":"2","tables":0},{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":213}]},{"name":"UAT","databases":[{"name":"uat_database","connectionId":"3","tables":0},{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":218}]}]
+2026-06-11T10:09:40.867Z [Diagnostic] conn found: {"id":"205c9167-99a6-4465-bf73-4c27cd680773","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-11T10:09:40.867Z [Diagnostic] envData found: DEV
+2026-06-11T10:09:40.867Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tablesCount":214}
+2026-06-15T02:55:06.041Z [Diagnostic] loadSchema called. selectedConnectionId: 205c9167-99a6-4465-bf73-4c27cd680773
+2026-06-15T02:55:06.334Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":213}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":218}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]}]
+2026-06-15T02:55:06.334Z [Diagnostic] conn found: {"id":"205c9167-99a6-4465-bf73-4c27cd680773","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-15T02:55:06.334Z [Diagnostic] envData found: DEV
+2026-06-15T02:55:06.335Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tablesCount":214}
+2026-06-15T09:29:16.169Z [Diagnostic] loadSchema called. selectedConnectionId: 205c9167-99a6-4465-bf73-4c27cd680773
+2026-06-15T09:29:16.675Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":213}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":218}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]}]
+2026-06-15T09:29:16.676Z [Diagnostic] conn found: {"id":"205c9167-99a6-4465-bf73-4c27cd680773","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-15T09:29:16.676Z [Diagnostic] envData found: DEV
+2026-06-15T09:29:16.676Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tablesCount":214}
+2026-06-15T09:35:34.404Z [Diagnostic] loadSchema called. selectedConnectionId: 205c9167-99a6-4465-bf73-4c27cd680773
+2026-06-15T09:35:34.627Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":213}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":218}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]}]
+2026-06-15T09:35:34.627Z [Diagnostic] conn found: {"id":"205c9167-99a6-4465-bf73-4c27cd680773","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-15T09:35:34.627Z [Diagnostic] envData found: DEV
+2026-06-15T09:35:34.627Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tablesCount":214}
+2026-06-16T02:27:49.449Z [Diagnostic] loadSchema called. selectedConnectionId: 3846dbaa-48bb-4434-b5cc-4f8ee1ce1707
+2026-06-16T02:27:49.478Z [Diagnostic] getSchemas returned environments: [{"name":"DEV","databases":[{"name":"flo_helper","connectionId":"0d961e7c-7920-47b4-9476-db4d8cf3ccc2","tables":19}]},{"name":"STAGE","databases":[{"name":"flo_helper","connectionId":"fc1d3cb0-d2a1-4325-b981-e87212fa17d5","tables":0}]},{"name":"UAT","databases":[{"name":"flo_helper","connectionId":"3846dbaa-48bb-4434-b5cc-4f8ee1ce1707","tables":17}]}]
+2026-06-16T02:27:49.478Z [Diagnostic] conn found: {"id":"3846dbaa-48bb-4434-b5cc-4f8ee1ce1707","name":"FloUAT","environment":"UAT","database":"flo_helper"}
+2026-06-16T02:27:49.478Z [Diagnostic] envData found: UAT
+2026-06-16T02:27:49.479Z [Diagnostic] dbData found: {"name":"flo_helper","connectionId":"3846dbaa-48bb-4434-b5cc-4f8ee1ce1707","tablesCount":17}
+2026-06-16T09:47:43.371Z [Diagnostic] loadSchema called. selectedConnectionId: 205c9167-99a6-4465-bf73-4c27cd680773
+2026-06-16T09:47:44.255Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":213}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":218}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]}]
+2026-06-16T09:47:44.255Z [Diagnostic] conn found: {"id":"205c9167-99a6-4465-bf73-4c27cd680773","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-16T09:47:44.255Z [Diagnostic] envData found: DEV
+2026-06-16T09:47:44.255Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tablesCount":214}
+2026-06-16T09:48:05.929Z [Diagnostic] loadSchema called. selectedConnectionId: faa251a3-917e-4209-9c48-6fbfd117ca39
+2026-06-16T09:48:08.456Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":213}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":218}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]}]
+2026-06-16T09:48:08.456Z [Diagnostic] conn found: {"id":"faa251a3-917e-4209-9c48-6fbfd117ca39","name":"FloUAT","environment":"UAT","database":"preflow_41"}
+2026-06-16T09:48:08.456Z [Diagnostic] envData found: UAT
+2026-06-16T09:48:08.457Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tablesCount":218}
+2026-06-16T14:52:22.713Z [Diagnostic] loadSchema called. selectedConnectionId: 205c9167-99a6-4465-bf73-4c27cd680773
+2026-06-16T14:52:23.427Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":213}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":218}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]}]
+2026-06-16T14:52:23.427Z [Diagnostic] conn found: {"id":"205c9167-99a6-4465-bf73-4c27cd680773","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-16T14:52:23.427Z [Diagnostic] envData found: DEV
+2026-06-16T14:52:23.427Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tablesCount":214}
+2026-06-16T23:46:53.038Z [Diagnostic] loadSchema called. selectedConnectionId: 205c9167-99a6-4465-bf73-4c27cd680773
+2026-06-16T23:46:54.299Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":213}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":218}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]}]
+2026-06-16T23:46:54.300Z [Diagnostic] conn found: {"id":"205c9167-99a6-4465-bf73-4c27cd680773","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-16T23:46:54.300Z [Diagnostic] envData found: DEV
+2026-06-16T23:46:54.300Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tablesCount":214}
+2026-06-17T08:38:36.207Z [Diagnostic] loadSchema called. selectedConnectionId: 205c9167-99a6-4465-bf73-4c27cd680773
+2026-06-17T08:38:36.573Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":213}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":214}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":218}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]}]
+2026-06-17T08:38:36.573Z [Diagnostic] conn found: {"id":"205c9167-99a6-4465-bf73-4c27cd680773","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-17T08:38:36.573Z [Diagnostic] envData found: DEV
+2026-06-17T08:38:36.573Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tablesCount":214}
+2026-06-17T08:50:59.514Z [Diagnostic] loadSchema called. selectedConnectionId: 205c9167-99a6-4465-bf73-4c27cd680773
+2026-06-17T08:51:00.163Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":213}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":218}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]}]
+2026-06-17T08:51:00.163Z [Diagnostic] conn found: {"id":"205c9167-99a6-4465-bf73-4c27cd680773","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-17T08:51:00.163Z [Diagnostic] envData found: DEV
+2026-06-17T08:51:00.163Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tablesCount":215}
+2026-06-17T10:21:49.432Z [Diagnostic] loadSchema called. selectedConnectionId: 205c9167-99a6-4465-bf73-4c27cd680773
+2026-06-17T10:21:50.590Z [Diagnostic] getSchemas returned environments: [{"name":"STAGE","databases":[{"name":"preflow_40","connectionId":"f39dfe7d-12ea-428e-8d56-8f041f448285","tables":213}]},{"name":"DEV","databases":[{"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tables":215}]},{"name":"UAT","databases":[{"name":"preflow_41","connectionId":"faa251a3-917e-4209-9c48-6fbfd117ca39","tables":218}]},{"name":"PROD","databases":[{"name":"prod_database","connectionId":"4","tables":0}]}]
+2026-06-17T10:21:50.590Z [Diagnostic] conn found: {"id":"205c9167-99a6-4465-bf73-4c27cd680773","name":"FloDEV","environment":"DEV","database":"preflow_41"}
+2026-06-17T10:21:50.590Z [Diagnostic] envData found: DEV
+2026-06-17T10:21:50.591Z [Diagnostic] dbData found: {"name":"preflow_41","connectionId":"205c9167-99a6-4465-bf73-4c27cd680773","tablesCount":215}

@@ -1,5 +1,13 @@
-This is your new *vault*.
+# Welcome to TheAndb Vault 🛸
 
-Make a note of something, [[create a link]], or try [the Importer](https://help.obsidian.md/Plugins/Importer)!
+This is the knowledge base and task organization vault for **TheAndb (Professional Database Schema Reliability Engine)**.
 
-When you're ready, delete this note and make the vault your own.
+## 🧭 Vault Navigation
+
+- [[1. Project Overview]]: Key differentiators, license model, and core value proposition.
+- [[2. Architecture & Storage]]: Package structures (`core`, `cli`, `desktop`, `mcp`) and storage strategies.
+- [[3. Roadmaps & Features]]: Development roadmaps, features maps, and beta launch strategies.
+- [[4. Developer Guide]]: Quickstart commands, environment setups, and coding rules.
+
+---
+*Created by Antigravity on 2026-06-05.*

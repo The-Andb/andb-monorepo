@@ -4,22 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "c02f7e4da559da5d",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "94d4adaabd8ef32e",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          }
-        ]
-      },
-      {
         "id": "cf24f8da1ad80f2b",
         "type": "tabs",
         "children": [
@@ -27,10 +11,14 @@
             "id": "2d8a0fbb44d7d2bf",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "1. Project Overview.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. Project Overview"
             }
           }
         ]
@@ -195,9 +183,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "94d4adaabd8ef32e",
+  "active": "2d8a0fbb44d7d2bf",
   "lastOpenFiles": [
     "Welcome.md",
+    "4. Developer Guide.md",
     "Untitled.canvas"
   ]
 }
