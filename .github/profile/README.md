@@ -65,6 +65,10 @@ We are an open-source first organization. Whether you are a DBA, a Fullstack Dev
 - 💬 **Discussions**: [Join our GitHub Conversations](https://github.com/orgs/The-Andb/discussions)
 - ✨ **Contributing**: Read our [Organization Wiki](https://github.com/The-Andb/.github/wiki)
 
+### ⚖️ License
+
+**TheAndb Desktop** and **TheAndb Core** are free to download and use for internal business operations including production use. A commercial license is required only if you redistribute, white-label, or resell the software as a competing product.
+
 ---
 
 <p align="center">
