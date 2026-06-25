@@ -30,27 +30,27 @@ Two entry points for beta testers:
 
 ### Breakdown
 
-1. [ ] **Phase 1: Beta Gate (Desktop App)**
-   - [ ] Add "Beta Registration" screen on first launch (before dashboard)
-   - [ ] Fields: Email, Name (optional), Company (optional), Use case (dropdown: "Personal", "Startup", "Enterprise")
-   - [ ] Store beta registration locally in `electron-store`
-   - [ ] API call to backend to register beta tester
-   - [ ] On success: unlock the app, show "Welcome to Beta" toast
-   - [ ] On subsequent launches: skip registration (already registered)
+1. [x] **Phase 1: Beta Gate (Desktop App)**
+   - [x] Add "Beta Registration" screen on first launch (before dashboard)
+   - [x] Fields: Email, Name (optional), Company (optional), Use case (dropdown: "Personal", "Startup", "Enterprise")
+   - [x] Store beta registration locally in `electron-store`
+   - [x] API call to backend to register beta tester
+   - [x] On success: unlock the app, show "Welcome to Beta" toast
+   - [x] On subsequent launches: skip registration (already registered)
 
-2. [ ] **Phase 2: Beta Landing Page (`andb.dev/beta`)**
-   - [ ] Hero section: "Join the Beta — Help us build the best DB migration tool"
-   - [ ] Email signup form with Resend/Mailgun integration
-   - [ ] Auto-send welcome email with download links (DMG/EXE/AppImage)
-   - [ ] Beta key generation (simple UUID-based, no complex licensing)
-   - [ ] Counter: "X developers in the beta"
+2. [x] **Phase 2: Beta Landing Page (`andb.dev/beta`)**
+   - [x] Hero section: "Join the Beta — Help us build the best DB migration tool"
+   - [x] Email signup form with Resend/Mailgun integration
+   - [x] Auto-send welcome email with download links (DMG/EXE/AppImage)
+   - [x] Beta key generation (simple UUID-based, no complex licensing)
+   - [x] Counter: "X developers in the beta"
 
-3. [ ] **Phase 3: Beta Backend (Lightweight API)**
-   - [ ] Endpoint: `POST /api/beta/register` → { email, name, useCase }
-   - [ ] Endpoint: `GET /api/beta/verify/:key` → { valid: true/false }
-   - [ ] Storage: Supabase (free tier) or simple JSON file on Vercel
-   - [ ] Rate limiting: 10 req/min per IP
-   - [ ] Email delivery: Resend (100 free/day)
+3. [x] **Phase 3: Beta Backend (Lightweight API)**
+   - [x] Endpoint: `POST /api/beta/register` → { email, name, useCase }
+   - [x] Endpoint: `GET /api/beta/verify/:key` → { valid: true/false }
+   - [x] Storage: Supabase (free tier) or simple JSON file on Vercel
+   - [x] Rate limiting: 10 req/min per IP
+   - [x] Email delivery: Resend (100 free/day)
 
 ### Tech Stack Decision
 

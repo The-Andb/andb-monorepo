@@ -16,8 +16,8 @@
 | :---------- | :-------------------- | :---------------------------------------------- | :--------- |
 | **Phase 1** | **Provable Engine**   | 1 external dev runs `andb compare` successfully | ✅ Done    |
 | **Phase 2** | **Trustable Product** | 1 team uses on staging for 2 weeks, 0 incidents | ✅ Done    |
-| **Phase 3** | **Revenue Ready & AI**| 1 paying customer + Stable AI DBA workflows     | 🚧 Active  |
-| **Phase 3** | **Revenue Ready**     | 1 paying customer                               | ⏳ Planned |
+| **Phase 3** | **Revenue Ready & AI**| 1 paying customer + Stable AI DBA workflows     | ✅ Done    |
+| **Phase 4** | **Revenue Ready**     | 1 paying customer                               | 🚧 Active  |
 
 ---
 
@@ -68,13 +68,15 @@
 
 ---
 
-## 🤖 Phase 2.5: AI Integration (v4.0.0)
+## 🤖 Phase 2.5: AI Integration (v4.0.0 -> v4.0.4)
 
-- ✅ Monorepo version bumped to v4.0.0
+- ✅ Monorepo version bumped to v4.0.4
 - ✅ AI DBA Assistant Panel integration
 - ✅ Context-aware Schema/Code Ask AI
 - ✅ SQLite Chat History Persistence
 - ✅ Global UI/UX Stabilization (Sidebar scaling, Layout skew fixed)
+- ✅ Beta Program Registration implemented
+- ✅ Web portal launched at andb.dev
 
 ---
 

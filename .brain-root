@@ -1,0 +1,6 @@
+# Anph2ndBrain pointer — do not store agent config in this repo
+BRAIN_ROOT=/Volumes/FlexibleWorkplace/Anph2ndBrain
+CATEGORY=side
+ORG=anph
+PROJECT_SLUG=theandb
+PROJECT_BRAIN=/Volumes/FlexibleWorkplace/Anph2ndBrain/projects/side/anph/theandb

@@ -1,1 +1,0 @@
-../andb-www/src/content/guide/faq.md

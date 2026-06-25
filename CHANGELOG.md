@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-06-19] v4.0.4
+- **andb-core/cli**: 4.0.4
+- **andb-desktop**: 4.0.4
+- **andb-www**: 4.0.4
+
+### Fixed
+- **Live Demo Race Condition**: Fixed a bug where creating a Live Demo or Instant Compare project would accidentally steal and permanently reassign connections from the active project due to an async state loading race condition. Included an auto-recovery mechanism on startup to seamlessly restore any connections orphaned by this bug.
+- **Global Schema View**: Ensure the Global Schema View immediately selects the first available connection instead of showing "Unknown", and improved the local search behavior to correctly find and highlight DDL content.
+
+
 ## [2026-06-17] v4.0.3
 - **andb-core/cli**: 4.0.3
 - **andb-desktop**: 4.0.3

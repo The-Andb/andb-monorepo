@@ -1,7 +1,17 @@
+# The-Andb — Pointer
+
+Agent config moved to **Anph2ndBrain**. Read before coding:
+
+- `/Volumes/FlexibleWorkplace/Anph2ndBrain/CLAUDE.md` (master)
+- `/Volumes/FlexibleWorkplace/Anph2ndBrain/projects/side/anph/theandb/context.mdc`
+- `/Volumes/FlexibleWorkplace/Anph2ndBrain/projects/side/anph/theandb/CLAUDE.md` (full doc + GitNexus)
+
+Init: skill `init-project-brain` · marker: `.brain-root`
+
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **The-Andb** (1224 symbols, 1194 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **andb-monorepo** (1216 symbols, 1188 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 
@@ -24,20 +34,20 @@ This project is indexed by GitNexus as **The-Andb** (1224 symbols, 1194 relation
 
 | Resource | Use for |
 |----------|---------|
-| `gitnexus://repo/The-Andb/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/The-Andb/clusters` | All functional areas |
-| `gitnexus://repo/The-Andb/processes` | All execution flows |
-| `gitnexus://repo/The-Andb/process/{name}` | Step-by-step execution trace |
+| `gitnexus://repo/andb-monorepo/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/andb-monorepo/clusters` | All functional areas |
+| `gitnexus://repo/andb-monorepo/processes` | All execution flows |
+| `gitnexus://repo/andb-monorepo/process/{name}` | Step-by-step execution trace |
 
 ## CLI
 
 | Task | Read this skill file |
 |------|---------------------|
-| Understand architecture / "How does X work?" | `.claude/skills/gitnexus/gitnexus-exploring/SKILL.md` |
-| Blast radius / "What breaks if I change X?" | `.claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md` |
-| Trace bugs / "Why is X failing?" | `.claude/skills/gitnexus/gitnexus-debugging/SKILL.md` |
-| Rename / extract / split / refactor | `.claude/skills/gitnexus/gitnexus-refactoring/SKILL.md` |
-| Tools, resources, schema reference | `.claude/skills/gitnexus/gitnexus-guide/SKILL.md` |
-| Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
+| Understand architecture / "How does X work?" | `/Volumes/FlexibleWorkplace/Anph2ndBrain/projects/side/anph/theandb/skills/gitnexus/gitnexus-exploring/SKILL.md` |
+| Blast radius / "What breaks if I change X?" | `/Volumes/FlexibleWorkplace/Anph2ndBrain/projects/side/anph/theandb/skills/gitnexus/gitnexus-impact-analysis/SKILL.md` |
+| Trace bugs / "Why is X failing?" | `/Volumes/FlexibleWorkplace/Anph2ndBrain/projects/side/anph/theandb/skills/gitnexus/gitnexus-debugging/SKILL.md` |
+| Rename / extract / split / refactor | `/Volumes/FlexibleWorkplace/Anph2ndBrain/projects/side/anph/theandb/skills/gitnexus/gitnexus-refactoring/SKILL.md` |
+| Tools, resources, schema reference | `/Volumes/FlexibleWorkplace/Anph2ndBrain/projects/side/anph/theandb/skills/gitnexus/gitnexus-guide/SKILL.md` |
+| Index, status, clean, wiki CLI commands | `/Volumes/FlexibleWorkplace/Anph2ndBrain/projects/side/anph/theandb/skills/gitnexus/gitnexus-cli/SKILL.md` |
 
 <!-- gitnexus:end -->
