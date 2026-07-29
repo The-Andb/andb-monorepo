@@ -1,5 +1,21 @@
 # Sponsor The-Andb
 
+> As one legendary programmer once said:
+>
+> "Software is like sex: it's better when it's free."
+>
+> That's the philosophy behind everything I build.
+>
+> No hidden repositories. No source-available tricks. Just real open source.
+>
+> Read it. Fork it. Hack it. Self-host it.
+>
+> If I ever offer hosted services, you'll be paying for convenience — not for access to the source code.
+>
+> Your sponsorship keeps the servers running and lets me spend more time building tools for the community.
+>
+> Code should be free. Time isn't. ❤️
+
 TheAndb is fully open source under AGPL-3.0 — engine, CLI, MCP server, and desktop app. There's no proprietary tier and no feature gate. Sponsorship doesn't unlock code; it funds the time behind the code.
 
 ## Why sponsor

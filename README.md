@@ -98,7 +98,9 @@ See [LICENSE](./LICENSE) for the full AGPL-3.0 text.
 
 ## ❤️ Sponsor
 
-TheAndb is a sustainability-first open-source project, not an open-core business — sponsorship funds development time, CI/CD, and releases, not code access. See [SPONSORS.md](./SPONSORS.md) for tiers and funding goals, or **[sponsor on GitHub →](https://github.com/sponsors/The-Andb)**
+> Software is like sex: it's better when it's free. No hidden repositories, no source-available tricks — just real open source. Sponsorship doesn't unlock code; it keeps the servers running and buys more time to build.
+
+See [SPONSORS.md](./SPONSORS.md) for tiers and funding goals, or **[sponsor on GitHub →](https://github.com/sponsors/The-Andb)**
 
 ---
 
