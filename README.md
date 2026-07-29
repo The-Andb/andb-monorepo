@@ -102,6 +102,9 @@ See [LICENSE](./LICENSE) for the full AGPL-3.0 text.
 
 See [SPONSORS.md](./SPONSORS.md) for tiers and funding goals, or **[sponsor on GitHub →](https://github.com/sponsors/The-Andb)**
 
+<!-- sponsors:start -->
+<!-- sponsors:end -->
+
 ---
 
 Built with ❤️ by **TheAndb Team**. Contact: `ph4n4n@gmail.com`

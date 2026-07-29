@@ -18,6 +18,9 @@
 
 TheAndb is fully open source under AGPL-3.0 — engine, CLI, MCP server, and desktop app. There's no proprietary tier and no feature gate. Sponsorship doesn't unlock code; it funds the time behind the code.
 
+<!-- sponsors:start -->
+<!-- sponsors:end -->
+
 ## Why sponsor
 
 Shipping a schema-diffing engine that has to be _correct_ across MySQL and Postgres, an Electron desktop app, a CLI, and an MCP server is more than a side-project's worth of work. Sponsorship goes directly toward:
