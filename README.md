@@ -6,9 +6,9 @@ AST-powered Safety, Semantic Diffing, and Multi-Environment Orchestration for Hi
 ---
 
 [![Fast: 5-Min Setup](https://img.shields.io/badge/Setup-5--Minute-blueviolet?style=for-the-badge&logo=rocket)](#-quickstart)
-[![Safety: AST-Analyzed](https://img.shields.io/badge/Safety-AST--Analyzed-green?style=for-the-badge&logo=shield)](https://github.com/ph4n4n/the-andb-core)
+[![Safety: AST-Analyzed](https://img.shields.io/badge/Safety-AST--Analyzed-green?style=for-the-badge&logo=shield)](https://github.com/The-Andb/andb-core)
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue?style=for-the-badge&logo=gnu)](./LICENSE)
-[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-orange?style=for-the-badge)](./LICENSE)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-ff69b4?style=for-the-badge&logo=githubsponsors)](https://github.com/sponsors/The-Andb)
 
 TheAndb is a developer-first tool built to eliminate the common pain points of database migrations: accidental data loss, schema drift, and complex manual SQL generation. It understands your database structure not just as text, but as a semantic model.
 
@@ -85,19 +85,20 @@ npm run repo:install
 | :---------------------------------------------------------------------------- | :-------------------------------------------------------------------------- |
 | **[`andb-core`](file:///Volumes/FlexibleWorkplace/The-Andb/andb-core)**       | The "Brain". Handles AST parsing, diffing logic, and SQL generation.        |
 | **[`andb-cli`](file:///Volumes/FlexibleWorkplace/The-Andb/andb-cli)**         | The primary interface for developers and CI/CD pipelines.                   |
-| **[`andb-desktop`](file:///Volumes/FlexibleWorkplace/The-Andb/andb-desktop)** | Premium GUI for visual schema management and drift audits (Electron + Vue). |
+| **[`andb-desktop`](file:///Volumes/FlexibleWorkplace/The-Andb/andb-desktop)** | Visual schema management and drift-audit GUI (Electron + Vue).             |
 | **[`andb-mcp`](file:///Volumes/FlexibleWorkplace/The-Andb/andb-mcp)**         | Model Context Protocol server for AI agent integration.                     |
 
 ---
 
 ## ⚖️ License
 
-TheAndb follows a **Dual-Track** licensing model:
+TheAndb is **fully open source under AGPL-3.0** — engine, CLI, MCP server, desktop app, and website all ship under the same license. There's no closed-source tier. A commercial license is only needed if you re-host TheAndb as a competing managed SaaS or white-label it without publishing your changes — see [COMMERCIAL.md](./COMMERCIAL.md) for specifics.
 
-- **Open Core (AGPL-3.0)**: Our engine (`andb-core`), CLI (`andb-cli`), MCP Server (`andb-mcp`), and Landing Page (`andb-www`) are fully open source.
-- **Desktop App (Proprietary)**: Our premium GUI is closed source but free for individual use.
+See [LICENSE](./LICENSE) for the full AGPL-3.0 text.
 
-See [LICENSE](./LICENSE) for the full AGPL-3.0 text and [ai/RULES.md](./ai/RULES.md) for architectural boundaries.
+## ❤️ Sponsor
+
+TheAndb is a sustainability-first open-source project, not an open-core business — sponsorship funds development time, CI/CD, and releases, not code access. See [SPONSORS.md](./SPONSORS.md) for tiers and funding goals, or **[sponsor on GitHub →](https://github.com/sponsors/The-Andb)**
 
 ---
 
