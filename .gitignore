@@ -13,3 +13,5 @@ node_modules
 /org/
 andb-*
 .gitnexus
+/mismatch.txt
+/frontend-diagnostics.log
