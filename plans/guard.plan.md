@@ -130,6 +130,8 @@ Deliverable:
 
 # 💰 Phase 5 – Monetization Layer (Month 5–6)
 
+> **Note:** the paid-tier pricing structure below predates the AGPL-3.0-everywhere pivot (commit `39158b0`) and the cloud drift-monitoring backend it depends on (`andb-api`) does not exist yet. Treat this section as an unresolved strategic proposal requiring an explicit decision, not a current or in-progress plan — tracked as [The-Andb/andb-monorepo#2](https://github.com/The-Andb/andb-monorepo/issues/2).
+
 ## Pricing Strategy
 
 ### Free
