@@ -1,3 +1,5 @@
+> **Archived — superseded by the AGPL-3.0 pivot (commit `39158b0`).** This doc's closed-source "Pro Edition" monetization strategy is no longer the product's licensing model; TheAndb ships fully AGPL-3.0 across every package, funded by sponsorship. Kept for historical reference only.
+
 # 🚀 ANDB "Go Pro" Roadmap
 
 Đây là bản kế hoạch chi tiết để nâng cấp `TheAndb` từ một tool cá nhân thành một sản phẩm commercial-ready. Kế hoạch được tái cấu trúc để ưu tiên sự ổn định (Stability) và tính năng thiết yếu cho môi trường Production.

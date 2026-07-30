@@ -1,3 +1,5 @@
+> **Archived — superseded by the AGPL-3.0 pivot (commit `39158b0`).** This doc's closed-source "Pro Edition" monetization strategy is no longer the product's licensing model; TheAndb ships fully AGPL-3.0 across every package, funded by sponsorship. Kept for historical reference only.
+
 # 🎯 TheAndb Executive Roadmap (2026)
 
 **Mission:** Transform `TheAndb` from a personal tool into a commercial-grade database management product.
